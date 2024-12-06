@@ -7,20 +7,20 @@ def get_infos():
         for row in reader:
             product_infos = {
                 'id': row['id'],
-                'titre': row['titre'],
-                'type de produit': row['type_de_produit'],
-                'poid total du bijoux': row['poid_total_du_bijoux'],
-                'pierre principale': row['pierre_principale'],
-                'forme pierre principale': row['forme_pierre_principale'],
-                'couleur pierre principale': row['couleur_pierre_principale'],
-                'carat pierre principale': row['carat_pierre_principale'],
-                'nombre de pierres': row['nombre_de_pierres'],
-                'couleur pierre d\'ornements': row['couleur_pierre_d_ornements'],
-                'caratage pierre d\'ornement': row['caratage_pierre_d_ornement'],
-                'prix': row['prix'],
-                'nom produit': row['nom_produit'],
+                'title': row['titre'], 
+                'product_type': row['type_de_produit'],
+                'total_weight_of_jewelry': row['poid_total_du_bijoux'],
+                'main_stone': row['pierre_principale'],
+                'main_stone_shape': row['forme_pierre_principale'],
+                'main_stone_color': row['couleur_pierre_principale'],
+                'main_stone_carat': row['carat_pierre_principale'],
+                'number_of_stones': row['nombre_de_pierres'],
+                'ornamental_stone_color': row["couleur_pierre_d_ornements"],
+                'ornamental_stone_carat': row["caratage_pierre_d_ornement"],
+                'price': row['prix'], 
+                'product_name': row['nom_produit'],
                 'description': row['description'],
-                'en ligne': row['en_ligne']
+                'online': row['en_ligne']
             }
             infos.append(product_infos)
     return infos
@@ -28,5 +28,7 @@ def get_infos():
 infos= get_infos()
 for info in infos:
     print(info)
+
+
 
 
