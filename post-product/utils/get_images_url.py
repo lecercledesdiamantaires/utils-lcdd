@@ -6,14 +6,12 @@ from google.oauth2.service_account import Credentials
 import json
 
 SERVICE_ACCOUNT_FILE = 'credentials.json'
-FOLDER_ID = '1TE90qtOXN1qqaPpNPyf81aTeJvVd9Zm3'  
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 
 credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 service = build('drive', 'v3', credentials=credentials)
 
-def list_files_in_folder(folder_id, prefix):
-    links = []
+def get_images_url(folder_id, prefix):
     files_data = [] 
     query = f"'{folder_id}' in parents and trashed = false"
     page_token = None
@@ -35,8 +33,14 @@ def list_files_in_folder(folder_id, prefix):
         if not page_token:
             break
 
+    # Trier par nom de fichier
     files_data_sorted = sorted(files_data, key=lambda x: x[0])
-    links = [link for _, link in files_data_sorted]
+
+    # Convertir les liens en objets {src: link}
+    links = [{"src": link} for _, link in files_data_sorted]
     return links
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes

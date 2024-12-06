@@ -117,7 +117,7 @@ def select_two_random_ids():
         raise ValueError("Pas assez de produits pour sélectionner deux éléments au hasard.")
     
     # Sélectionner deux IDs au hasard
-    random_products = random.sample(all_products, 2)  # Sélectionne deux produits uniques au hasard
+    random_products = random.sample(all_products, 2)  
     return random_products[0]["id"], random_products[1]["id"]
 
 def get_related_products(product_type):
@@ -156,3 +156,65 @@ def get_stone(primal_stone, secondary_stone):
                 stone_ids.append(stone["id"])
 
     return stone_ids
+
+def get_color(primal_color, secondary_color):
+    """
+    Retourne les IDs des couleurs principales et secondaires dans Shopify.
+    Gestion de la casse pour éviter les problèmes avec majuscules/minuscules.
+    """
+    # Transformer la chaîne secondary_color en liste avec séparation par tirets et tout en minuscule
+    secondary_color_list = [color.lower() for color in secondary_color.split('-')]
+    
+    # Liste pour stocker les IDs
+    color_ids = []
+    
+    for color in color_metafields:
+        if color["color"].lower() == primal_color.lower():
+            color_ids.append(color["id"])
+        for i in range(len(secondary_color_list)):
+            if color["color"].lower() in secondary_color_list:
+                secondary_color_list.remove(color["color"].lower())
+                color_ids.append(color["id"])
+
+    return color_ids
+
+
+def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_color):
+    """
+    Retourne les IDs des metafields pour les pierres et les couleurs.
+    """
+    load_products()
+
+    stone_ids = get_stone(primal_stone, secondary_stone)
+    color_ids = get_color(color, secondary_color)
+    gold_color = get_gold_color()
+    related_products = get_related_products(product_type)
+
+    return {
+        "metafields": [
+            {
+                "namespace": "custom",
+                "key": "pierre_pr_cieuse",
+                "value": stone_ids,
+                "value_type": "list.product_reference",
+            },
+            {
+                "namespace": "custom",
+                "key": "couleur_de_la_pierre",
+                "value": color_ids,
+                "value_type": "list.product_reference",
+            },
+            {
+                "namespace": "custom",
+                "key": "couleur_de_l_or",
+                "value": gold_color,
+                "value_type": "list.product_reference",
+            },
+            {
+                "namespace": "related_products",
+                "key": "product_list",
+                "value": related_products,
+                "value_type": "list.product_reference",
+            }
+        ]
+    }

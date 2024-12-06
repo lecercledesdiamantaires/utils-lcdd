@@ -32,4 +32,7 @@ def create_variants(price):
     print(len(variants))
         
         
+<<<<<<< Updated upstream
 create_variants('1000')
+=======
+>>>>>>> Stashed changes

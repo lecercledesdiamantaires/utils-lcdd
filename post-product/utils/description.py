@@ -21,6 +21,7 @@ def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
         })
     return secondary_stone
 
+
 def write_secondary_stone(secondary_stones):
     def format_stone(stone):
         carat_unit = "carat" if float(stone['carat']) < 1 else "carats"
@@ -46,10 +47,12 @@ def write_description(product_info, first_p) :
         <!--short-description-->
         <ul>
             <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if product_info['weight'] <1 else "grammes"}</li>
-            <li><strong>Matériau </strong>: {product_info['material']}</li>
+            <li><strong>Matériau </strong>: Or</li>
             <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 1 else "carats"})</li>
             {write_secondary_stone(product_info['secondary_stone'])}
             <li><strong>Nombre de pierres </strong>: {product_info['stone_number']}</li>
+            <li><strong>Couleur principale </strong>: {product_info['main_color']}</li>
+            <li><strong>Couleur secondaire </strong>: {product_info['secondary_color']}</li>
             <li><strong>Forme de la pierre </strong>: {product_info['stone_shape']}</li>
             <li><strong>Type de serti </strong>: {product_info['serti_type']}</li>
         </ul>
@@ -62,22 +65,21 @@ def write_description(product_info, first_p) :
 
 def main(
     weight, 
-    material, 
     primal_stone_name, 
     carat_primal_stone, 
     secondary_stone_name, 
     carat_secondary_stone, 
     stone_number, 
     stone_shape, 
-    serti_type,
     product_type,
+    main_color,
+    secondary_color,
     first_p=None) :
 
     first_p = check_first_p(first_p, product_type, primal_stone_name)
     secondary_stone = check_secondary_stone(secondary_stone_name, carat_secondary_stone)
     product_info = {
         "weight": weight,
-        "material": material,
         "primal_stone": 
             {
                 "name" : primal_stone_name,
@@ -86,20 +88,8 @@ def main(
         "secondary_stone": secondary_stone,
         "stone_number": stone_number,
         "stone_shape": stone_shape,
-        "serti_type": serti_type
+        "serti_type": serti_type,
+        "main_color": main_color,
+        "secondary_color": secondary_color
     }
     return write_description(product_info, first_p)
-
-# print(main(
-#     2.5,
-#     "Or jaune",
-#     "Diamant",
-#     0.5,
-#     "Saphir-Rubis",
-#     "0.3-0.4",
-#     3,
-#     "Rond",
-#     "Pavé",
-#     "Bague",
-#     "OUi oui oui"
-# ))
