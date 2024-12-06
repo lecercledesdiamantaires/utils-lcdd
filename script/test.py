@@ -18,7 +18,7 @@ FALSE_URL = os.getenv("FALSE_URL")
 SHOPIFY_STORE = os.getenv("SHOPIFY_URL")
 
 # Chemin vers votre fichier JSON des informations d'identification
-SERVICE_ACCOUNT_FILE = 'credentials.json'
+SERVICE_ACCOUNT_FILE = '../credentials.json'
 FOLDER_ID = '146Ox-MtR-QPFp3MpJePwboKNY1PbaSdB'  
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 

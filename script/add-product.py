@@ -5,7 +5,6 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-# from google.oauth2.credentials import Credentials
 from google.oauth2.service_account import Credentials
 
 
@@ -21,7 +20,7 @@ FALSE_URL = os.getenv("FALSE_URL")
 SHOPIFY_STORE_URL = os.getenv("SHOPIFY_STORE")
 
 
-SERVICE_ACCOUNT_FILE = 'credentials.json'
+SERVICE_ACCOUNT_FILE = '../credentials.json'
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
