@@ -12,16 +12,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
-BASE_URL = os.getenv("BASE_URL")
 PASSWORD = os.getenv("PASSWORD")
 SHOP_NAME = os.getenv("SHOP_NAME")
 API_VERSION = os.getenv("API_VERSION")
 LIMIT = os.getenv("LIMIT")
 FALSE_URL = os.getenv("FALSE_URL")
-SHOPIFY_STORE = os.getenv("SHOPIFY_URL")
+SHOPIFY_STORE = os.getenv("SHOP_URL")
+BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 
-credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-service = build('drive', 'v3', credentials=credentials)
+
+# credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+# service = build('drive', 'v3', credentials=credentials)
 
 def list_files_in_folder(folder_id):
     link = []
@@ -45,12 +46,14 @@ def list_files_in_folder(folder_id):
 
 def post_image(product_id, data):
     url = f"{BASE_URL}/admin/api/{API_VERSION}/products/{product_id}/images.json"
+    print(url)
     response = requests.post(url, json=data)
     print(response.json())
     return response.json()
 
 def post_product(data):
     url = f"{BASE_URL}/admin/api/{API_VERSION}/products.json"
+    print(url)
     response = requests.post(url, json=data)
     return response.json()
 
@@ -66,15 +69,16 @@ def post_product(data):
 #         print(f"Failed to download image. Status code: {response.status_code}")
 #         return None
 
-IMAGE_URLS = list_files_in_folder(FOLDER_ID)
+# IMAGE_URLS = list_files_in_folder(FOLDER_ID)
 
 response = post_product(data = {
     "product": {
         "title": "Test",
         "body_html": "<p>Test</p>",
         "vendor": "Test",
-        "product_type": "Test",
+        "product_type": "bague",
         "tags": "Test",
+        "price": "10.00",
         # "variants":[{"option1":"Blue","option2":"155","price":"10.00"},{"option1":"Black","option2":"159"},{"option1":"Blue", "option2":"159"}],"options":[{"name":"Color","values":["Blue","Black"]},{"name":"Size","values":["155","159"]}],
         # "images": [
         #     {
