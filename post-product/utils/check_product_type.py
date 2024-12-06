@@ -5,4 +5,3 @@ def check_product_type(id, product_type):
     if product_type not in available_product_types:
         raise ValueError(f"Le type de produit {product_type} n'est pas valide id : {id}.")
 
-    
