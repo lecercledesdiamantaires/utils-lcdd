@@ -79,13 +79,14 @@ response = post_product(data = {
         "product_type": "bague",
         "tags": "Test",
         "price": "10.00",
-        # "variants":[{"option1":"Blue","option2":"155","price":"10.00"},{"option1":"Black","option2":"159"},{"option1":"Blue", "option2":"159"}],"options":[{"name":"Color","values":["Blue","Black"]},{"name":"Size","values":["155","159"]}],
-        # "images": [
-        #     {
-        #         "src": "https://drive.google.com/uc?export=view&id=1DomtgKHQWL2yZG3eKlnE3bVECNQJqc-P"
-        #     }
-        # ],
-        "metafields":[{"namespace":"custom","key":"oui","value":"oui","type":"single_line_text_field"}]
+        "variants":[{"option1":"Blue","option2":"155","price":"10.00"},{"option1":"Black","option2":"159"},{"option1":"Blue", "option2":"159"}],"options":[{"name":"Color","values":["Blue","Black"]},{"name":"Size","values":["155","159"]}],
+        "images": [
+            {
+                "src": "https://drive.google.com/uc?export=view&id=1DomtgKHQWL2yZG3eKlnE3bVECNQJqc-P"
+            }
+        ],
+        "metafields":[{"namespace":"custom", "key":"pierre_pr_cieuse","value": "[\"gid://shopify/Metaobject/83800850767\",\"gid://shopify/Metaobject/83795837263\",\"gid://shopify/Metaobject/83532054863\"]","type":"list.metaobject_reference"
+        }]
     }
 })
 

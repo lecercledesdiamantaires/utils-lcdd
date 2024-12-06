@@ -9,7 +9,6 @@ import os
 load_dotenv()
 
 SHOPIFY_API_KEY = os.getenv("API_KEY")
-BASE_URL = os.getenv("DATABASE_URL")
 SHOPIFU_API_PASSWORD = os.getenv("PASSWORD")
 SHOP_NAME = os.getenv("SHOP_NAME")
 API_VERSION = os.getenv("API_VERSION")
