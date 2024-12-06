@@ -25,10 +25,6 @@ def get_infos():
             infos.append(product_infos)
     return infos
 
-infos= get_infos()
-for info in infos:
-    print(info)
-
 
 
 
