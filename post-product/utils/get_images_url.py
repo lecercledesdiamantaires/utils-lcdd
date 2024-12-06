@@ -40,5 +40,3 @@ def list_files_in_folder(folder_id, prefix):
     return links
 
 
-IMAGE_URLS = list_files_in_folder(FOLDER_ID, str(1))
-print(json.dumps(IMAGE_URLS, indent=2))

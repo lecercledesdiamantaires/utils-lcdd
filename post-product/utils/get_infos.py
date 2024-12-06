@@ -2,6 +2,7 @@ import csv;
 
 def get_infos():
     infos = []
+    products_list = []
     with open(f'./post-product/info-product.csv', 'r', encoding='utf-8') as fichier_csv:
         reader = csv.DictReader(fichier_csv)
         for row in reader:
@@ -23,6 +24,10 @@ def get_infos():
                 'online': row['en_ligne']
             }
             infos.append(product_infos)
+
+            
+
+
     return infos
 
 
