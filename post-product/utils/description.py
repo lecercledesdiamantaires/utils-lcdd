@@ -1,6 +1,6 @@
 def check_first_p(first_p, product_type, primal_stone_name) :
     if not first_p  :
-        return f"<p>Découvre notre {product_type} en Or avec {primal_stone_name}</p>"
+        return f"<p>Découvrez notre {product_type} en Or avec {primal_stone_name}</p>"
     else :
         return f"<p>{first_p}</p>"
 
