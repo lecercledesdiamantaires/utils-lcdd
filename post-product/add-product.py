@@ -8,6 +8,8 @@ from google.auth.transport.requests import Request
 from google.oauth2.service_account import Credentials
 
 
+
+
 load_dotenv()
 
 SHOPIFY_API_KEY = os.getenv("API_KEY")
