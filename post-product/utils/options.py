@@ -1,18 +1,15 @@
 from get_infos import get_infos
 
-colors= {
-    "name" : "Couleur de l'or",
-    "values" : ["Rose gold","Gold","White gold"]
-}
-
-carats ={
-    "name": "Caratage de l'or",
-    "values": ["14", "18"]
-}
-
-
-def create_options(colors, carats):
+def create_options():
     infos = get_infos()
+    colors= {
+        "name" : "Couleur de l'or",
+        "values" : ["Rose gold","Gold","White gold"]
+    }
+    carats ={
+        "name": "Caratage de l'or",
+        "values": ["14", "18"]
+    }
     options = []
     for info in infos:
         if info['product_type'] == 'Bague':
@@ -29,7 +26,5 @@ def create_options(colors, carats):
             options.append(size)
         options.append(colors)
         options.append(carats)
+        print('produit' + info['product_type'])
     return options
-
-        
-create_options(colors, carats)
