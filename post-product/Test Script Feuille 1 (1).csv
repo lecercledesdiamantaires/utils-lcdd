@@ -1,3 +1,70 @@
-id,titre,type de produit,poid total du bijoux,pierre principale ,forme pierre principale ,couleur pierre principale ,carat pierre principale,nombre de pierres,nom pierre d'ornements,couleur pierre d'ornements,caratage pierre d'ornement,prix ,description,en ligne
+Image,id,titre,type de produit,poid total du bijoux,pierre principale ,forme pierre principale ,couleur pierre principale ,carat pierre principale,nombre de pierres,nom pierre d'ornements,couleur pierre d'ornements,caratage pierre d'ornement,prix ,description,en ligne
 
-64, Bague diamant jaune - Aélia,Bague,7.1,Diamant,Rond ,Blanc,1,18,1,Jaune,1,8750,,FALSE
+,64, Bague diamant jaune - Aélia,Bague,7.1,Diamant,Rond ,Blanc,1,18,1,Jaune,1,8750,,FALSE
+,65,Bague diamant jaune - Lysandra,Bague,"6,5",Diamant,Rond et carre,Blanc,"0,6",75,Diamant,Jaune,"1,3",5750,,FALSE
+,66,Bague saphire bleu - Cléa,Bague,"7,2",Diamant,Ovale et rond ,Blanc,"1,6",34,Saphir,Bleu,"2,75",6900,,FALSE
+,67,Bague saphir bleu - Isaline,Bague,"7,6",Diamant,Ovale et rond ,Blanc,"0,95",,Saphir,Bleu,"2,2",6900,,FALSE
+,68,Bague saphire bleu - Saphira ,Bague,"9,1",Diamant,Ovale et rond ,Blanc,"0,95",6,Saphir,Bleu,"6,15",9300,,FALSE
+,69,Bague rubis - Elaya,Bague,"4,1",Diamant,Rond,Blanc,"0,45",36,Rubis,Rouge,"1,2",2850,,FALSE
+,70,Bague rubis - Orphée,Bague,"7,1",Diamant,ovale  ,Blanc,"0,6",6,Rubis,Bleu,"0,6",4950,,FALSE
+,71,Bague tourmaline - Naïa,Bague,"4,9",Diamant,Rond ,Blanc,"0,8",10,Tourmaline,Bleu,"1,8",5100,,FALSE
+,72,Bague émeraude verte - ,Bague,"7,6",Diamant,Ovale,Blanc,"2,45",18,Émeraude,Vert,"1,8",4350,,FALSE
+,73,Bague en diamant blanc - Élénor,Bague,"5,8",Diamant,Rond ,Blanc,"0,95",18,Diamant,Blanc,"0,95",3950,,FALSE
+,74,Bague en Péridot vert - Céleste,Bague,"6,9",Diamant,Poire,Blanc,"1,06",33,Péridot,Vert,"3,2",4800,,FALSE
+,75,Bague en diamant blanc - Ariane,Bague,"6,6",Diamant,,Blanc,"0,6",44,Diamant,Blanc,2,11800,,FALSE
+,76,Bague en émeraude verte - Esmée,Bague,"6,6",Diamant,,Blanc,"0,3",6,Émeraude,Vert,"2,95",4850,,FALSE
+,77,Bague en émeraude verte - Serena,Bague,"6,6",Diamant,,Blanc,"0,8",20,Émeraude,Vert,"2,15",4450,,FALSE
+,78,Bague en émeraude verte - Daphné,Bague,"5,8",Diamant,,Blanc,"0,95",,Émeraude,Vert,"2,85",4650,,FALSE
+,79,Bague en saphir bleu - Isolde,Bague,"9,15",Diamant,,Blanc,"2,95",54,Saphir,Bleu,"2,8",8100,,FALSE
+,80,Bague en Diamant jaune - Clémence,Bague,"14,6",Diamant,,Blanc,"0,95",56,"Diamant, Jaune",Jaune,"10,8",9800,,FALSE
+,81,Bague en saphir bleu - Mathilde,Bague,"16,3",Diamant,,Blanc,"0,65",40,Saphir,Bleu,"11,2",10800,,FALSE
+,82,Bague en rubis rouge - Alizée,Bague,"8,8",Diamant,,Blanc,"1,7",40,Rubis,Rouge,"0,8",7400,,FALSE
+,83,Bague en saphir bleu - Élise,Bague,"8,3",Diamant,Rond,Blanc,"2,6","3,1",Saphir,Bleu,"3,1",4820,,FALSE
+,84,Bague Rubis - Flora,Bague,"4,6",Diamant,Rond ,Blanc,"1,45",66,Rubis,Rouge,"0,15",3900,,FALSE
+,85,Bague diamant - Rosea,Bague,"7,8",Diamant,Rond,Blanc,"2,45",112,Diamant,Blanc,"2,45",6800,,FALSE
+,86,Bague diamant - Mélisandre ,Bague,"10,8",Diamant,Rond et Baguette ,Gvs1,"2,28",165,Diamant,Blanc,"2,28",9400,,FALSE
+,87,Bague diamant - Camélia,Bague,"7,8",Diamant,Rond ,Gvs1,"1,28",68,Diamant,Blanc,"1,28",4350,,FALSE
+,88,Bague en Perle ,Bague,"14,6",Diamant,Rond,Gvs1,"0,38",7,Perle,Blanc,,7200,,FALSE
+,89,Bague émeraude verte - Naya,Bague,"9,8",Diamant,Rond ,Gvs1,"1,35",30,Émeraude,Vert,"3,6",9400,,FALSE
+,90,Bague émeraude verte - Mia,Bague,"8,9",Diamant,Rond ,Gvs1,"0,8",42,Émeraude,Vert,"3,15",7900,,FALSE
+,91,Bague coeur Diamant - Lina,Bague,"6,9",Diamant,Rond ,Gvs1,"0,6","1,12",Diamant,Blanc,"1,12",4950,,FALSE
+,92,Bague Tanzanite - Elie,Bague,"6,1",Diamant,Rond,Gvs1,"1,65",55,Tanzanite,Bleu,"3,93",6800,,FALSE
+,93,Bague aigmarine - Clea,Bague,"6,7",Diamant,Rond ,Gvs1,"0,8",20,aigmarine,Bleu,"3,3",6700,,FALSE
+,94,Bague aigmarine - Yara,Bague,"7,4",Diamant,Rond,Gvs1,"1,28",40,aigmarine,Bleu,"4,15",6200,,FALSE
+,95,Bague aigmarine - Eléonore,Bague,"6,7",Diamant,Rond,Gvs1,"0,8",18,aigmarine,Bleu,"1,6",5400,,FALSE
+,96,Bague saphir - Charlotte,Bague,"8,8",Diamant,Rond,Gvs1,"1,7",34,Saphir,Rose,"5,12",9800,,FALSE
+,97,Bague saphir - Margaux ,Bague,"6,3",Diamant,Rond,Gvs1,"0,8",24,Saphir,Jaune,"3,9",4800,,FALSE
+,98,Bague diamant - Cécile,Bague,"6,9",Diamant,Rond,Gvs1,"1,4",29,Diamant,Blanc,"1,6",8900,,FALSE
+,99,Bague diamant - Juliette ,Bague,"5,3",Diamant,Rond ,Gvs1,,35,Diamant,Blanc,1,6300,,FALSE
+,100,Bague Rubelite - Amandine,Bague,"4,6",Diamant,Rond ,Gvs1,"0,8",36,Rubellite,Rouge,"2,1",3800,,FALSE
+,101,Bague saphir rouge - Sophie,Bague,"5,3",Diamant,Rond,Gvs1,"0,65",12,Saphir,Rouge,"0,65",6800,,FALSE
+,102,Bague saphir et diamant - Victoire,Bague,"4,8",Saphir,Baguette ,Gvs1,"0,7",14,Diamant,Blanc,"0,3",3800,,FALSE
+,103,Bague saphir - Aylin,Bague,"4,2",Saphir,Rond ,Gvs1,"0,6","1,58",Saphir,Rose,"1,58",4800,,FALSE
+,104,Bague saphir - Zora,Bague,"4,6",Diamant,Rond,Gvs1,"0,8","2,95",Saphir,"Blanc, Orange","2,95",5400,,FALSE
+,105,Bague émeraude verte - Néva,Bague,"3,2",Diamant,Rond,Gvs1,"0,22",14,Émeraude,Vert,"0,4",3200,,FALSE
+,106,Bague émeraude - Elowen ,Bague,"6,12",Diamant,Rond,Gvs1,"1,22",,Émeraude,"Bleu, Vert","1,15",7800,,FALSE
+,107,Bague Diamant - Sienna,Bague,"3,8",Diamant,Rond ,Gvs1,"0,6",,,,,3200,,FALSE
+,108,Bague émeraude - Kaila,Bague,"4,8",Diamant,Rond,Gvs1,"0,95",,Émeraude,Vert,"3,6",5800,,FALSE
+,109,Bague émeraude - Lila,Bague,"6,12",Diamant,Rond ,Gvs1,"1,6",,Émeraude,Vert,"6,8",6300,,FALSE
+,110,Bague diamant - Prunelle,Bague,"4,3",Diamant,Rond,Gvs1,"0,8",,Diamant,Blanc,"0,2",3050,,FALSE
+,111,Bague diamant - Althéa ,Bague,"3,65",Diamant,Rond,Gvs1,"0,8",,Diamant,Blanc,"0,8",2600,,FALSE
+,112,Bague diamant - Marjolaine,Bague,"6,8",Diamant,Rond,Gvs1,"1,2",,Diamant,Blanc,"0,6",6200,,FALSE
+,113,Bague diamant - Anéomie,Bague,"7,12",Diamant,Rond,Gvs1,"0,6",,Diamant,Blanc,"1,7",5800,,FALSE
+,114,Bague rubis - Léa ,Bague,"14,3",Diamant,Rond,Gvs1,"1,7",,Rubis,Rouge,"0,8",6300,,FALSE
+,115,Bague diamant - Tess,Bague,"15,3",Diamant,Rond,Gvs1,"1,25",,Diamant,Blanc,"1,7",8600,,FALSE
+,116,Bague Tourmaline - Zoé,Bague,"6,3",Diamant,Rond,Gvs1,"0,5",,Tourmaline,Rose,"3,8",3950,,FALSE
+,117,Bague éméraude - Nina,Bague,"5,9",Diamant,Rond,Gvs1,"1,65",,Émeraude,Vert,"3,8",5150,,FALSE
+,118,Bague émeraude - Clio,Bague,"3,48",Diamant,,Gvs1,"0,3",,Émeraude,Vert,"2,6",3100,,FALSE
+,119,Bague émeraude - Amy,Bague,"2,8",Émeraude,,Vert,"0,55",,,,,2950,,FALSE
+,121,Bague diamant - Jade,Bague,"3,1",Diamant,Rond,Gvs1,,,,,,,,FALSE
+,122,Bague Rubis - Isa,Bague,"3,6",Rubis,,Rouge,"1,15",,Diamant,Blanc,"0,6",2950,,FALSE
+,123,Bague Rubis - Alba,Bague,"3,6",Diamant,Baguette,Blanc,"0,95",,Rubis,Rouge,"2,6",2650,,FALSE
+,124,Bague spessartite - Maelle,Bague,"3,6",Diamant,Baguette,Blanc,"0,2",,,Rouge,"2,95",3150,,FALSE
+,125,Bague améthyste - Isis,Bague,"12,1",,,,,,Améthyste,Violet,"11,6",3950,,FALSE
+,127,Bague améthyste - Lyvia,Bague,"3,8",Quartz,,Blanc,"0,6",,Améthyste,Violet,"0,6",2980,,FALSE
+,128,Bague Saphir - Solène,Bague,"3,8",Diamant,,Blanc,"0,8",,Saphir,Bleu,"0,8",3400,,FALSE
+,129,Bgaue saphir - Iris,Bague,"17,1",Diamant,,Blanc,"1,7",,Saphir,Bleu,"2,95",9100,,FALSE
+,130,Bague topaze - Melina,Bague,"5,7",Diamant,Rond,Blanc,"0,8",,Topaze,Bleu,"5,8",4100,,FALSE
+,131,Bague Citrine - Nais,Bague,"12,15",Diamant,Rond,Blanc,"0,9",,Citrine,Jaune,"21,15",5800,,FALSE
+,132,Bague Tourmaline - Tiana,Bague,"6,18",Diamant,Rond,Blanc,"1,15",,Tourmaline,Bleu,"0,9",4200,,FALSE
+,133,Bague Emeraude - Elvire,Bague,"6,6",Diamant,Rond,Blanc,1,,Émeraude,Vert,"3,28",4800,,FALSE

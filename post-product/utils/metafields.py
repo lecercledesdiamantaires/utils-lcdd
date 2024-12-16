@@ -101,7 +101,10 @@ def load_products():
         else:
             break
 
-#load_products()
+def enlever_doublons(liste):
+    # Utiliser un set pour supprimer les doublons et conserver l'ordre d'origine
+    liste_sans_doublons = list(dict.fromkeys(liste))
+    return liste_sans_doublons
 
 def find_products_by_type(product_type):
     """
@@ -143,7 +146,7 @@ def get_stone(primal_stone, secondary_stone):
     Gestion de la casse pour éviter les problèmes avec majuscules/minuscules.
     """
     # Transformer la chaîne secondary_stone en liste avec séparation par tirets et tout en minuscule
-    secondary_stone_list = [stone.lower() for stone in secondary_stone.split('-')]
+    secondary_stone_list = [stone.lower() for stone in secondary_stone.split(', ')]
     
     # Liste pour stocker les IDs
     stone_ids = []
@@ -164,7 +167,7 @@ def get_color(primal_color, secondary_color):
     Gestion de la casse pour éviter les problèmes avec majuscules/minuscules.
     """
     # Transformer la chaîne secondary_color en liste avec séparation par tirets et tout en minuscule
-    secondary_color_list = [color.lower() for color in secondary_color.split('-')]
+    secondary_color_list = [color.lower() for color in secondary_color.split(', ')]
     
     # Liste pour stocker les IDs
     color_ids = []
@@ -190,8 +193,8 @@ def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_
     """
     load_products()
 
-    stone_ids = get_stone(primal_stone, secondary_stone)
-    color_ids = get_color(color, secondary_color)
+    stone_ids = enlever_doublons(get_stone(primal_stone, secondary_stone))
+    color_ids = enlever_doublons(get_color(color, secondary_color))
     gold_color = get_gold_color()
     related_products = get_related_products(product_type)
 
