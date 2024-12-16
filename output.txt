@@ -3,7 +3,7 @@
     "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carat)</li>\n            \n    <li><strong>Pierre secondaire</strong> : Diamant, Saphir (1.4 carat)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Blanc, Bleu</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
     "vendor": "Le Cercle des Diamantaires",
     "product_type": "Collier",
-    "tags": "Collier, Diamant, Diamant, saphir, Or blanc, Or jaune, Or rose.",
+    "tags": "Collier, Diamant, Diamant, saphir, Or blanc, Or jaune, Or rose",
     "images": [
         {
             "src": "https://drive.google.com/uc?id=1X5WqH2jskrbBaPOYKwcRSLaWwjby0Dr4"
@@ -13,48 +13,78 @@
         {
             "option1": "Rose gold",
             "option2": "14",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "7437.5",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
         {
             "option1": "Rose gold",
             "option2": "18",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "8750",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
         {
             "option1": "Gold",
             "option2": "14",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "7437.5",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
         {
             "option1": "Gold",
             "option2": "18",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "8750",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
         {
             "option1": "White gold",
             "option2": "14",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "7437.5",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
         {
             "option1": "White gold",
             "option2": "18",
+            "option3": "null",
+            "inventory_policy": "continue",
+            "barcode": "",
+            "inventory_management": "shopify",
             "price": "8750",
-            "weight": "7,1",
+            "weight": 7.1,
+            "weight_unit": "g",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         }
@@ -98,7 +128,7 @@
         {
             "namespace": "related_products",
             "key": "product_list",
-            "value": "[\"gid://shopify/Product/14994697617743\",\"gid://shopify/Product/9473805648207\"]",
+            "value": "[\"gid://shopify/Product/9473871413583\",\"gid://shopify/Product/14994697322831\"]",
             "value_type": "list.product_reference"
         }
     ]
