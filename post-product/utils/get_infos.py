@@ -29,6 +29,7 @@ def get_infos():
         for row in reader:
             if row['en_ligne'] == "TRUE":
                 continue
+
             product_infos = {
                 'id': row['id'],
                 'title': row['titre'], 
@@ -101,10 +102,8 @@ def get_infos():
                     'metafields': metafields,    
                 }     
             }
-
             # print(products)
             product_infos['online'] = 'TRUE'
-
             add_product(data)
             
             with open("output.txt", "w", encoding="utf-8") as fichier:
