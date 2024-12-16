@@ -1,7 +1,6 @@
 import csv;
 import json;
 import os
-import requests
 from options import create_options
 from check_product_type import check_product_type
 from tags import create_tags
@@ -11,6 +10,7 @@ from check_product_type import check_product_type
 from get_images_url import get_images_url
 from variants import create_variants
 from metafields import get_metafield
+from add_product import add_product
 
 API_KEY = os.getenv("API_KEY")
 PASSWORD = os.getenv("PASSWORD")
@@ -67,34 +67,44 @@ def get_infos():
                 product_infos['ornamental_stone']
                 )
             images_url = get_images_url(FOLDER_ID, product_infos['id'])
+
             metafields = get_metafield(
                 product_infos['product_type'],
                 product_infos['main_stone'],
                 product_infos['ornamental_stone'],
                 product_infos['main_stone_color'],
                 product_infos['ornamental_stone_color']
-                )
+            )
+
             variants = create_variants(
                 product_infos['price'],
                 product_infos['product_type'],
                 product_infos['total_weight_of_jewelry']
-                )
+            )
+
             options = create_options(
                 product_infos['product_type']
-                )
-            data = {
-                'title': title_main(product_infos['title']),
-                'body_html': description,
-                'vendor': 'Le Cercle des Diamantaires',
-                'product_type': product_infos['product_type'],
-                'tags': tags,
-                'images': images_url,
-                'variants': variants,
-                'options': options,
-                'metafields': metafields,
+            )
+            
+            data = { 
+                 "product" : {
+                    'title': title_main(product_infos['title']),
+                    'body_html': description,
+                    'vendor': 'Le Cercle des Diamantaires',
+                    'product_type': product_infos['product_type'],
+                    'tags': tags,
+                    'images': images_url,
+                    'variants': variants,
+                    'options': options,
+                    'metafields': metafields,    
+                }     
             }
 
-        print(data)
+            # print(products)
+
+            add_product(data)
+
+       
 
             # url = f"{BASE_URL}/admin/api/{API_VERSION}/products.json"
             # response = requests.post(url, json=data)
@@ -103,6 +113,8 @@ def get_infos():
         json.dump(data, fichier, indent=4, ensure_ascii=False)
 
 get_infos()
+
+
 
 
 
