@@ -56,7 +56,8 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/83795804495\"", "stone": "Aigue-Marine" },
     { "id": "\"gid://shopify/Metaobject/83795214671\"", "stone": "Morganite" },
     { "id": "\"gid://shopify/Metaobject/83532054863\"", "stone": "Rubis" },
-    { "id": "\"gid://shopify/Metaobject/292354818383\"", "stone": "Spessarite"}
+    { "id": "\"gid://shopify/Metaobject/292354818383\"", "stone": "Spessarite"},
+    { "id": "\"gid://shopify/Metaobject/292394041679\"", "stone": "Tsavorite"}
 ]
 
 color_metafields = [

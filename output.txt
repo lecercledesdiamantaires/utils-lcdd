@@ -1,10 +1,10 @@
 {
     "product": {
         "title": "Bague diamant jaune - Aélia",
-        "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carat)</li>\n            \n    <li><strong>Pierre secondaire</strong> : Diamant (1.4 carat)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Bleu</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
+        "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carat)</li>\n            \n    <li><strong>Pierres secondaires</strong> : Diamant (1.4 carat), Saphir (1.5 carat)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Bleu, Rouge</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
         "vendor": "Le Cercle des Diamantaires",
         "product_type": "Collier",
-        "tags": "Collier, Diamant, Diamant, Or blanc, Or jaune, Or rose",
+        "tags": "Collier, Diamant, Diamant, saphir, Or blanc, Or jaune, Or rose",
         "images": [],
         "variants": [
             {
@@ -107,13 +107,13 @@
             {
                 "namespace": "custom",
                 "key": "pierre_pr_cieuse",
-                "value": "[\"gid://shopify/Metaobject/83795837263\"]",
+                "value": "[\"gid://shopify/Metaobject/83800850767\",\"gid://shopify/Metaobject/83795837263\"]",
                 "type": "list.metaobject_reference"
             },
             {
                 "namespace": "custom",
                 "key": "couleur_de_la_pierre",
-                "value": "[\"gid://shopify/Metaobject/85293171023\",\"gid://shopify/Metaobject/85150695759\"]",
+                "value": "[\"gid://shopify/Metaobject/85293171023\",\"gid://shopify/Metaobject/85150695759\",\"gid://shopify/Metaobject/84516766031\"]",
                 "type": "list.metaobject_reference"
             },
             {
@@ -125,7 +125,7 @@
             {
                 "namespace": "related_products",
                 "key": "product_list",
-                "value": "[\"gid://shopify/Product/14994887704911\",\"gid://shopify/Product/9473871413583\"]",
+                "value": "[\"gid://shopify/Product/9473883701583\",\"gid://shopify/Product/9473917190479\"]",
                 "value_type": "list.product_reference"
             }
         ]
