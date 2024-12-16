@@ -1,14 +1,25 @@
 import csv;
+import json;
+import os
+import requests
 from options import create_options
 from check_product_type import check_product_type
-from tags import tags
+from tags import create_tags
 from description import main as description_main
 from title import main as title_main
 from check_product_type import check_product_type
-from price import get_price 
 from get_images_url import get_images_url
 from variants import create_variants
-from metafield import get_metafield
+from metafields import get_metafield
+
+API_KEY = os.getenv("API_KEY")
+PASSWORD = os.getenv("PASSWORD")
+SHOP_NAME = os.getenv("SHOP_NAME")
+API_VERSION = os.getenv("API_VERSION")
+LIMIT = os.getenv("LIMIT")
+FALSE_URL = os.getenv("FALSE_URL")
+SHOPIFY_STORE = os.getenv("SHOP_URL")
+BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 
 FOLDER_ID = '1TE90qtOXN1qqaPpNPyf81aTeJvVd9Zm3'  # ID du dossier contenant les images
 
@@ -30,11 +41,13 @@ def get_infos():
                 'ornamental_stone_color': row["couleur_pierre_d_ornements"],
                 'ornamental_stone_carat': row["caratage_pierre_d_ornement"],
                 'price': row['prix'], 
-                'product_name': row['nom_produit'],
                 'description': row['description'],
                 'online': row['en_ligne']
             }
-            check_product_type(product_infos['product_type'])
+            check_product_type(
+                product_infos['id'],
+                product_infos['product_type']
+                )
             description = description_main(
                     product_infos['total_weight_of_jewelry'],
                     product_infos['main_stone'],
@@ -48,7 +61,7 @@ def get_infos():
                     product_infos['ornamental_stone_color'],
                     product_infos['description']
                 )
-            tags = tags(
+            tags = create_tags(
                 product_infos['product_type'], 
                 product_infos['main_stone'], 
                 product_infos['ornamental_stone']
@@ -61,18 +74,33 @@ def get_infos():
                 product_infos['main_stone_color'],
                 product_infos['ornamental_stone_color']
                 )
+            variants = create_variants(
+                product_infos['price'],
+                product_infos['product_type'],
+                product_infos['total_weight_of_jewelry']
+                )
+            options = create_options(
+                product_infos['product_type']
+                )
             data = {
-                'id' : product_infos['id'],
                 'title': title_main(product_infos['title']),
                 'body_html': description,
                 'vendor': 'Le Cercle des Diamantaires',
                 'product_type': product_infos['product_type'],
                 'tags': tags,
                 'images': images_url,
-                
-                'metafileds': metafields,
-
+                'variants': variants,
+                'options': options,
+                'metafields': metafields,
             }
+
+            # url = f"{BASE_URL}/admin/api/{API_VERSION}/products.json"
+            # response = requests.post(url, json=data)
+            # print(response.raise_for_status())
+    with open("output.txt", "w", encoding="utf-8") as fichier:
+        json.dump(data, fichier, indent=4, ensure_ascii=False)
+
+get_infos()
 
 
 

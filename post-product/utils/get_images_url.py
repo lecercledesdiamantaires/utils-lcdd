@@ -39,8 +39,5 @@ def get_images_url(folder_id, prefix):
     # Convertir les liens en objets {src: link}
     links = [{"src": link} for _, link in files_data_sorted]
     return links
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes

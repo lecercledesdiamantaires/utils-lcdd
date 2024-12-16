@@ -46,15 +46,14 @@ def write_description(product_info, first_p) :
         <h4>Caractéristiques du produit</h4>
         <!--short-description-->
         <ul>
-            <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if product_info['weight'] <1 else "grammes"}</li>
+            <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if float(product_info['weight']) <1 else "grammes"}</li>
             <li><strong>Matériau </strong>: Or</li>
-            <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 1 else "carats"})</li>
+            <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if float(product_info['primal_stone']['carat']) < 1 else "carats"})</li>
             {write_secondary_stone(product_info['secondary_stone'])}
             <li><strong>Nombre de pierres </strong>: {product_info['stone_number']}</li>
             <li><strong>Couleur principale </strong>: {product_info['main_color']}</li>
             <li><strong>Couleur secondaire </strong>: {product_info['secondary_color']}</li>
             <li><strong>Forme de la pierre </strong>: {product_info['stone_shape']}</li>
-            <li><strong>Type de serti </strong>: {product_info['serti_type']}</li>
         </ul>
         <!--end-short-description-->
     </div>
@@ -88,7 +87,6 @@ def main(
         "secondary_stone": secondary_stone,
         "stone_number": stone_number,
         "stone_shape": stone_shape,
-        "serti_type": serti_type,
         "main_color": main_color,
         "secondary_color": secondary_color
     }

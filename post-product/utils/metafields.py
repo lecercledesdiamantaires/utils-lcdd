@@ -1,7 +1,8 @@
 import os
 import requests
+import random
 from dotenv import load_dotenv
-
+ 
 load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
@@ -178,6 +179,10 @@ def get_color(primal_color, secondary_color):
 
     return color_ids
 
+def formater_liste(liste):
+    # Supprimer les guillemets internes et formater la liste
+    resultat = [element.strip('"') for element in liste]
+    return "[" + ",".join(f'"{elem}"' for elem in resultat) + "]"
 
 def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_color):
     """
@@ -190,25 +195,24 @@ def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_
     gold_color = get_gold_color()
     related_products = get_related_products(product_type)
 
-    return {
-        "metafields": [
+    return [
             {
                 "namespace": "custom",
                 "key": "pierre_pr_cieuse",
-                "value": stone_ids,
-                "value_type": "list.product_reference",
+                "value": formater_liste(stone_ids),
+                "type": "list.metaobject_reference",
             },
             {
                 "namespace": "custom",
                 "key": "couleur_de_la_pierre",
-                "value": color_ids,
-                "value_type": "list.product_reference",
+                "value": formater_liste(color_ids),
+                "type": "list.metaobject_reference",
             },
             {
                 "namespace": "custom",
                 "key": "couleur_de_l_or",
                 "value": gold_color,
-                "value_type": "list.product_reference",
+                "type": "list.metaobject_reference",
             },
             {
                 "namespace": "related_products",
@@ -217,4 +221,4 @@ def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_
                 "value_type": "list.product_reference",
             }
         ]
-    }
+    
