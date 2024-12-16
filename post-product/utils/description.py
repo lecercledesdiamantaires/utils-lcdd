@@ -4,11 +4,21 @@ def check_first_p(first_p, product_type, primal_stone_name) :
     else :
         return f"<p>{first_p}</p>"
 
+def convert_to_float(value):
+    try:
+        # Remplacer les virgules par des points
+        value = value.replace(',', '.')
+        # Convertir la chaîne en float
+        return float(value)
+    except ValueError as e:
+        print(f"Erreur de conversion : {e}")
+        return None
+
 def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
     secondary_stone = []
     if "-" in secondary_stone_name :
-        names = secondary_stone_name.split("-")
-        carats = secondary_stone_carat.split("-")
+        names = secondary_stone_name.split(", ")
+        carats = secondary_stone_carat.split(", ")
         for name, carat in zip(names, carats) :
             secondary_stone.append({
                 "name": name,
@@ -30,7 +40,7 @@ def write_secondary_stone(secondary_stones):
     if not secondary_stones:
         return ""
     
-    title = "Pierres secondaires" if len(secondary_stones) > 1 else "Pierre secondaire"
+    title = "<strong>Pierres secondaires</strong>" if len(secondary_stones) > 1 else "Pierre secondaire"
 
 
     formatted_stones = ", ".join(format_stone(stone) for stone in secondary_stones)
@@ -75,8 +85,12 @@ def main(
     secondary_color,
     first_p=None) :
 
+    weight = convert_to_float(weight)
+    carat_primal_stone = convert_to_float(carat_primal_stone)
+    carat_secondary_stone = convert_to_float(carat_secondary_stone)
     first_p = check_first_p(first_p, product_type, primal_stone_name)
     secondary_stone = check_secondary_stone(secondary_stone_name, carat_secondary_stone)
+  
     product_info = {
         "weight": weight,
         "primal_stone": 

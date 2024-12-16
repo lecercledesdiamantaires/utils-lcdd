@@ -1,9 +1,9 @@
 {
     "title": "Bague diamant jaune - Aélia",
-    "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1 carats)</li>\n            \n    <li>Pierre secondaire : Diamant (1 carats)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Jaune</li>\n            <li><strong>Forme de la pierre </strong>: Rond </li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
+    "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carats)</li>\n            \n    <li>Pierre secondaire : Diamant, Saphir (1.4 carats)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Blanc, Bleu</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
     "vendor": "Le Cercle des Diamantaires",
     "product_type": "Collier",
-    "tags": "Collier, Diamant, Diamant, Or blanc, Or jaune, Or rose.",
+    "tags": "Collier, Diamant, Diamant, saphir, Or blanc, Or jaune, Or rose.",
     "images": [
         {
             "src": "https://drive.google.com/uc?id=1X5WqH2jskrbBaPOYKwcRSLaWwjby0Dr4"
@@ -14,7 +14,7 @@
             "option1": "Rose gold",
             "option2": "14",
             "price": "7437.5",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
@@ -22,7 +22,7 @@
             "option1": "Rose gold",
             "option2": "18",
             "price": "8750",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
@@ -30,7 +30,7 @@
             "option1": "Gold",
             "option2": "14",
             "price": "7437.5",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
@@ -38,7 +38,7 @@
             "option1": "Gold",
             "option2": "18",
             "price": "8750",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
@@ -46,7 +46,7 @@
             "option1": "White gold",
             "option2": "14",
             "price": "7437.5",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         },
@@ -54,7 +54,7 @@
             "option1": "White gold",
             "option2": "18",
             "price": "8750",
-            "weight": "7.1",
+            "weight": "7,1",
             "inventory_quantity": 999,
             "old_inventory_quantity": 999
         }
@@ -80,13 +80,13 @@
         {
             "namespace": "custom",
             "key": "pierre_pr_cieuse",
-            "value": "[\"gid://shopify/Metaobject/83795837263\",\"gid://shopify/Metaobject/83795837263\"]",
+            "value": "[\"gid://shopify/Metaobject/83800850767\",\"gid://shopify/Metaobject/83795837263\"]",
             "type": "list.metaobject_reference"
         },
         {
             "namespace": "custom",
             "key": "couleur_de_la_pierre",
-            "value": "[\"gid://shopify/Metaobject/85150695759\",\"gid://shopify/Metaobject/84184858959\"]",
+            "value": "[\"gid://shopify/Metaobject/85293171023\",\"gid://shopify/Metaobject/85150695759\"]",
             "type": "list.metaobject_reference"
         },
         {
@@ -98,7 +98,7 @@
         {
             "namespace": "related_products",
             "key": "product_list",
-            "value": "[\"gid://shopify/Product/9477652316495\",\"gid://shopify/Product/9473876427087\"]",
+            "value": "[\"gid://shopify/Product/9473917190479\",\"gid://shopify/Product/9473900446031\"]",
             "value_type": "list.product_reference"
         }
     ]
