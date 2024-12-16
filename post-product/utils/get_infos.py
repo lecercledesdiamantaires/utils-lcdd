@@ -21,7 +21,7 @@ FALSE_URL = os.getenv("FALSE_URL")
 SHOPIFY_STORE = os.getenv("SHOP_URL")
 BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 
-FOLDER_ID = '1TE90qtOXN1qqaPpNPyf81aTeJvVd9Zm3'  # ID du dossier contenant les images
+FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les images
 
 def get_infos():
     with open(f'./post-product/info-product.csv', 'r', encoding='utf-8') as fichier_csv:
