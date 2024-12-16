@@ -22,7 +22,6 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/83815203151\"", "stone": "Agate" },
     { "id": "\"gid://shopify/Metaobject/83815170383\"", "stone": "Opaline" },
     { "id": "\"gid://shopify/Metaobject/83815072079\"", "stone": "Turquoise" },
-    { "id": "\"gid://shopify/Metaobject/83815039311\"", "stone": "Tanzanite" },
     { "id": "\"gid://shopify/Metaobject/83814941007\"", "stone": "Spinelle" },
     { "id": "\"gid://shopify/Metaobject/83814908239\"", "stone": "Rubellite" },
     { "id": "\"gid://shopify/Metaobject/83814875471\"", "stone": "Rhodonite" },
@@ -42,7 +41,6 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/83814220111\"", "stone": "Cornaline" },
     { "id": "\"gid://shopify/Metaobject/83814154575\"", "stone": "Calcédoine" },
     { "id": "\"gid://shopify/Metaobject/83814023503\"", "stone": "Aventurine" },
-    { "id": "\"gid://shopify/Metaobject/83813990735\"", "stone": "Améthyste" },
     { "id": "\"gid://shopify/Metaobject/83813957967\"", "stone": "Ambre" },
     { "id": "\"gid://shopify/Metaobject/83813859663\"", "stone": "Amazonite" },
     { "id": "\"gid://shopify/Metaobject/83801538895\"", "stone": "Topaze" },
@@ -57,7 +55,8 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/83795837263\"", "stone": "Diamant" },
     { "id": "\"gid://shopify/Metaobject/83795804495\"", "stone": "Aigue-Marine" },
     { "id": "\"gid://shopify/Metaobject/83795214671\"", "stone": "Morganite" },
-    { "id": "\"gid://shopify/Metaobject/83532054863\"", "stone": "Rubis" }
+    { "id": "\"gid://shopify/Metaobject/83532054863\"", "stone": "Rubis" },
+    { "id": "\"gid://shopify/Metaobject/292354818383\"", "stone": "Spessarite"}
 ]
 
 color_metafields = [

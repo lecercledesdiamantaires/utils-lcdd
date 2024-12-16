@@ -34,13 +34,13 @@ def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
 
 def write_secondary_stone(secondary_stones):
     def format_stone(stone):
-        carat_unit = "carat" if float(stone['carat']) < 1 else "carats"
+        carat_unit = "carat" if stone['carat'] < 2 else "carats"
         return f"{stone['name']} ({stone['carat']} {carat_unit})"
 
     if not secondary_stones:
         return ""
     
-    title = "<strong>Pierres secondaires</strong>" if len(secondary_stones) > 1 else "Pierre secondaire"
+    title = "<strong>Pierres secondaires</strong>" if len(secondary_stones) > 1 else "<strong>Pierre secondaire</strong>"
 
 
     formatted_stones = ", ".join(format_stone(stone) for stone in secondary_stones)
@@ -56,9 +56,9 @@ def write_description(product_info, first_p) :
         <h4>Caractéristiques du produit</h4>
         <!--short-description-->
         <ul>
-            <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if float(product_info['weight']) <1 else "grammes"}</li>
+            <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if float(product_info['weight']) < 2 else "grammes"}</li>
             <li><strong>Matériau </strong>: Or</li>
-            <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if float(product_info['primal_stone']['carat']) < 1 else "carats"})</li>
+            <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if float(product_info['primal_stone']['carat']) < 2 else "carats"})</li>
             {write_secondary_stone(product_info['secondary_stone'])}
             <li><strong>Nombre de pierres </strong>: {product_info['stone_number']}</li>
             <li><strong>Couleur principale </strong>: {product_info['main_color']}</li>
