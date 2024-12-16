@@ -46,6 +46,8 @@ def get_infos():
                 'description': row['description'],
                 'online': row['en_ligne']
             }
+            print(product_infos['ornamental_stone_color'])
+            print(product_infos['main_stone_color'])
             check_product_type(
                 product_infos['id'],
                 product_infos['product_type']

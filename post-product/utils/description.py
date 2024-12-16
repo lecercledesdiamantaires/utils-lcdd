@@ -16,7 +16,7 @@ def convert_to_float(value):
 
 def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
     secondary_stone = []
-    if "-" in secondary_stone_name :
+    if ", " in secondary_stone_name :
         names = secondary_stone_name.split(", ")
         carats = secondary_stone_carat.split(", ")
         for name, carat in zip(names, carats) :
@@ -81,24 +81,24 @@ def main(
     stone_number, 
     stone_shape, 
     product_type,
-    main_stone_color,
     main_color,
     secondary_color,
     first_p=None) :
+
+
 
     weight = convert_to_float(weight)
     carat_primal_stone = convert_to_float(carat_primal_stone)
     carat_secondary_stone = convert_to_float(carat_secondary_stone)
     first_p = check_first_p(first_p, product_type, primal_stone_name)
     secondary_stone = check_secondary_stone(secondary_stone_name, carat_secondary_stone)
-  
     product_info = {
         "weight": weight,
         "primal_stone": 
             {
                 "name" : primal_stone_name,
                 "carat" : carat_primal_stone,
-                "color" : main_stone_color
+                "color" : main_color
             },
         "secondary_stone": secondary_stone,
         "stone_number": stone_number,
