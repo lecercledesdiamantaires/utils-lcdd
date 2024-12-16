@@ -196,7 +196,7 @@ def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_
     stone_ids = enlever_doublons(get_stone(primal_stone, secondary_stone))
     color_ids = enlever_doublons(get_color(color, secondary_color))
     gold_color = get_gold_color()
-    related_products = get_relate85150695759d_products(product_type)
+    related_products = get_related_products(product_type)
 
     return [
             {
