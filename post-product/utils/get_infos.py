@@ -96,6 +96,7 @@ def get_infos():
                 'metafields': metafields,
             }
 
+            product_infos['online'] = 'TRUE'
             with open("output.txt", "w", encoding="utf-8") as fichier:
                 json.dump(data, fichier, indent=4, ensure_ascii=False)
 
