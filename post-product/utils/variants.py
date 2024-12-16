@@ -7,8 +7,8 @@ def select_price(price, product_option) :
     return str(price)
 
 
-def create_variants(price):
-    options = create_options('Bague')
+def create_variants(price, type):
+    options = create_options(type)
     variants = []
     for option1 in options[0]['values']:
         for option2 in options[1]['values']:
