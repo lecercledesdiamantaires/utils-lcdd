@@ -110,15 +110,15 @@ def find_products_by_type(product_type):
     return [product for product in all_products if product.get("product_type") == product_type]
 
 
-def select_two_random_ids():
+def select_two_random_ids(related_products):
     """
     Sélectionne deux IDs au hasard parmi les produits chargés dans `all_products`.
     """
-    if len(all_products) < 2:
+    if len(related_products) < 2:
         raise ValueError("Pas assez de produits pour sélectionner deux éléments au hasard.")
     
     # Sélectionner deux IDs au hasard
-    random_products = random.sample(all_products, 2)  
+    random_products = random.sample(related_products, 2)  
     return random_products[0]["id"], random_products[1]["id"]
 
 def get_related_products(product_type):
@@ -126,7 +126,7 @@ def get_related_products(product_type):
     Sélectionne deux produits de type "Bague" et retourne leurs IDs.
     """
     related_products = find_products_by_type(product_type)
-    id1, id2 = select_two_random_ids()
+    id1, id2 = select_two_random_ids(related_products)
 
     return f"[\"gid://shopify/Product/{id1}\",\"gid://shopify/Product/{id2}\"]"
 
