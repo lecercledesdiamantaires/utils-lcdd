@@ -27,6 +27,8 @@ def get_infos():
     with open(f'./post-product/info-product.csv', 'r', encoding='utf-8') as fichier_csv:
         reader = csv.DictReader(fichier_csv)
         for row in reader:
+            if row['en_ligne'] == "TRUE":
+                continue
             product_infos = {
                 'id': row['id'],
                 'title': row['titre'], 
@@ -94,11 +96,8 @@ def get_infos():
                 'metafields': metafields,
             }
 
-            # url = f"{BASE_URL}/admin/api/{API_VERSION}/products.json"
-            # response = requests.post(url, json=data)
-            # print(response.raise_for_status())
-    with open("output.txt", "w", encoding="utf-8") as fichier:
-        json.dump(data, fichier, indent=4, ensure_ascii=False)
+            with open("output.txt", "w", encoding="utf-8") as fichier:
+                json.dump(data, fichier, indent=4, ensure_ascii=False)
 
 get_infos()
 

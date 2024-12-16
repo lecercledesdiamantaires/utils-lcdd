@@ -1,6 +1,6 @@
 {
     "title": "Bague diamant jaune - Aélia",
-    "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carats)</li>\n            \n    <li>Pierre secondaire : Diamant, Saphir (1.4 carats)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Blanc, Bleu</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
+    "body_html": "\n    <p>Découvrez notre Collier en Or avec Diamant</p>\n    <div class=\"infos-product\">\n        <h4>Caractéristiques du produit</h4>\n        <!--short-description-->\n        <ul>\n            <li><strong>Poids </strong>: 7.1 grammes</li>\n            <li><strong>Matériau </strong>: Or</li>\n            <li><strong>Pierre principale </strong>: Diamant (1.0 carat)</li>\n            \n    <li><strong>Pierre secondaire</strong> : Diamant, Saphir (1.4 carat)</li>\n    \n            <li><strong>Nombre de pierres </strong>: 18</li>\n            <li><strong>Couleur principale </strong>: Blanc</li>\n            <li><strong>Couleur secondaire </strong>: Blanc, Bleu</li>\n            <li><strong>Forme de la pierre </strong>: Rond</li>\n        </ul>\n        <!--end-short-description-->\n    </div>\n    <br>\n    <p>Photos retouchées</p>\n    ",
     "vendor": "Le Cercle des Diamantaires",
     "product_type": "Collier",
     "tags": "Collier, Diamant, Diamant, saphir, Or blanc, Or jaune, Or rose.",
@@ -98,7 +98,7 @@
         {
             "namespace": "related_products",
             "key": "product_list",
-            "value": "[\"gid://shopify/Product/9473917190479\",\"gid://shopify/Product/9473900446031\"]",
+            "value": "[\"gid://shopify/Product/14994697617743\",\"gid://shopify/Product/9473805648207\"]",
             "value_type": "list.product_reference"
         }
     ]
