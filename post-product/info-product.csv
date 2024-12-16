@@ -1,3 +1,2 @@
-id,titre,type_de_produit,poid_total_du_bijoux,pierre_principale,forme_pierre_principale,couleur_pierre_principale,carat_pierre_principale,nombre_de_pierres,couleur_pierre_d_ornements,caratage_pierre_d_ornement,prix,nom_produit,description,en_ligne
-1,Bague en or blanc et diamant,Bague,2.5,Diamant,Brillant,Blanc,0.5,1,Blanc,0.1,5000,Bague en or blanc et diamant,Superbe bague en or blanc et diamant,True
-2,Bague en or blanc et diamant,Bracelet,2.5,Diamant,Brillant,Blanc,0.5,1,Blanc,0.1,5100,Bague en or blanc et diamant,Superbe bague en or blanc et diamant,True
+id,titre,type_de_produit,poid_total_du_bijoux,pierre_principale,forme_pierre_principale,couleur_pierre_principale,carat_pierre_principale,nombre_de_pierres,nom_pierre_d_ornements,couleur_pierre_d_ornements,caratage_pierre_d_ornement,prix,description,en_ligne
+64,Bague diamant jaune - Aélia,Collier,7.1,Diamant,Rond ,Blanc,1,18,Diamant,Jaune,1,8750,,FALSE

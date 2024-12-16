@@ -1,4 +1,3 @@
-
 def create_options(type):
     colors= {
         "name" : "Couleur de l'or",
