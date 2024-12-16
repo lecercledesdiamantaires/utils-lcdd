@@ -35,7 +35,6 @@ def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
 def write_secondary_stone(secondary_stones):
     def format_stone(stone):
         carat_unit = "carat" if stone['carat'] < 2 else "carats"
-        print(stone['carat'])
         return f"{stone['name']} ({stone['carat']} {carat_unit})"
 
     if not secondary_stones:

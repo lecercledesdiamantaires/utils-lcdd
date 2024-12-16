@@ -55,7 +55,5 @@ def create_variants(price, prodct_type, weight):
                 }
                 variants.append(variant)
     return variants
-    # print(variants)
-    # print(len(variants))
         
         
