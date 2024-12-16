@@ -1,7 +1,7 @@
-def check_first_p(first_p, product_type, primal_stone_name) :
-    if not first_p  :
+def check_first_p(first_p, product_type, primal_stone_name):
+    if not first_p:
         return f"<p>Découvrez notre {product_type} en Or avec {primal_stone_name}</p>"
-    else :
+    else:
         return f"<p>{first_p}</p>"
 
 def convert_to_float(value):
@@ -14,24 +14,24 @@ def convert_to_float(value):
         print(f"Erreur de conversion : {e}")
         return None
 
-def check_secondary_stone(secondary_stone_name, secondary_stone_carat) :
+def check_secondary_stone(secondary_stone_name, secondary_stone_carat):
     secondary_stone = []
-    if ", " in secondary_stone_name :
-        names = secondary_stone_name.split(", ")
-        carats = secondary_stone_carat.split("-")
-        for name, carat in zip(names, carats) :
-            carat = convert_to_float(carat)
+    if secondary_stone_name and secondary_stone_carat:
+        if ", " in secondary_stone_name:
+            names = secondary_stone_name.split(", ")
+            carats = secondary_stone_carat.split("-")
+            for name, carat in zip(names, carats):
+                carat = convert_to_float(carat)
+                secondary_stone.append({
+                    "name": name,
+                    "carat": carat
+                })
+        else:
             secondary_stone.append({
-                "name": name,
-                "carat": carat
+                "name": secondary_stone_name,
+                "carat": convert_to_float(secondary_stone_carat)
             })
-    else :
-        secondary_stone.append({
-            "name": secondary_stone_name,
-            "carat": secondary_stone_carat
-        })
     return secondary_stone
-
 
 def write_secondary_stone(secondary_stones):
     def format_stone(stone):
@@ -42,15 +42,13 @@ def write_secondary_stone(secondary_stones):
         return ""
     
     title = "<strong>Pierres secondaires</strong>" if len(secondary_stones) > 1 else "<strong>Pierre secondaire</strong>"
-
-
     formatted_stones = ", ".join(format_stone(stone) for stone in secondary_stones)
 
     return f"""
     <li>{title} : {formatted_stones}</li>
     """
-        
-def write_description(product_info, first_p) :
+
+def write_description(product_info, first_p):
     description = f"""
     {first_p}
     <div class="infos-product">
@@ -60,11 +58,20 @@ def write_description(product_info, first_p) :
             <li><strong>Poids </strong>: {product_info['weight']} {"gramme" if float(product_info['weight']) < 2 else "grammes"}</li>
             <li><strong>Matériau </strong>: Or</li>
             <li><strong>Pierre principale </strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if float(product_info['primal_stone']['carat']) < 2 else "carats"})</li>
-            {write_secondary_stone(product_info['secondary_stone'])}
-            <li><strong>Nombre de pierres </strong>: {product_info['stone_number']}</li>
             <li><strong>Couleur principale </strong>: {product_info['main_color']}</li>
-            <li><strong>Couleur secondaire </strong>: {product_info['secondary_color']}</li>
-            <li><strong>Forme de la pierre </strong>: {product_info['stone_shape']}</li>
+            {write_secondary_stone(product_info['secondary_stone'])}
+    """
+
+    if 'stone_number' in product_info and product_info['stone_number']:
+        description += f"<li><strong>Nombre de pierres </strong>: {product_info['stone_number']}</li>\n"
+
+    if 'secondary_color' in product_info and product_info['secondary_color']:
+        description += f"<li><strong>Couleur secondaire </strong>: {product_info['secondary_color']}</li>\n"
+
+    if 'stone_shape' in product_info and product_info['stone_shape']:
+        description += f"<li><strong>Forme de la pierre </strong>: {product_info['stone_shape']}</li>\n"
+
+    description += """
         </ul>
         <!--end-short-description-->
     </div>
@@ -84,9 +91,7 @@ def main(
     product_type,
     main_color,
     secondary_color,
-    first_p=None) :
-
-
+    first_p=None):
 
     weight = convert_to_float(weight)
     carat_primal_stone = convert_to_float(carat_primal_stone)
