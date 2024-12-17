@@ -21,7 +21,7 @@ FALSE_URL = os.getenv("FALSE_URL")
 SHOPIFY_STORE = os.getenv("SHOP_URL")
 BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 
-FOLDER_ID = '1TE90qtOXN1qqaPpNPyf81aTeJvVd9Zm3'  # ID du dossier contenant les images
+FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les images
 
 def get_infos():
     with open(f'./post-product/info-product.csv', 'r', encoding='utf-8') as fichier_csv:
@@ -29,6 +29,7 @@ def get_infos():
         for row in reader:
             if row['en_ligne'] == "TRUE":
                 continue
+
             product_infos = {
                 'id': row['id'],
                 'title': row['titre'], 
@@ -101,10 +102,8 @@ def get_infos():
                     'metafields': metafields,    
                 }     
             }
-
             # print(products)
             product_infos['online'] = 'TRUE'
-
             add_product(data)
             
             with open("output.txt", "w", encoding="utf-8") as fichier:
