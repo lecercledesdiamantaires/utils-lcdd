@@ -1316,7 +1316,7 @@
             {
                 "namespace": "related_products",
                 "key": "product_list",
-                "value": "[\"gid://shopify/Product/9462380462415\",\"gid://shopify/Product/9462403465551\"]",
+                "value": "[\"gid://shopify/Product/14834066161999\",\"gid://shopify/Product/9462379708751\"]",
                 "value_type": "list.product_reference"
             }
         ]

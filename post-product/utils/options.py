@@ -17,7 +17,7 @@ def create_options(type):
     elif type == 'Bracelet':
         size = {
             "name" : "Taille",
-            "values" : ["XXS","XS","S","M", "L","XL", "XXL"]
+            "values" : ["XXS","XS","S","M","L","XL","XXL"]
         }
         options.append(size)
     options.append(colors)
