@@ -56,7 +56,6 @@ def download_files_in_folder(folder_id):
             fields="nextPageToken, files(id, name)",
             pageToken=page_token
         ).execute()
-       
         files = results.get('files', [])
         for file in files:  
             download_link = f"https://drive.google.com/uc?id={file['id']}"
@@ -74,5 +73,6 @@ def download_files_in_folder(folder_id):
     files_data_sorted = sorted(files_data, key=lambda x: x[0])
 
     # Convertir les liens en objets {src: link}
-    links = [{"src": link} for _, link in files_data_sorted]
+    links = [link for _, link in files_data_sorted]
     return links
+

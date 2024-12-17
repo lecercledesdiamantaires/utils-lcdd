@@ -11,6 +11,7 @@ from get_images_url import get_images_url
 from variants import create_variants
 from metafields import get_metafield
 from add_product import add_product
+from post_image import post_image
 
 API_KEY = os.getenv("API_KEY")
 PASSWORD = os.getenv("PASSWORD")
@@ -90,24 +91,29 @@ def get_infos():
             )
             
             data = { 
-                 "product" : {
+                "product" : {
                     'title': title_main(product_infos['title']),
                     'body_html': description,
                     'vendor': 'Le Cercle des Diamantaires',
                     'product_type': product_infos['product_type'],
                     'tags': tags,
-                    'images': images_url,
                     'variants': variants,
                     'options': options,
                     'metafields': metafields,    
                 }     
             }
-            # print(products)
+
             product_infos['online'] = 'TRUE'
-            add_product(data)
+            product = add_product(data)
+            product_id = product["product"]["id"]
+            print(images_url)
+            for image in images_url :
+                post_image(product_id, image)
+
+
             
-            with open("output.txt", "w", encoding="utf-8") as fichier:
-                json.dump(data, fichier, indent=4, ensure_ascii=False)
+            # with open("output.txt", "w", encoding="utf-8") as fichier:
+            #     json.dump(data, fichier, indent=4, ensure_ascii=False)
 
 get_infos()
 
