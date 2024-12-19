@@ -13,7 +13,6 @@ def get_images_url(folder_id, prefix):
     subfolder_id = get_subfolder_id_by_name(folder_id, prefix)
 
     if subfolder_id:
-        print(f"Subfolder ID: {subfolder_id}")
         links = download_files_in_folder(subfolder_id)
         return links
     else:
@@ -61,9 +60,7 @@ def download_files_in_folder(folder_id):
             download_link = f"https://drive.google.com/uc?id={file['id']}"
             files_data.append((file['name'], download_link))
             response = requests.get(download_link)
-            if response.status_code == 200:
-                print(f"Downloaded {file['name']}")
-            else:
+            if response.status_code != 200:
                 print(f"Failed to download {file['name']}")
 
         page_token = results.get('nextPageToken', None)
