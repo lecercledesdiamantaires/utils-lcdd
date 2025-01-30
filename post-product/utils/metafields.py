@@ -21,7 +21,7 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/85096694095\"", "stone": "Corail" },
     { "id": "\"gid://shopify/Metaobject/83815203151\"", "stone": "Agate" },
     { "id": "\"gid://shopify/Metaobject/83815170383\"", "stone": "Opaline" },
-    { "id": "\"gid://shopify/Metaobject/83815072079\"", "stone": "Turquoise" },
+    { "id": "\"gid://shopify/Metaobject/83815170383\"", "stone": "Turquoise" },
     { "id": "\"gid://shopify/Metaobject/83814941007\"", "stone": "Spinelle" },
     { "id": "\"gid://shopify/Metaobject/83814908239\"", "stone": "Rubellite" },
     { "id": "\"gid://shopify/Metaobject/83814875471\"", "stone": "Rhodonite" },
@@ -64,14 +64,14 @@ color_metafields = [
     { "id": "\"gid://shopify/Metaobject/85293171023\"", "color": "bleu" },
     { "id": "\"gid://shopify/Metaobject/85289992527\"", "color": "vert" },
     { "id": "\"gid://shopify/Metaobject/85161443663\"", "color": "violet" },
-    { "id": "\"gid://shopify/Metaobject/85150695759\"", "color": "blanc" },
-    { "id": "\"gid://shopify/Metaobject/84516766031\"", "color": "rouge" },
+    { "id": "\"gid://shopify/Metaobject/83803111759\"", "color": "blanc" },
+    { "id": "\"gid://shopify/Metaobject/85293695311\"", "color": "rouge" },
     { "id": "\"gid://shopify/Metaobject/84184858959\"", "color": "jaune" },
     { "id": "\"gid://shopify/Metaobject/83803308367\"", "color": "rose" },
-    { "id": "\"gid://shopify/Metaobject/85106164047\"", "color": "noir" },
+    { "id": "\"gid://shopify/Metaobject/299818778959\"", "color": "noir" },
     { "id": "\"gid://shopify/Metaobject/85294874959\"", "color": "multicolore" },
     { "id": "\"gid://shopify/Metaobject/85298184527\"", "color": "orange" },
-    { "id": "\"gid://shopify/Metaobject/284543320399\"", "color": "argent" }
+    { "id": "\"gid://shopify/Metaobject/301276856655\"", "color": "argent" }
 ]
 
 

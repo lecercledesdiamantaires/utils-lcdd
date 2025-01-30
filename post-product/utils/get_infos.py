@@ -1,6 +1,8 @@
 import csv;
 import json;
 import os
+import logging
+
 from options import create_options
 from check_product_type import check_product_type
 from tags import create_tags
@@ -12,6 +14,9 @@ from variants import create_variants
 from metafields import get_metafield
 from add_product import add_product
 from post_image import post_image
+
+logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 API_KEY = os.getenv("API_KEY")
 PASSWORD = os.getenv("PASSWORD")
@@ -33,7 +38,7 @@ def get_infos():
         if row['en_ligne'] == "TRUE":
             continue
 
-        print(f"Processing product ID: {row['id']}")
+        logging.info(f"Processing product ID: {row['id']}")
 
 
         product_infos = {
@@ -106,12 +111,12 @@ def get_infos():
                 'metafields': metafields,    
             }     
         }
-
         product = add_product(data)
         product_id = product["product"]["id"]
+        logging.info(f"Product added with ID: {product['product']['id']}")
         for image in images_url :
             post_image(product_id, image, product_infos['title'])
-        print(f"Finished processing product ID: {row['id']}")
+        logging.info(f"Finished processing product ID: {product_infos['id']}")
         row['en_ligne'] = 'TRUE'  
 
     with open(f'./post-product/info-product.csv', 'w', encoding='utf-8', newline='') as fichier_csv:
