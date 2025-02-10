@@ -34,5 +34,5 @@ def post_image(product_id, src, title, retries=5, delay=10):
             if attempt < retries - 1:
                 time.sleep(delay)
             else:
-                loggin.error("Max retries reached. Failed to post image.")
+                logging.error("Max retries reached. Failed to post image.")
                 return None

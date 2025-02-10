@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-import os
 import requests
 
 load_dotenv()
@@ -20,5 +19,4 @@ BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 def add_product(data):
     url = f"{BASE_URL}/admin/api/{API_VERSION}/products.json"
     response = requests.post(url, json=data)
-    print(response.raise_for_status())
     return response.json()

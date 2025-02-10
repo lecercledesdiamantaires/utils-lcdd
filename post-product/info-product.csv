@@ -1,5 +1,68 @@
 id,titre,type_de_produit,poid_total_du_bijoux,pierre_principale,forme_pierre_principale,couleur_pierre_principale,carat_pierre_principale,nombre_de_pierres,nom_pierre_d_ornements,couleur_pierre_d_ornements,caratage_pierre_d_ornement,prix,description,en_ligne
-66,Bague diamant jaune - Aélia,Bague,7.1,Diamant,Rond,Jaune,1,18,Diamant,"Jaune, Blanc","1,15",8750,,TRUE
+3,Bague Diamant - Éclat Infini,Bague,3,Diamant,Ronde,Blanc,"0,5",,Diamant,Blanc,"0,4",4100,,TRUE
+4,Bague Diamant - Royale,Bague,3.5,Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,4",6200,,TRUE
+5,Bague Diamant - Poire,Bague,3.5,Diamant,Poire ,Blanc,1,,Diamant,Blanc,"0,7",7100,,TRUE
+6,Bague Diamant - Solsad,Bague,3,Diamant,Ronde,Blanc,"0,5",,Diamant,Blanc,"0,4",4600,,TRUE
+7,Bague Tourmaline - Virginnie ,Bague,3.5,Tourmaline,Ronde,Rose,"0,3",,Diamant,Blanc,"0,3",2900,,TRUE
+8,Bague Rubis - Sarah,Bague,5,Rubis,Ronde,Rose,"0,4",,Diamant,Blanc,"1,4",4200,,TRUE
+9,Bague Rubis - Lune rouge,Bague,4,Rubis,Ronde,Rose,"1,2",,Diamant,Blanc,"0,6",4100,,TRUE
+10,Bague Tanzanite - Rêve Bleu,Bague,4.5,Tanzanite,Ronde,Bleu,"0,15",,Diamant,Blanc,"0,5",3800,,TRUE
+11,Bague Saphir - Mystère de la Nuit,Bague,4.5,Saphir,Ovale,Bleu,"3,15",,Diamant,Blanc,"0,7",4600,,TRUE
+12,Bague Tanzanite - Mystère Bleu,Bague,4.5,Tanzanite,Ronde,Bleu,"2,15",,,,,3950,,TRUE
+13,Bague Tanzanite - Olive,Bague,4.5,Tanzanite,Ovale,Bleu,"6,3",,Diamant,Blanc,"0,7",3900,,TRUE
+14,Bague Tourmaline - Reflet de la Beauté,Bague,6,Rubis,Marquise,Rose,"1,28",,Diamant,Blanc,"3,1",6800,,TRUE
+15,Bague Diamant - Éternelle,Bague,6,Diamant,Coussin,Blanc,"1,5",,Diamant,Blanc,"1,6",6900,,TRUE
+16,Bague Diamant - Sérénade,Bague,8,Diamant,Baguettes,Blanc,"1,1",,Diamant,Blanc,"2,2",6900,,FALSE
+17,Bague Diamant - Lumière Éternelle,Bague,7,Diamant,Ronde,Blanc,"2,37",,Diamant,Blanc,"2,37",3800,,FALSE
+18,Bague Aquamarine - Harmonie ,Bague,8,Aquamarine,Ronde,Blanc,2,,Émeraude,Vert,"0,9",3900,,FALSE
+19,Bague Peridot - Céleste,Bague,5,Péridot,Ronde,Vert,"2,5",,Diamant,Blanc,"0,24",3100,,FALSE
+20,Bague Diamant - Reflet,Bague,"6,5",Diamant,Ronde,Blanc,"0,7",,Diamant,Blanc,"1,26",4100,,FALSE
+21,Bague Diamant - Trésor,Bague,7,Diamant,Ronde,Blanc,"3,1",,Diamant,Blanc,"3,1",3600,,FALSE
+22,Bague Diamant - Éblouissante ,Bague,"6,5",Diamant,Ronde,Blanc,"0,4",,Diamant,Blanc,2.16,3800,,FALSE
+23,Bague Diamant – Griffes,Bague,"5,8",Diamant,Poire ,Blanc,"0,75",,Diamant,Blanc,"0,6",5800,,FALSE
+24,Bague Diamant - Sérénade,Bague,6.5,Diamant,Ronde,Blanc,"2,08",,Diamant,Blanc,"0,61",3800,,FALSE
+25,Bague Diamant - Galaxie,Bague,6.5,Diamant,Ronde,Blanc,"2,08",,Diamant,Blanc,"0,61",3800,,FALSE
+26,Bague Saphir - Céleste,Bague,7,Saphir,Carré,Bleu,1,,Diamant,Blanc,"2,1",5800,,FALSE
+27,Bague Diamant- Éclat,Bague,4,Diamant,Ronde,Blanc,1,,,,,4800,,FALSE
+28,,,,,,,,,,,,,,TRUE
+29,Diamant Aquamarine - Danse,Bague,4.5,Aquamarine,Ronde,Bleu,"1,8",,Diamant,Blanc,"0,9",3900,,FALSE
+30,Bague Diamant - Reflet de Passion,Bague,6,Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,7",3900,,FALSE
+31,Bague Diamant - Céleste Bijou,Bague,4,Diamant,Ronde,Blanc,"0,7",,Diamant,Blanc,"0,6",3900,,FALSE
+32,Bague Diamant -Passion,Bague,4,Diamant,Ronde,Blanc,"0,7",,Diamant,Blanc,"0,6",3900,,FALSE
+33,Bague Diamant - Élégance Éternelle,Bague,4.5,Diamant,Ovale,Blanc,"0,8",,Diamant,Blanc,"0,4",4900,,FALSE
+34,Bague Diamant - Peche,Bague,4,Diamant,Poire ,Blanc,"0,5",,Diamant,Blanc,"0,6",,,FALSE
+35,Bague Diamant - Éclat de Lune,Bague,4.5,Diamant,Ronde,Blanc,"0,8",,Diamant,Blanc,"0,5",4700,,FALSE
+36,Bague Diamant - Éclat,Bague,4,Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,48",5100,,FALSE
+37,Bague Diamant - Bijoux Élégance,Bague,4,Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,85",4950,,FALSE
+38,,Bague,,,,,,,,,,,,TRUE
+39,Bague Diamant - Bijoux Précieux,Bague,4,Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,8",4850,,FALSE
+40,Bague diamant - Élégance Pure,Bague,4,Diamant,Ronde,Blanc,"0,75",,Diamant,Blanc,"0,84",3950,,FALSE
+41,Bague Diamant - Bijoux Élégance,Bague,6,Diamant,Ronde,Blanc,"1,6",,Diamant,Blanc,"1,6",4100,,FALSE
+42,Bague Diamant - Chic et Glamour,Bague,8,Diamant,Ronde,Blanc,"0,35",,Diamant,Blanc,"0,35",5100,,FALSE
+43,Bague Saphir - Cobalt ,Bague,9,Saphir,Poire,Bleu,2,,Diamant,Blanc,"1,68",11200,,FALSE
+44,Bague Diamant - Chance éternelle,Bague,10,Diamant,Ronde,Blanc,"1,6",,Diamant,Blanc,"1,6",5800,,FALSE
+45,Bague Tourmaline - Blush Radieux,Bague,8,Saphir,Ovale,Rose,2,,Diamant,Blanc,"1,6",6800,,FALSE
+46,Bague Saphir - Rose Celeste,Bague,7,Saphir,Ovale,Rose,2,,Diamant,Blanc,"1,56",4900,,FALSE
+47,Bague Diamant - Fusion éclatante,Bague,9,Diamant,Ronde,Blanc,"1,8",,"Saphir, Diamant, Diamant","Bleu, Violet, Orange","0,5 - 0,5 - 0,5",4600,,FALSE
+48,Bague Diamant - Brillance royale,Bague,6,Diamant,Ronde,Jaune,"2,7",,Diamant,Blanc,"0,2",4100,,FALSE
+49,Bague Emeraude - Légende scintillante,Bague,8,Émeraude,Ronde,Vert,"3,5",,Diamant,Blanc,"0,9",6700,,FALSE
+50,Bague Saphir - Palais scintillant,Bague,5,Saphir,Ronde,Bleu,"1,5",,Diamant,Blanc,"1,6",4900,,FALSE
+51,Bague Saphir - Nuitée,Bague,11,Saphir,Ronde,Bleu,"1,75",,Diamant,Blanc,"1,64",4100,,FALSE
+52,Bague Diamant- Lumière du Cœur,Bague,"4,9",Diamant,Ronde,Blanc,"0,6",,Diamant,Blanc,"0,6",2100,,FALSE
+53,Bague Emeraude - Lueur de Chance,Bague,"7,7",Émeraude,Ronde,Vert,1,,Diamant,Blanc,1,5400,,FALSE
+54,Bague Emeraude - Lueur de Vie,Bague,"7,7",Émeraude,Ronde,Rose,1,,Diamant,Blanc,1,5400,,FALSE
+55,Bague Diamant - Cristal du Temps,Bague,"6,15",Diamant,Ronde,Blanc,1,,Diamant,Blanc,"0,7",5400,,FALSE
+56,Bague Diamant - Clarté Divine,Bague,"6,7",Diamant,Ronde,Blanc,"0,7",,Diamant,Blanc,"0,7",3970,,FALSE
+57,Bague Diamant - Triptique,Bague,,Diamant,Émeraude,Blanc,"4,2",,Diamant,Blanc,"1,34",6300,,FALSE
+58,Bague Diamant - Aurora Lumière,Bague,"6,1",Diamant,Ronde,Blanc,"5,1",,Diamant,Blanc,"0,8",3620,,FALSE
+59,Bague Diamant - Lueur de Vie,Bague,"6,2",Diamant,Ronde,Blanc,"1,6",,Diamant,Blanc,"1,6",4300,,TRUE
+60,Bague Diamant - Joyau des Émotions,Bague,"8,9",Diamant,Ronde,Blanc,"2,28",,Diamant,Blanc,"2,28",6300,,FALSE
+61,Bague Diamant - Halo Perpétuel ,Bague,"6,1",Diamant,Ronde,Blanc,"1,45",,Diamant,Blanc,"1,45",4600,,FALSE
+62,Bague Diamant - Éclat Infini,Bague,"6,8",Diamant,Ronde,Blanc,"1,75",,Diamant,Blanc,"1,75",4600,,FALSE
+63,Bague Diamant - Ébène,Bague,"16,8",Diamant,Ronde,Noir,"1,1",,Diamant,Blanc,"2,8",11200,,FALSE
+64,Bague Diamant - Sérénité,Bague,"4,1",Diamant,Ronde,Blanc,"0,65",,Diamant,Blanc,"0,65",2600,,FALSE
+65,Bague Diamant - Promesse Éternelle ,Bague,"7,25",Diamant,Ronde,Blanc,"0,8",,Diamant,Blanc,"1,55",6350,,FALSE
+66, Bague diamant jaune - Aélia,Bague,7.1,Diamant,Ronde,Jaune,1,18,Diamant,"Jaune, Blanc","1,15",8750,,TRUE
 67,Bague diamant jaune - Lysandra,Bague,"6,5",Diamant,Carre,Jaune,"0,6",75,Diamant,Blanc,"1,3",5750,,TRUE
 68,Bague saphire bleu - Cléa,Bague,"7,2",Saphir,Ovale ,Blanc,"2,75",34,Saphir,Bleu,"1,6",6900,,TRUE
 69,Bague saphir bleu - Isaline,Bague,"7,6",Saphir,Ovale,Blanc,"0,95",175,Saphir,Bleu,"2,2",6900,,TRUE
@@ -42,7 +105,7 @@ id,titre,type_de_produit,poid_total_du_bijoux,pierre_principale,forme_pierre_pri
 106,Bague saphir - Zora,Bague,"4,6",Saphir,Rond,Orange,"2,95",21,Diamant,Blanc,"0,8",5400,,TRUE
 107,Bague émeraude verte - Néva,Bague,"3,2",Émeraude,Baguette ,Vert,"0,4",46,Diamant,Blanc,"0,22",3200,,TRUE
 108,Bague émeraude - Elowen ,Bague,"6,12",Émeraude,Ovale,Vert,"1,15",100,"Saphir, Diamant","Bleu, Blanc","1,25 - 0,80",7800,,TRUE
-109,Bague Diamant - Sienna,Bague,"3,8",Diamant,Rond,Blanc,"0,6",,,,,3200,,TRUE
+109,Bague Diamant - Sienna,Bague,"3,8",Diamant,Rond ,Blanc,"0,6",,,,,3200,,TRUE
 110,Bague émeraude - Kaila,Bague,"4,8",Émeraude,Rond,Vert,"3,6",10,Diamant,Blanc,"0,95",5800,,TRUE
 111,Bague émeraude - Lila,Bague,"6,12",Émeraude,Rond,Vert,"6,8",84,Émeraude,Vert,"1,6",6300,,TRUE
 112,Bague diamant - Prunelle,Bague,"4,3",Diamant,Rond,Blanc,"0,2",,Diamant,Blanc,"0,8",3050,,TRUE
@@ -75,55 +138,78 @@ id,titre,type_de_produit,poid_total_du_bijoux,pierre_principale,forme_pierre_pri
 139,Bague Diamant - Priscilla,Bague,"7,1",Diamant,Taillé brillant,Blanc,"2,95",,,,,6450,,TRUE
 140,Bague Diamant - Liliane,Bague,"3,95",Diamant,Taillé brillant,Blanc,"0,5",,Diamant,Blanc,"0,8",3800,,TRUE
 141,Bague Citrine - Phélindra,Bague,"4,5",Citrine,Ronde,Jaune,"4,12",,"Diamant, Tsavorite","Vert, Blanc","0,60 - 0,25",2450,,TRUE
-142,Bague Turquoise - Maude,Bague,"3,9",Turquoise,Ovale,Bleu,"1,8",,"Turquoise, Diamant","Bleu, Blanc","0,6 - 0,25",1720,,FALSE
-143,Bague Tourmaline - Teresa,Bague,"3,1",Tourmaline,Triangle ,Orange,"2,8",,Diamant,Blanc,"0,6",1980,,FALSE
-144,Bague Topaze - Brianna,Bague,"4,1",Topaze,Ovale,Violet,"0,6",,"Citrine, Diamant","Violet, Orange, Blanc","0,40 - 0,70",2450,,FALSE
-145,Bague Saphir - Phanie,Bague,"3,9",Saphir,Ovale,Bleu,"0,6",,"Améthyste, Topaze, Diamant","Violet, Orange, Blanc, Bleu","0,15 - 0,30 - 0,95",2450,,FALSE
-146,Bague Saphir - Orphée,Bague,"3,1",Saphir,Poire,Violet,"1,18",,Diamant,Blanc,"0,55",2150,,FALSE
-147,Bague Saphir - Patricia,Bague,"2,6",Saphir,Ovale,Rouge,"1,15",,Diamant,Blanc,"0,48",1950,,FALSE
-148,Bague Tanzanite - Luccia,Bague,"2,5",Tanzanite,Ovale,Bleu,"0,9",,Diamant,Blanc,"0,58",1850,,FALSE
-149,Bague Rubis - Arianna,Bague,"3,8",Rubis,Poire,Rouge,"0,9",,"Tourmaline, Diamant","Rouge, Blanc","0,9 - 0,4",3200,,FALSE
-150,Bague Diamant - Nicky,Alliance,"6,1",Diamant,Ronde,Blanc,"2,6",,,,,4600,,FALSE
-151,Bague Diamant - Jessie,Alliance,"6,3",Diamant,Ronde,Blanc,"2,8",,,,,6300,,FALSE
-152,Bague Diamant - Iris,Alliance,"3,6",Diamant,Ronde,Blanc,"1,15",,,,,2850,,FALSE
-153,Bague Diamant - Sandra,Alliance,"3,65",Diamant,Ronde,Blanc,"1,22",,,,,3950,,FALSE
-154,Bague Diamant - Manolia,Alliance,"3,4",Diamant,Ronde,Blanc,"1,6",,,,,4100,,FALSE
-155,Bague Diamant - Melissa,Alliance,"3,55",Diamant,Ronde,Blanc,"1,7",,,,,3900,,FALSE
-156,Bague Diamant - Karène,Alliance,"3,55",Diamant,Ronde,Blanc,"0,95",,,,,2950,,FALSE
-157,Bague Diamant - Sylvie,Alliance,"3,55",Diamant,Ronde,Blanc,"0,95",,,,,2950,,FALSE
-158,Bague Diamant - Céline,Alliance,"3,7",Diamant,Ronde,Blanc,"2,15",,,,,4950,,FALSE
-159,Bague Diamant - Brunella,Alliance,"3,45",Diamant,Ronde,Blanc,"1,35",,,,,3450,,FALSE
-160,Bague Diamant - Féllicia,Alliance,"3,25",Diamant,Ronde,Blanc,"1,1",,,,,3650,,FALSE
-161,Bague Diamant - Nathanya,Alliance,"3,25",Diamant,Ronde,Blanc,"1,1",,,,,3650,,FALSE
-162,Bague Diamant - Audes,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",,Diamant,Blanc,"0,15",2850,,FALSE
-163,Bague Diamant - Ambre,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",10,Diamant,Blanc,"0,15",2850,,FALSE
-164,Bague Diamant - Carmen,Bague,"4,8",Diamant,Baguette,Blanc,"1,85",,Diamant,Blanc,"0,75",4850,,FALSE
-165,Bague Diamant - Jocelyne,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",,Diamant,Blanc,"0,15",2850,,FALSE
-166,Bague Diamant - Anastasia,Alliance,"3,6",Diamant,Ronde,Blanc,"0,95",,Diamant,Blanc,"1,38",4630,,FALSE
-167,Bague Diamant - Myléna,Bague,"3,1",Diamant,Radiant,Blanc,"0,4",,Diamant,Blanc,"0,85",3950,,FALSE
-168,Bague Diamant - Maryse,Bague,"4,1",Diamant,Ronde,Blanc,"0,4",,Diamant,Blanc,"0,6",3650,,FALSE
-169,Bague Diamant - Lucrèce,Alliance,"3,95",Diamant,Baguette,Blanc,"1,15",,,,,3950,,FALSE
-170,Bague Diamant - Mélodie,Bague,"4,6",Diamant,Ronde,Blanc,"0,55",,Diamant,Blanc,"0,8",3950,,FALSE
-171,Bague Diamant - Vanessa,Bague,"4,65",Diamant,Ronde,Blanc,"0,8",,Diamant,Blanc,"0,6",4800,,FALSE
-172,Bague Diamant - Julia,Bague,"7,2",Diamant,Ronde,Blanc,"0,95",,Diamant,Blanc,"1,35",5250,,FALSE
-173,Bague Émeraude - Fidji,Bague,"8,7",Émeraude,Émeraude,Vert,"5,15",,Diamant,Jaune,"0,95",9800,,FALSE
-174,Bague Diamant - Adèle,Bague,"12,4",Diamant,Ronde,Blanc,"2,1",,Diamant,Blanc,"1,55",11600,,FALSE
-175,Bague Saphir - Adriana,Bague,"7,1",Saphir,Ronde,Rose,"1,5",,Diamant,Blanc,"1,5",5800,,FALSE
-176,Bague Émeraude - Aline,Bague,"7,1",Émeraude,Ronde,Vert,"1,5",,Diamant,Blanc,"1,5",5800,,FALSE
-177,Bague Diamant - Agathe,Bague,"12,15",Diamant,Ronde,Blanc,"0,9",,Diamant,Blanc,"1,15",8200,,FALSE
-178,Bague Diamant - Amanda,Bague,"2,8",Diamant,brillant,Blanc,"0,8",,Diamant,Blanc,"0,3",5800,,FALSE
-179,Bague Diamant -  Audrey,Bague,"2,4",Diamant,Radiant,Blanc,"0,4",,,,,2800,,FALSE
-180,Bague Diamant - Astrid,Bague,"2,6",Diamant,Baguette,Blanc,"0,3",,Diamant,Blanc,"0,65",3800,,FALSE
-181,Bague Quartz - Bianca,Bague,"21,6",Quartz,Navette,Rose,"15,6",,"Tourmaline, Diamant",Rose,"5,9 - 2,0",7900,,FALSE
-182,Bague Tanzanite - Ava,Bague,"6,3",Tanzanite,Poire,Bleu,"1,2",,Diamant,Blanc,"2,9",4200,,FALSE
-183,Bague Diamant - Carla,Bague,"9,8",Diamant,Brillant,Blanc,"2,7",,Diamant,Blanc,"2,4",8900,,FALSE
-184,Bague Diamant - Camilia,Bague,"8,3",Diamant,Rond,Blanc,"14,8",,,,,10800,,FALSE
-185,Bague Tourmaline - Christelle,Bague,"8,1",Tourmaline,Brillant,Rose,"3,6",,Diamant,Blanc,"1,6",5800,,FALSE
-186,Bague Tourmaline - Clarisse,Bague,"8,5",Tourmaline,Navette,Vert,"2,7",,Diamant,Blanc,"0,7",1960,,FALSE
-187,Bague Diamant - Coralie,Bague,,Diamant,Ronde,Blanc,"2,1",,Diamant,Blanc,"1,28",7800,,FALSE
-188,Bague Diamant - Élisa,Bague,"7,5",Diamant,Brillant,Blanc,"3,8",,,,,3950,,FALSE
-189,Bague Diamant - Émilie,Bague,"6,3",Diamant,Brillant,Blanc,"0,8",,Diamant,Blanc,"0,45",4300,,FALSE
-190,Bague Tourmaline - Emma,Bague,"4,1",Tourmaline,ronde,Bleu,"4,1",,Diamant,Blanc,"0,6",4100,,FALSE
-191,Bague Diamant - Eva,Bague,"4,5",Diamant,ovale,Jaune,"4,5",,Tsavorite,Vert,"1,45",3800,,FALSE
-192,Bague Agate - Gloria,Bague,"9,2",Agate,Ronde,Vert,"7,5",,Agate,Rouge,"7,5",3800,,FALSE
-193,Bague Diamant - Inès,Bague,"5,3",Diamant,Rond,Noir,"0,36",,"Saphir, Diamant","Rouge, Blanc","0,58 - 0,21",4900,,FALSE
+142,Bague Turquoise - Maude,Bague,"3,9",Turquoise,Ovale,Bleu,"1,8",,"Turquoise, Diamant","Bleu, Blanc","0,6 - 0,25",1720,,TRUE
+143,Bague Tourmaline - Teresa,Bague,"3,1",Tourmaline,Triangle ,Orange,"2,8",,Diamant,Blanc,"0,6",1980,,TRUE
+144,Bague Topaze - Brianna,Bague,"4,1",Topaze,Ovale,Violet,"0,6",,"Citrine, Diamant","Violet, Orange, Blanc","0,40 - 0,70",2450,,TRUE
+145,Bague Saphir - Phanie,Bague,"3,9",Saphir,Ovale,Bleu,"0,6",,"Améthyste, Topaze, Diamant","Violet, Orange, Blanc, Bleu","0,15 - 0,30 - 0,95",2450,,TRUE
+146,Bague Saphir - Orphée,Bague,"3,1",Saphir,Poire,Violet,"1,18",,Diamant,Blanc,"0,55",2150,,TRUE
+147,Bague Saphir - Patricia,Bague,"2,6",Saphir,Ovale,Rouge,"1,15",,Diamant,Blanc,"0,48",1950,,TRUE
+148,Bague Tanzanite - Luccia,Bague,"2,5",Tanzanite,Ovale,Bleu,"0,9",,Diamant,Blanc,"0,58",1850,,TRUE
+149,Bague Rubis - Arianna,Bague,"3,8",Rubis,Poire,Rouge,"0,9",,"Tourmaline, Diamant","Rouge, Blanc","0,9 - 0,4",3200,,TRUE
+150,Bague Diamant - Nicky,Alliance,"6,1",Diamant,Ronde,Blanc,"2,6",,,,,4600,,TRUE
+151,Bague Diamant - Jessie,Alliance,"6,3",Diamant,Ronde,Blanc,"2,8",,,,,6300,,TRUE
+152,Bague Diamant - Iris,Alliance,"3,6",Diamant,Ronde,Blanc,"1,15",,,,,2850,,TRUE
+153,Bague Diamant - Sandra,Alliance,"3,65",Diamant,Ronde,Blanc,"1,22",,,,,3950,,TRUE
+154,Bague Diamant - Manolia,Alliance,"3,4",Diamant,Ronde,Blanc,"1,6",,,,,4100,,TRUE
+155,Bague Diamant - Melissa,Alliance,"3,55",Diamant,Ronde,Blanc,"1,7",,,,,3900,,TRUE
+156,Bague Diamant - Karène,Alliance,"3,55",Diamant,Ronde,Blanc,"0,95",,,,,2950,,TRUE
+157,Bague Diamant - Sylvie,Alliance,"3,55",Diamant,Ronde,Blanc,"0,95",,,,,2950,,TRUE
+158,Bague Diamant - Céline,Alliance,"3,7",Diamant,Ronde,Blanc,"2,15",,,,,4950,,TRUE
+159,Bague Diamant - Brunella,Alliance,"3,45",Diamant,Ronde,Blanc,"1,35",,,,,3450,,TRUE
+160,Bague Diamant - Féllicia,Alliance,"3,25",Diamant,Ronde,Blanc,"1,1",,,,,3650,,TRUE
+161,Bague Diamant - Nathanya,Alliance,"3,25",Diamant,Ronde,Blanc,"1,1",,,,,3650,,TRUE
+162,Bague Diamant - Audes,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",,Diamant,Blanc,"0,15",2850,,TRUE
+163,Bague Diamant - Ambre,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",10,Diamant,Blanc,"0,15",2850,,TRUE
+164,Bague Diamant - Carmen,Bague,"4,8",Diamant,Baguette,Blanc,"1,85",,Diamant,Blanc,"0,75",4850,,TRUE
+165,Bague Diamant - Jocelyne,Bague,"3,1",Diamant,Ronde,Blanc,"0,32",,Diamant,Blanc,"0,15",2850,,TRUE
+166,Bague Diamant - Anastasia,Alliance,"3,6",Diamant,Ronde,Blanc,"0,95",,Diamant,Blanc,"1,38",4630,,TRUE
+167,Bague Diamant - Myléna,Bague,"3,1",Diamant,Radiant,Blanc,"0,4",,Diamant,Blanc,"0,85",3950,,TRUE
+168,Bague Diamant - Maryse,Bague,"4,1",Diamant,Ronde,Blanc,"0,4",,Diamant,Blanc,"0,6",3650,,TRUE
+169,Bague Diamant - Lucrèce,Alliance,"3,95",Diamant,Baguette,Blanc,"1,15",,,,,3950,,TRUE
+170,Bague Diamant - Mélodie,Bague,"4,6",Diamant,Ronde,Blanc,"0,55",,Diamant,Blanc,"0,8",3950,,TRUE
+171,Bague Diamant - Vanessa,Bague,"4,65",Diamant,Ronde,Blanc,"0,8",,Diamant,Blanc,"0,6",4800,,TRUE
+172,Bague Diamant - Julia,Bague,"7,2",Diamant,Ronde,Blanc,"0,95",,Diamant,Blanc,"1,35",5250,,TRUE
+173,Bague Émeraude - Fidji,Bague,"8,7",Émeraude,Émeraude,Vert,"5,15",,Diamant,Jaune,"0,95",9800,,TRUE
+174,Bague Diamant - Adèle,Bague,"12,4",Diamant,Ronde,Blanc,"2,1",,Diamant,Blanc,"1,55",11600,,TRUE
+175,Bague Saphir - Adriana,Bague,"7,1",Saphir,Ronde,Rose,"1,5",,Diamant,Blanc,"1,5",5800,,TRUE
+176,Bague Émeraude - Aline,Bague,"7,1",Émeraude,Ronde,Vert,"1,5",,Diamant,Blanc,"1,5",5800,,TRUE
+177,Bague Diamant - Agathe,Bague,"12,15",Diamant,Ronde,Blanc,"0,9",,Diamant,Blanc,"1,15",8200,,TRUE
+178,Bague Diamant - Amanda,Bague,"2,8",Diamant,brillant,Blanc,"0,8",,Diamant,Blanc,"0,3",5800,,TRUE
+179,Bague Diamant -  Audrey,Bague,"2,4",Diamant,Radiant,Blanc,"0,4",,,,,2800,,TRUE
+180,Bague Diamant - Astrid,Bague,"2,6",Diamant,Baguette,Blanc,"0,3",,Diamant,Blanc,"0,65",3800,,TRUE
+181,Bague Quartz - Bianca,Bague,"21,6",Quartz,Navette,Rose,"15,6",,"Tourmaline, Diamant",Rose,"5,9 - 2,0",7900,,TRUE
+182,Bague Tanzanite - Ava,Bague,"6,3",Tanzanite,Poire,Bleu,"1,2",,Diamant,Blanc,"2,9",4200,,TRUE
+183,Bague Diamant - Carla,Bague,"9,8",Diamant,Brillant,Blanc,"2,7",,Diamant,Blanc,"2,4",8900,,TRUE
+184,Bague Diamant - Camilia,Bague,"8,3",Diamant,Rond,Blanc,"14,8",,,,,10800,,TRUE
+185,Bague Tourmaline - Christelle,Bague,"8,1",Tourmaline,Brillant,Rose,"3,6",,Diamant,Blanc,"1,6",5800,,TRUE
+186,Bague Tourmaline - Clarisse,Bague,"8,5",Tourmaline,Navette,Vert,"2,7",,Diamant,Blanc,"0,7",1960,,TRUE
+187,Bague Diamant - Coralie,Bague,"8,2",Diamant,Ronde,Blanc,"2,1",,Diamant,Blanc,"1,28",7800,,TRUE
+188,Bague Diamant - Élisa,Bague,"7,5",Diamant,Brillant,Blanc,"3,8",,,,,3950,,TRUE
+189,Bague Diamant - Émilie,Bague,"6,3",Diamant,Brillant,Blanc,"0,8",,Diamant,Blanc,"0,45",4300,,TRUE
+190,Bague Tourmaline - Emma,Bague,"4,1",Tourmaline,ronde,Bleu,"4,1",,Diamant,Blanc,"0,6",4100,,TRUE
+191,Bague Diamant - Eva,Bague,"4,5",Diamant,ovale,Jaune,"4,5",,Tsavorite,Vert,"1,45",3800,,TRUE
+192,Bague Agate - Gloria,Bague,"9,2",Agate,Ronde,Vert,"7,5",,Agate,Rouge,"7,5",3800,,TRUE
+193,Bague Diamant - Inès,Bague,"5,3",Diamant,Rond,Noir,"0,36",,"Saphir, Diamant","Rouge, Blanc","0,58 - 0,21",4900,,TRUE
+194,Bague Péridot - Rita,Bague,"11,3",Péridot,Brillant,Vert,"1,2",,,,,3450,,TRUE
+195,Bague Améthyste - Rachel,Bague,"17,8",Améthyste,Tournante,Violet,"21,8",,"Diamant, Spinelle",Blanc,"1,20-0,60",5600,,TRUE
+196,Bague Saphir - Paola,Bague,"8,3",Saphir,ovale,Bleu,"2,8",,Diamant,Blanc,"0,3",6200,,TRUE
+197,Bague Diamant - Rebecca,Bague,"7,1",Diamant,Brillant,Noir,"1,8",,Diamant,Blanc,"0,6",4800,,TRUE
+198,Bague Tanzanite - Patricia,Bague,"8,9",Tanzanite,Ronde,Bleu,"4,28",,Diamant,Blanc,"1,85",6400,,TRUE
+199,Bague Rubis - Olivia,Bague,"6,3",Rubis,Poire,Rouge,"4,2",,Diamant,Blanc,"0,8",4650,,TRUE
+200,Bague Rubis - Olga,Bague,"7,95",Rubis,Ovale,Violet,"2,7",,Diamant,Blanc,"0,6",4800,,TRUE
+201,Bague Perle - Nicole,Bague,"15,6",Perle,Ronde,Noir,"4,2",,Diamant,Blanc,"1,2",7900,,TRUE
+202,Bague Topaze - Nancy,Bague,"6,95",Topaze,Emeraude,Bleu,"6,7",,Diamant,Blanc,"1,35",4800,,TRUE
+203,Bague Grenat - Monica,Bague,"20,75",Grenat,Rectangle,Rouge,"17,2",,Diamant,Blanc,"0,8",9800,,TRUE
+204,Bague Mila,Bague,"5,6",,Ovale,Jaune,,,,,,2600,,TRUE
+205,Bague Améthyste - Marina,Bague,"29,6",Améthyste,Ronde,Violet,"34,6",,,,,6200,,TRUE
+206,Bague Saphir - Jasmine,Bague,"17,3",Saphir,Brillant,Bleu,"14,6",,Diamant,Blanc,"0,7",4800,,TRUE
+207,Bague Onyx - Marilyn,Bague,"9,3",Onyx,Ovale,Bleu,"1,1",,Diamant,Blanc,"0,7",4800,,TRUE
+208,Bague Tourmaline - Mélanie,Bague,"7,6",Tourmaline,Ronde,Rose,"4,9",,Diamant,Blanc,"0,6",4800,,TRUE
+209,Bague Tourmaline - Élisa,Bague,"17,2",Tourmaline,Ovale,Violet,"4,6",,"Améthyste, Diamant",,"7,20-4,65",6200,,TRUE
+210,Bague Diamant - Lucie,Bague,"6,3",Diamant,radiant,Blanc,"0,6",,Diamant,Blanc,"1,1",4600,,TRUE
+211,Bague Rubellite - Jessica,Bague,"11,7",Rubellite,Ovale,Rose,"11,5",,,,"1,2",6800,,TRUE
+212,Bague Diamant - Julia,Bague,"6,3",Diamant,Brillant,Blanc,"0,7",,,,"0,6",4800,,TRUE
+213,Bague Saphir - Iris,Bague,"11,2",Saphir,Trigonne,Rose,"2,8",,Diamant,Blanc,"0,55",8100,,TRUE
+214,Bague Diamant - Hannah,Bague,"5,7",Diamant,Brillant,Blanc,"0,5",,Diamant,Blanc,"0,8",3950,,TRUE
+215,Bague Iolite - Erika,Bague,"4,9",Iolite,Emeraude,Bleu,"1,2",,,,,2450,,TRUE
+216,Bague Saphir - Ève,Bague,"9,35",Saphir,Ronde,Rose,"2,1",,Diamant,Blanc,"1,7",6400,,TRUE
