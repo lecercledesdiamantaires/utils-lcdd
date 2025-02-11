@@ -8336,3 +8336,12 @@
 2025-02-11 16:20:58,222 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/credentials.json", inode=57618458, flags=10800, id=163029395): is_file, is_renamed
 2025-02-11 16:20:58,222 - DEBUG - queue_event FileDeletedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/credentials.json', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
 2025-02-11 16:20:58,222 - DEBUG - queue_event DirModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2025-02-11 16:25:25,806 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:25:28,553 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:25:28,626 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:25:28,629 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:25:29,112 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:25:29,117 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:25:30,009 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:25:30,283 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:25:30,581 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None

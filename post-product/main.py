@@ -43,7 +43,13 @@ def get_google_sheet_data(sheet_url, sheet_name):
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
     data = sheet.get_all_records()
-    return pd.DataFrame(data)
+
+    # Convertir en DataFrame et supprimer les lignes vides
+    df = pd.DataFrame(data)
+    df.dropna(how="all", inplace=True)  # Supprime les lignes entièrement vides
+    df = df[df['id'].notna()]  # Filtrer aussi les lignes sans ID produit
+
+    return df
 
 def update_google_sheet(sheet_url, sheet_name, product_id, shopify_id):
     """Met à jour la colonne 'en_ligne' à 'TRUE' pour un produit donné"""
