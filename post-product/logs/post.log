@@ -8310,3 +8310,29 @@
 2025-02-11 15:58:40,855 - DEBUG - Popen(['git', 'diff', '--abbrev=40', '--full-index', '-M', '--raw', '-z', '--no-color'], cwd=/Users/thomassauvage/Desktop/alternance/script-product, stdin=None, shell=False, universal_newlines=False)
 2025-02-11 15:58:40,869 - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/Users/thomassauvage/Desktop/alternance/script-product, stdin=<valid stream>, shell=False, universal_newlines=False)
 2025-02-11 15:58:40,882 - DEBUG - Popen(['git', 'rev-list', 'origin/main..main', '--'], cwd=/Users/thomassauvage/Desktop/alternance/script-product, stdin=None, shell=False, universal_newlines=False)
+2025-02-11 16:14:22,359 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:14:23,359 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:14:23,397 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:14:23,404 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:14:23,631 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+2025-02-11 16:15:56,481 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163004524): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:15:56,482 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:16:00,331 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:16:00,350 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:16:00,396 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:16:00,397 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:16:00,500 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+2025-02-11 16:16:01,731 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:16:01,787 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:16:01,788 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:16:01,940 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+2025-02-11 16:16:18,444 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:16:18,484 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:16:18,485 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:16:18,591 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+2025-02-11 16:20:58,191 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/.env", inode=57618457, flags=10800, id=163029379): is_file, is_renamed
+2025-02-11 16:20:58,192 - DEBUG - queue_event FileDeletedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/.env', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2025-02-11 16:20:58,193 - DEBUG - queue_event DirModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2025-02-11 16:20:58,222 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/credentials.json", inode=57618458, flags=10800, id=163029395): is_file, is_renamed
+2025-02-11 16:20:58,222 - DEBUG - queue_event FileDeletedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/credentials.json', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2025-02-11 16:20:58,222 - DEBUG - queue_event DirModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)

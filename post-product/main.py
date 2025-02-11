@@ -30,7 +30,7 @@ FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les i
 # Configuration Google Sheets
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
 SHEET_NAME = "Feuille1"  # Modifier selon ton Google Sheet
-CREDENTIALS_FILE = "credentials.json"  # Fichier JSON des credentials
+CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
 
 # Configuration logging
 logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
