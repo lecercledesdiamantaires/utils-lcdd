@@ -1,7 +1,10 @@
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseUpload
 import requests
 import logging
+from io import BytesIO
+from PIL import Image
 
 SERVICE_ACCOUNT_FILE = 'credentials.json'
 SCOPES = ['https://www.googleapis.com/auth/drive']
@@ -11,94 +14,118 @@ logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG,
 credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 service = build('drive', 'v3', credentials=credentials)
 
+ARCHIVE_FOLDER_NAME = "Archive"
+
 def get_images_url(folder_id, prefix):
     logging.info(f"Fetching images from folder ID: {folder_id} with prefix: {prefix}")
     links = []
     subfolder_id = get_subfolder_id_by_name(folder_id, prefix)
-
+    
     if subfolder_id:
         logging.info(f"Subfolder ID found: {subfolder_id}")
-        links = download_files_in_folder(subfolder_id)
+        archive_folder_id = get_or_create_subfolder(folder_id, ARCHIVE_FOLDER_NAME)
+        logging.info(f"Archive folder ID: {archive_folder_id}")
+        links = process_images_in_folder(subfolder_id, archive_folder_id)
         return links
     else:
         logging.error(f"Subfolder '{prefix}' not found.")
         return None
 
 def get_subfolder_id_by_name(parent_folder_id, subfolder_name):
-    logging.info(f"Searching for subfolder '{subfolder_name}' in parent folder ID: {parent_folder_id}")
     query = f"'{parent_folder_id}' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
     page_token = None
-
+    
     while True:
-        try:
-            results = service.files().list(
-                q=query,
-                fields="nextPageToken, files(id, name)",
-                pageToken=page_token
-            ).execute()
-            folders = results.get('files', [])
-            logging.debug(f"Found {len(folders)} folders in parent folder ID: {parent_folder_id}")
-            for folder in folders:
-                if folder['name'] == str(subfolder_name):
-                    logging.info(f"Subfolder '{subfolder_name}' found with ID: {folder['id']}")
-                    return folder['id']
-            page_token = results.get('nextPageToken', None)
-            if not page_token:
-                break
-        except Exception as e:
-            logging.error(f"An error occurred while searching for subfolder: {e}")
+        results = service.files().list(q=query, fields="nextPageToken, files(id, name)", pageToken=page_token).execute()
+        for folder in results.get('files', []):
+            if folder['name'] == str(subfolder_name):
+                return folder['id']
+        page_token = results.get('nextPageToken')
+        if not page_token:
             break
-    logging.warning(f"Subfolder '{subfolder_name}' not found in parent folder ID: {parent_folder_id}")
+    
     return None
 
-def download_files_in_folder(folder_id):
-    logging.info(f"Downloading files from folder ID: {folder_id}")
+def get_or_create_subfolder(parent_folder_id, subfolder_name):
+    subfolder_id = get_subfolder_id_by_name(parent_folder_id, subfolder_name)
+    if subfolder_id:
+        return subfolder_id
+    
+    file_metadata = {
+        'name': subfolder_name,
+        'mimeType': 'application/vnd.google-apps.folder',
+        'parents': [parent_folder_id]
+    }
+    folder = service.files().create(body=file_metadata, fields='id').execute()
+    logging.info(f"Created subfolder '{subfolder_name}' with ID: {folder.get('id')}")
+    return folder.get('id')
+
+def process_images_in_folder(folder_id, archive_folder_id):
     query = f"'{folder_id}' in parents and trashed = false"
-    page_token = None
-    files_data = []
-    files_data_sorted = []
+    results = service.files().list(q=query, fields="files(id, name)").execute()
+    files = results.get('files', [])
+    
     links = []
+    for file in files:
+        if file['name'].lower().endswith('.webp'):
+            logging.info(f"Skipping already WebP image: {file['name']}")
+            links.append(f"https://drive.google.com/uc?id={file['id']}")
+            continue
 
-    while True:
-        try:
-            results = service.files().list(
-                q=query,
-                fields="nextPageToken, files(id, name)",
-                pageToken=page_token
-            ).execute()
-            files = results.get('files', [])
-            logging.debug(f"Found {len(files)} files in folder ID: {folder_id}")
-            for file in files:  
-                download_link = f"https://drive.google.com/uc?id={file['id']}"
-                files_data.append((file['name'], download_link))
-                response = requests.get(download_link, timeout=30)  # Augmenter le délai d'attente à 30 secondes
-                if response.status_code != 200:
-                    logging.error(f"Failed to download {file['name']} with status code {response.status_code}")
-                else:
-                    logging.info(f"Successfully downloaded {file['name']}")
-
-            page_token = results.get('nextPageToken', None)
-            if not page_token:
-                break
-        except requests.exceptions.Timeout as e:
-            logging.error(f"Request timed out: {e}")
-            break
-        except Exception as e:
-            logging.error(f"An error occurred while downloading files: {e}")
-            break
-
-    # Trier par nom de fichier
-    files_data_sorted = sorted(files_data, key=lambda x: x[0])
-    logging.debug(f"Sorted files: {files_data_sorted}")
-
-    # Convertir les liens en objets {src: link}
-    links = [link for _, link in files_data_sorted]
-    logging.info(f"Downloaded {len(links)} files from folder ID: {folder_id}")
+        image_data = download_image(file['id'])
+        if image_data:
+            webp_image = convert_to_webp(image_data)
+            webp_file_id = upload_image_to_drive(webp_image, f"{file['name'].rsplit('.', 1)[0]}.webp", folder_id)
+            if webp_file_id:
+                links.append(f"https://drive.google.com/uc?id={webp_file_id}")
+                move_original_file(file['id'], archive_folder_id)
     return links
 
-# Exemple d'utilisation
-if __name__ == "__main__":
-    folder_id = 'your-folder-id'
-    prefix = 'your-prefix'
-    links = get_images_url(folder_id, prefix)
-    logging.info(f"Links: {links}")
+def download_image(file_id):
+    try:
+        request = service.files().get_media(fileId=file_id)
+        image_data = BytesIO(request.execute())
+        return image_data
+    except Exception as e:
+        logging.error(f"Error downloading image {file_id}: {e}")
+        return None
+
+def convert_to_webp(image_data):
+    try:
+        image = Image.open(image_data)
+        webp_buffer = BytesIO()
+        image.save(webp_buffer, format="WEBP", quality=80)
+        webp_buffer.seek(0)
+        return webp_buffer
+    except Exception as e:
+        logging.error(f"Error converting image to WebP: {e}")
+        return None
+
+def upload_image_to_drive(image_data, filename, folder_id):
+    try:
+        file_metadata = {'name': filename, 'parents': [folder_id]}
+        media = MediaIoBaseUpload(image_data, mimetype='image/webp', resumable=True)
+        uploaded_file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+        return uploaded_file.get('id')
+    except Exception as e:
+        logging.error(f"Error uploading WebP image: {e}")
+        return None
+
+def move_original_file(file_id, archive_folder_id):
+    try:
+        # Récupérer les informations du fichier pour obtenir son dossier parent actuel
+        file = service.files().get(fileId=file_id, fields="parents").execute()
+        current_parents = ",".join(file.get("parents", []))  # Convertir la liste en string
+
+        # Déplacer le fichier vers le dossier d'archive
+        service.files().update(
+            fileId=file_id,
+            addParents=archive_folder_id,
+            removeParents=current_parents,  # Utilisation correcte du parent actuel
+            fields="id"
+        ).execute()
+
+        logging.info(f"Successfully moved original file {file_id} to archive folder {archive_folder_id}")
+
+    except Exception as e:
+        logging.error(f"Error moving original file {file_id} to archive folder {archive_folder_id}: {e}")

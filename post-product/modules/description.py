@@ -1,3 +1,8 @@
+import logging
+
+logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def check_first_paragraph(first_paragraph, product_type, primal_stone_name):
     if not first_paragraph:
@@ -5,12 +10,17 @@ def check_first_paragraph(first_paragraph, product_type, primal_stone_name):
     else:
         return f"<p>{first_paragraph}</p>"
 
+
 def convert_to_float(value):
+    if isinstance(value, (int, float)):
+        logging.info(f"{value} est déjà un nombre")
+        return value
     try:
         value = value.replace(',', '.')
+        value = value.replace(' ', '')
         return float(value)
     except ValueError as e:
-        # Il peut être utile d'ajouter un log ou d'lever une exception
+        logging.error(f"Erreur de conversion de {value}: {e}")
         raise ValueError(f"Erreur de conversion de {value}: {e}")
 
 def check_secondary_stones(secondary_stone_name, secondary_stone_carat):
