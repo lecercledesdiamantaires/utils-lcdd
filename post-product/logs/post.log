@@ -8345,3 +8345,457 @@
 2025-02-11 16:25:30,009 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
 2025-02-11 16:25:30,283 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
 2025-02-11 16:25:30,581 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:34:19,460 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:34:20,575 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:34:20,613 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:34:20,617 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:34:21,135 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:34:21,138 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:34:21,953 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:34:22,744 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:34:23,537 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:35:44,727 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163105150): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:35:44,728 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:35:50,614 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:35:51,896 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:35:51,936 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:35:51,942 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:35:52,251 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:35:52,255 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:35:53,080 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:35:53,931 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:35:54,763 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:38:14,933 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163109698): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:38:14,934 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:38:33,161 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163115228): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:38:33,162 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:38:40,929 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163116499): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:38:40,930 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:38:46,826 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:38:48,276 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:38:48,316 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:38:48,319 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:38:48,682 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:38:48,686 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:38:49,174 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:38:49,417 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:38:50,179 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:39:14,708 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163118304): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:39:14,708 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:39:21,661 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163118370): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:39:21,662 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:39:23,138 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163118416): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:39:23,139 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:41:35,515 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:41:35,526 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:41:35,575 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:41:35,577 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:41:36,076 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:41:36,080 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:41:36,988 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:41:37,237 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:41:37,598 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:43:24,956 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:43:25,022 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:43:25,023 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:43:25,425 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:43:25,431 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:43:25,934 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:43:26,183 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:43:26,981 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:43:35,226 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:43:36,545 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:43:36,586 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:43:36,589 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:43:36,956 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:43:36,959 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:43:37,435 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:43:38,201 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:43:38,468 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:45:09,365 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163130058): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:45:09,366 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:45:11,566 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163130147): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:45:11,566 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:45:17,382 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:45:19,671 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:45:19,738 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:45:19,739 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:45:20,144 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:45:20,149 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:45:21,259 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:45:22,115 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:45:22,433 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:45:40,555 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:45:41,758 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:45:41,795 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:45:41,797 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:45:42,162 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:45:42,165 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:45:42,685 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:45:43,458 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:45:43,752 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:47:13,040 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:47:13,106 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:47:13,108 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:47:13,486 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:47:13,490 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:47:14,198 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:14,454 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:14,719 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:47:34,350 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:47:34,419 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:47:34,421 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:47:34,741 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:47:34,744 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:47:35,445 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:36,552 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:37,042 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:47:41,814 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:47:41,855 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:47:41,856 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:47:42,225 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:47:42,228 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:47:42,752 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:43,004 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:47:43,798 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:48:35,974 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:48:36,040 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:48:36,041 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:48:36,379 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:48:36,382 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:48:37,130 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:48:37,392 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:48:37,658 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:48:42,470 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:48:43,727 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:48:43,783 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:48:43,790 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:48:44,181 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:48:44,182 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:48:44,671 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:48:45,460 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:48:46,321 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:49:44,195 - INFO - 8 est déjà un nombre
+2025-02-11 16:49:44,197 - INFO - 1.1 est déjà un nombre
+2025-02-11 16:49:44,197 - INFO - 2.2 est déjà un nombre
+2025-02-11 16:49:44,198 - INFO - Fetching images from folder ID: 1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs with prefix: 16
+2025-02-11 16:49:44,214 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+2025-02-11 16:49:44,272 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:49:45,671 - INFO - Subfolder ID found: 136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR
+2025-02-11 16:49:45,677 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+2025-02-11 16:49:46,563 - INFO - Archive folder ID: 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:49:46,570 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%27136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR%27+in+parents+and+trashed+%3D+false&fields=files%28id%2C+name%29&alt=json
+2025-02-11 16:49:47,104 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/12j7FwBDc6m4QDe5XKzhM_q_x4fQYzfTT?alt=media
+2025-02-11 16:49:54,102 - DEBUG - tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 110 - value: b'Canon\x00'
+2025-02-11 16:49:54,102 - DEBUG - tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 116 - value: b'Canon EOS 750D\x00'
+2025-02-11 16:49:54,102 - DEBUG - tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 132 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:49:54,102 - DEBUG - tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 140 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:49:54,103 - DEBUG - tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-02-11 16:49:54,103 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 82 - Data Location: 148 - value: b'Adobe Lightroom 8.0 (Windows)\x00'
+2025-02-11 16:49:54,103 - DEBUG - tag: DateTime (306) - type: string (2) Tag Location: 94 - Data Location: 178 - value: b'2024:11:14 09:29:33\x00'
+2025-02-11 16:49:54,103 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\xc6\x00\x00\x00'
+2025-02-11 16:49:54,333 - DEBUG - Importing BlpImagePlugin
+2025-02-11 16:49:54,334 - DEBUG - Importing BmpImagePlugin
+2025-02-11 16:49:54,334 - DEBUG - Importing BufrStubImagePlugin
+2025-02-11 16:49:54,334 - DEBUG - Importing CurImagePlugin
+2025-02-11 16:49:54,335 - DEBUG - Importing DcxImagePlugin
+2025-02-11 16:49:54,335 - DEBUG - Importing DdsImagePlugin
+2025-02-11 16:49:54,342 - DEBUG - Importing EpsImagePlugin
+2025-02-11 16:49:54,343 - DEBUG - Importing FitsImagePlugin
+2025-02-11 16:49:54,343 - DEBUG - Importing FliImagePlugin
+2025-02-11 16:49:54,344 - DEBUG - Importing FpxImagePlugin
+2025-02-11 16:49:54,345 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-02-11 16:49:54,345 - DEBUG - Importing FtexImagePlugin
+2025-02-11 16:49:54,345 - DEBUG - Importing GbrImagePlugin
+2025-02-11 16:49:54,346 - DEBUG - Importing GifImagePlugin
+2025-02-11 16:49:54,346 - DEBUG - Importing GribStubImagePlugin
+2025-02-11 16:49:54,347 - DEBUG - Importing Hdf5StubImagePlugin
+2025-02-11 16:49:54,349 - DEBUG - Importing IcnsImagePlugin
+2025-02-11 16:49:54,352 - DEBUG - Importing IcoImagePlugin
+2025-02-11 16:49:54,353 - DEBUG - Importing ImImagePlugin
+2025-02-11 16:49:54,354 - DEBUG - Importing ImtImagePlugin
+2025-02-11 16:49:54,354 - DEBUG - Importing IptcImagePlugin
+2025-02-11 16:49:54,354 - DEBUG - Importing JpegImagePlugin
+2025-02-11 16:49:54,354 - DEBUG - Importing Jpeg2KImagePlugin
+2025-02-11 16:49:54,354 - DEBUG - Importing McIdasImagePlugin
+2025-02-11 16:49:54,355 - DEBUG - Importing MicImagePlugin
+2025-02-11 16:49:54,355 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-02-11 16:49:54,355 - DEBUG - Importing MpegImagePlugin
+2025-02-11 16:49:54,355 - DEBUG - Importing MpoImagePlugin
+2025-02-11 16:49:54,356 - DEBUG - Importing MspImagePlugin
+2025-02-11 16:49:54,356 - DEBUG - Importing PalmImagePlugin
+2025-02-11 16:49:54,356 - DEBUG - Importing PcdImagePlugin
+2025-02-11 16:49:54,357 - DEBUG - Importing PcxImagePlugin
+2025-02-11 16:49:54,357 - DEBUG - Importing PdfImagePlugin
+2025-02-11 16:49:54,360 - DEBUG - Importing PixarImagePlugin
+2025-02-11 16:49:54,360 - DEBUG - Importing PngImagePlugin
+2025-02-11 16:49:54,360 - DEBUG - Importing PpmImagePlugin
+2025-02-11 16:49:54,361 - DEBUG - Importing PsdImagePlugin
+2025-02-11 16:49:54,361 - DEBUG - Importing QoiImagePlugin
+2025-02-11 16:49:54,361 - DEBUG - Importing SgiImagePlugin
+2025-02-11 16:49:54,361 - DEBUG - Importing SpiderImagePlugin
+2025-02-11 16:49:54,362 - DEBUG - Importing SunImagePlugin
+2025-02-11 16:49:54,362 - DEBUG - Importing TgaImagePlugin
+2025-02-11 16:49:54,362 - DEBUG - Importing TiffImagePlugin
+2025-02-11 16:49:54,362 - DEBUG - Importing WebPImagePlugin
+2025-02-11 16:49:54,367 - DEBUG - Importing WmfImagePlugin
+2025-02-11 16:49:54,367 - DEBUG - Importing XbmImagePlugin
+2025-02-11 16:49:54,367 - DEBUG - Importing XpmImagePlugin
+2025-02-11 16:49:54,368 - DEBUG - Importing XVThumbImagePlugin
+2025-02-11 16:49:55,842 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:49:59,881 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/12j7FwBDc6m4QDe5XKzhM_q_x4fQYzfTT?fields=parents&alt=json
+2025-02-11 16:50:00,347 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/12j7FwBDc6m4QDe5XKzhM_q_x4fQYzfTT?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR&fields=id&alt=json
+2025-02-11 16:50:02,228 - INFO - Successfully moved original file 12j7FwBDc6m4QDe5XKzhM_q_x4fQYzfTT to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:50:02,235 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1fUmAHs4zXUHb_LL4v93a89tW6UQ5Mqqy?alt=media
+2025-02-11 16:50:07,360 - DEBUG - tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 110 - value: b'Canon\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 116 - value: b'Canon EOS 750D\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 132 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 140 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 82 - Data Location: 148 - value: b'Adobe Lightroom 8.0 (Windows)\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: DateTime (306) - type: string (2) Tag Location: 94 - Data Location: 178 - value: b'2024:11:14 09:29:26\x00'
+2025-02-11 16:50:07,360 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\xc6\x00\x00\x00'
+2025-02-11 16:50:08,969 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:50:12,872 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1fUmAHs4zXUHb_LL4v93a89tW6UQ5Mqqy?fields=parents&alt=json
+2025-02-11 16:50:13,385 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1fUmAHs4zXUHb_LL4v93a89tW6UQ5Mqqy?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR&fields=id&alt=json
+2025-02-11 16:50:14,998 - INFO - Successfully moved original file 1fUmAHs4zXUHb_LL4v93a89tW6UQ5Mqqy to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:50:15,008 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1D4Do5GxqZUQUfQj6CWi9GG8sXP9bwEHb?alt=media
+2025-02-11 16:50:18,154 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:50:18,156 - DEBUG - STREAM b'caBX' 41 13378
+2025-02-11 16:50:18,156 - DEBUG - b'caBX' 41 13378 (unknown)
+2025-02-11 16:50:18,156 - DEBUG - STREAM b'pHYs' 13431 9
+2025-02-11 16:50:18,156 - DEBUG - STREAM b'iTXt' 13452 2712
+2025-02-11 16:50:18,156 - DEBUG - STREAM b'IDAT' 16176 1048576
+2025-02-11 16:50:19,572 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:50:22,271 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1D4Do5GxqZUQUfQj6CWi9GG8sXP9bwEHb?fields=parents&alt=json
+2025-02-11 16:50:22,813 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1D4Do5GxqZUQUfQj6CWi9GG8sXP9bwEHb?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR&fields=id&alt=json
+2025-02-11 16:50:24,055 - INFO - Successfully moved original file 1D4Do5GxqZUQUfQj6CWi9GG8sXP9bwEHb to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:50:24,066 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1qiTKqr3mtO9SJ_MpRO_fRcXSEm3oWgL3?alt=media
+2025-02-11 16:50:28,722 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:50:28,723 - DEBUG - STREAM b'caBX' 41 13378
+2025-02-11 16:50:28,723 - DEBUG - b'caBX' 41 13378 (unknown)
+2025-02-11 16:50:28,723 - DEBUG - STREAM b'pHYs' 13431 9
+2025-02-11 16:50:28,723 - DEBUG - STREAM b'iTXt' 13452 1484
+2025-02-11 16:50:28,723 - DEBUG - STREAM b'IDAT' 14948 1048576
+2025-02-11 16:50:30,183 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:50:33,502 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1qiTKqr3mtO9SJ_MpRO_fRcXSEm3oWgL3?fields=parents&alt=json
+2025-02-11 16:50:33,996 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1qiTKqr3mtO9SJ_MpRO_fRcXSEm3oWgL3?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR&fields=id&alt=json
+2025-02-11 16:50:35,304 - INFO - Successfully moved original file 1qiTKqr3mtO9SJ_MpRO_fRcXSEm3oWgL3 to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:50:35,313 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1riO44zD8KLjZe4sXLzWLVjywhl5VaO9Y?alt=media
+2025-02-11 16:50:39,771 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:50:39,772 - DEBUG - STREAM b'caBX' 41 13378
+2025-02-11 16:50:39,772 - DEBUG - b'caBX' 41 13378 (unknown)
+2025-02-11 16:50:39,772 - DEBUG - STREAM b'pHYs' 13431 9
+2025-02-11 16:50:39,772 - DEBUG - STREAM b'iTXt' 13452 1484
+2025-02-11 16:50:39,772 - DEBUG - STREAM b'IDAT' 14948 1048576
+2025-02-11 16:50:41,219 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:50:44,444 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1riO44zD8KLjZe4sXLzWLVjywhl5VaO9Y?fields=parents&alt=json
+2025-02-11 16:50:44,930 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1riO44zD8KLjZe4sXLzWLVjywhl5VaO9Y?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=136YR-iCLGUBqYRlAwU_1uzqUirZbRQJR&fields=id&alt=json
+2025-02-11 16:50:46,153 - INFO - Successfully moved original file 1riO44zD8KLjZe4sXLzWLVjywhl5VaO9Y to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:50:46,156 - DEBUG - Images URL: ['https://drive.google.com/uc?id=1dhj7rmrk8rzyd1KK1-xZxQgDNoOh6Jt8', 'https://drive.google.com/uc?id=1zAF5DjHMsX1wOxrOfAxaJIeG20fyhvBu', 'https://drive.google.com/uc?id=1kjSZzExFKONWIrWJfbFx5ls_69RuOWeB', 'https://drive.google.com/uc?id=1ZyQ4Fot0D4naNexBPnQyOAM62Madx9A3', 'https://drive.google.com/uc?id=18O8Fvw-J146bIBhJFmHUiWOLGS0mRwsX']
+2025-02-11 16:50:46,161 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:49,044 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json HTTP/1.1" 200 None
+2025-02-11 16:50:49,283 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:51,032 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJsYXN0X2lkIjoxNTExNjQwMzQ3NDc2NywibGFzdF92YWx1ZSI6IkJhZ3VlIERpYW1hbnQgLSBDYXJsYSIsImRpcmVjdGlvbiI6Im5leHQifQ HTTP/1.1" 200 None
+2025-02-11 16:50:51,304 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:54,678 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTUxMTYzNjE4MjY2MzksImxhc3RfdmFsdWUiOiJCYWd1ZSBEaWFtYW50IC0gVmFuZXNzYSJ9 HTTP/1.1" 200 None
+2025-02-11 16:50:54,938 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:57,491 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTUwMjMzMTIyNzM3NDMsImxhc3RfdmFsdWUiOiJCYWd1ZSBSdWJpcyAtIEZsb3JhIn0 HTTP/1.1" 200 None
+2025-02-11 16:50:57,716 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:58,575 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTUxMTU5NTE0NDAyMDcsImxhc3RfdmFsdWUiOiJCYWd1ZSBUb3VybWFsaW5lIC0gWm_DqSJ9 HTTP/1.1" 200 None
+2025-02-11 16:50:58,750 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:59,235 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4NTk3MDg5MjQyMzksImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gQ8WTdXIgIDUzMjI2NDkxMyJ9 HTTP/1.1" 200 None
+2025-02-11 16:50:59,363 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:50:59,879 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzcxNDQ0NTM0NTUsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBCcmlsbGFudCA1MzMyOTI0MTQifQ HTTP/1.1" 200 None
+2025-02-11 16:50:59,942 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:00,429 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzcwODg0ODU3MTEsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBCcmlsbGFudCA2MjY0MDcxMjYifQ HTTP/1.1" 200 None
+2025-02-11 16:51:00,494 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:01,595 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzcyMTgwMTc2MTUsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBCcmlsbGFudCA2NTQ0NzQ5MTIifQ HTTP/1.1" 200 None
+2025-02-11 16:51:01,810 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:02,799 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6OTQ2MjM3NTUxNDQ0NywibGFzdF92YWx1ZSI6IkpVU1RJTkUgLSBPciBhdmVjIERpYW1hbnRzIn0 HTTP/1.1" 200 None
+2025-02-11 16:51:03,047 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:04,106 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6OTQ3Mzg4MzcwMTU4MywibGFzdF92YWx1ZSI6IlBsdWllIFNjaW50aWxsYW50ZSAtIENvbGxpZXIgZW4gT3IgYXZlYyBEaWFtYW50cyJ9 HTTP/1.1" 200 None
+2025-02-11 16:51:04,341 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:07,749 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products.json HTTP/1.1" 201 None
+2025-02-11 16:51:07,853 - INFO - Product added with ID: 15147243209039
+2025-02-11 16:51:07,855 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:08,292 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/collects.json HTTP/1.1" 201 None
+2025-02-11 16:51:08,297 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:15,662 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147243209039/images.json HTTP/1.1" 200 None
+2025-02-11 16:51:15,668 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:23,997 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147243209039/images.json HTTP/1.1" 200 None
+2025-02-11 16:51:24,002 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:31,512 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147243209039/images.json HTTP/1.1" 200 None
+2025-02-11 16:51:31,520 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:40,590 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147243209039/images.json HTTP/1.1" 200 None
+2025-02-11 16:51:40,596 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:51:48,824 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147243209039/images.json HTTP/1.1" 200 None
+2025-02-11 16:51:48,826 - INFO - Produit ajouté : Bague Diamant - Sérénade
+2025-02-11 16:51:48,835 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:51:48,898 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:51:48,899 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:51:49,244 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:51:49,248 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:51:50,296 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:51:50,549 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:51:51,404 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:51:51,895 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:51:52,832 - DEBUG - https://sheets.googleapis.com:443 "PUT /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27%21P16?valueInputOption=USER_ENTERED HTTP/1.1" 200 None
+2025-02-11 16:51:53,107 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
+2025-02-11 16:51:53,422 - DEBUG - https://sheets.googleapis.com:443 "PUT /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27%21Q16?valueInputOption=USER_ENTERED HTTP/1.1" 200 None
+2025-02-11 16:51:53,429 - INFO - 7 est déjà un nombre
+2025-02-11 16:51:53,429 - INFO - 2.37 est déjà un nombre
+2025-02-11 16:51:53,429 - INFO - 2.37 est déjà un nombre
+2025-02-11 16:51:53,429 - INFO - Fetching images from folder ID: 1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs with prefix: 17
+2025-02-11 16:51:53,435 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+2025-02-11 16:51:54,192 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&pageToken=~%21%21~AI9FV7SATi_A1xtuwOAZpszSIlWxm262l4mVPeoVUiRSbu2eR1pZlXk02sXMpz22VTnt7QfnsPf7SvUW8XqPZG6nUpk9LFa_1mVNXGY2J4vP20xzMbYtA9hhyNckNTJS7y9FsWkSs4NFphAm7Ygap-Wd7R8bdjYzFT8geFm12nCCuLNbgXc074NmGOH1z4UbIzre-3gg0wPvnPtStcMkNig3DZolnOcIE1vOUnK5FpPqdUNWmKBZXoEhhGk89BFo0m6i_X9XHPdrNNv_CcPkfzcN-07dp-vu8CX4cb1XdcFhUAd7_41Cv48%3D&alt=json
+2025-02-11 16:51:54,821 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&pageToken=~%21%21~AI9FV7RxErG5vm8pgOLFHiwjb2EGGM08VijSHoNQLb2dURRd-_yQW9I0OtlWvRFBHFZpJ1hDRjEMhf_IztrgbVbhVIuj_7mLjZM9-UigeawS35AYDlaFr-wNnR5Wya7_BzYfVKHK-njFagQ5WxNN5lclVQoWjOnCoa6L9b9qTXNkA21iRkPkF9o3lPbG3jVPUArZNhYgzJbwT3T_wKze1RolN8LY4vgqbjw1RQi4FfmOUZiyxTx8JgsrfTa1hUf2nsuPWZsgTeYiUT15sn8RR96ll9FPv4aMrHaFvEv_4_xUS4OZaMp7ZlV1weB30dxAWbvZD8ynFlYl&alt=json
+2025-02-11 16:51:55,335 - INFO - Subfolder ID found: 1qpcR7xLagORPZfMKcoSFKThIwu0T86hf
+2025-02-11 16:51:55,339 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs%27+in+parents+and+mimeType+%3D+%27application%2Fvnd.google-apps.folder%27+and+trashed+%3D+false&fields=nextPageToken%2C+files%28id%2C+name%29&alt=json
+2025-02-11 16:51:55,978 - INFO - Archive folder ID: 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:51:55,982 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files?q=%271qpcR7xLagORPZfMKcoSFKThIwu0T86hf%27+in+parents+and+trashed+%3D+false&fields=files%28id%2C+name%29&alt=json
+2025-02-11 16:51:56,376 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1KEKjZaHlKruT_UH1P4T-Gam-ucN-vHLM?alt=media
+2025-02-11 16:52:03,005 - DEBUG - tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 110 - value: b'Canon\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 116 - value: b'Canon EOS 750D\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 132 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 140 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 82 - Data Location: 148 - value: b'Adobe Lightroom 8.0 (Windows)\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: DateTime (306) - type: string (2) Tag Location: 94 - Data Location: 178 - value: b'2024:11:14 09:29:36\x00'
+2025-02-11 16:52:03,006 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\xc6\x00\x00\x00'
+2025-02-11 16:52:04,594 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:52:08,712 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1KEKjZaHlKruT_UH1P4T-Gam-ucN-vHLM?fields=parents&alt=json
+2025-02-11 16:52:09,140 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1KEKjZaHlKruT_UH1P4T-Gam-ucN-vHLM?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:52:10,378 - INFO - Successfully moved original file 1KEKjZaHlKruT_UH1P4T-Gam-ucN-vHLM to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:52:10,383 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1cu0IjvbowB9kobBK1GHmt64Vu1lZO5aB?alt=media
+2025-02-11 16:52:14,374 - DEBUG - tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 110 - value: b'Canon\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 116 - value: b'Canon EOS 750D\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: XResolution (282) - type: rational (5) Tag Location: 46 - Data Location: 132 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: YResolution (283) - type: rational (5) Tag Location: 58 - Data Location: 140 - value: b'\xf0\x00\x00\x00\x01\x00\x00\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 82 - Data Location: 148 - value: b'Adobe Lightroom 8.0 (Windows)\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: DateTime (306) - type: string (2) Tag Location: 94 - Data Location: 178 - value: b'2024:11:14 09:29:35\x00'
+2025-02-11 16:52:14,375 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\xc6\x00\x00\x00'
+2025-02-11 16:52:15,796 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:52:18,741 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1cu0IjvbowB9kobBK1GHmt64Vu1lZO5aB?fields=parents&alt=json
+2025-02-11 16:52:19,115 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1cu0IjvbowB9kobBK1GHmt64Vu1lZO5aB?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:52:20,630 - INFO - Successfully moved original file 1cu0IjvbowB9kobBK1GHmt64Vu1lZO5aB to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:52:20,635 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1MprlPEGTDGaEVzBnTo1Pxv1KjU_CDfIB?alt=media
+2025-02-11 16:52:25,026 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:52:25,026 - DEBUG - STREAM b'pHYs' 41 9
+2025-02-11 16:52:25,026 - DEBUG - STREAM b'iTXt' 62 1484
+2025-02-11 16:52:25,026 - DEBUG - STREAM b'IDAT' 1558 1048576
+2025-02-11 16:52:26,946 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:52:29,750 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1MprlPEGTDGaEVzBnTo1Pxv1KjU_CDfIB?fields=parents&alt=json
+2025-02-11 16:52:30,090 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1MprlPEGTDGaEVzBnTo1Pxv1KjU_CDfIB?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:52:31,161 - INFO - Successfully moved original file 1MprlPEGTDGaEVzBnTo1Pxv1KjU_CDfIB to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:52:31,167 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1Su3QUh678FrNUUS2VTRxVpeWzmDSB0Yd?alt=media
+2025-02-11 16:52:35,132 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:52:35,133 - DEBUG - STREAM b'caBX' 41 13378
+2025-02-11 16:52:35,133 - DEBUG - b'caBX' 41 13378 (unknown)
+2025-02-11 16:52:35,133 - DEBUG - STREAM b'pHYs' 13431 9
+2025-02-11 16:52:35,133 - DEBUG - STREAM b'iTXt' 13452 1484
+2025-02-11 16:52:35,133 - DEBUG - STREAM b'IDAT' 14948 1048576
+2025-02-11 16:52:36,459 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:52:37,090 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168285): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:52:37,090 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:52:38,756 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168312): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:52:38,756 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:52:39,576 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1Su3QUh678FrNUUS2VTRxVpeWzmDSB0Yd?fields=parents&alt=json
+2025-02-11 16:52:39,901 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1Su3QUh678FrNUUS2VTRxVpeWzmDSB0Yd?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:52:40,905 - INFO - Successfully moved original file 1Su3QUh678FrNUUS2VTRxVpeWzmDSB0Yd to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:52:40,911 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1npOoPJkeJ3GjXvNmCsqPP3O1pUOV9BKf?alt=media
+2025-02-11 16:52:41,346 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168366): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:52:41,347 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:52:43,844 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168406): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:52:43,844 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:52:45,094 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:52:45,094 - DEBUG - STREAM b'pHYs' 41 9
+2025-02-11 16:52:45,094 - DEBUG - STREAM b'iTXt' 62 1484
+2025-02-11 16:52:45,094 - DEBUG - STREAM b'IDAT' 1558 1048576
+2025-02-11 16:52:46,475 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:52:50,270 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1npOoPJkeJ3GjXvNmCsqPP3O1pUOV9BKf?fields=parents&alt=json
+2025-02-11 16:52:50,629 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1npOoPJkeJ3GjXvNmCsqPP3O1pUOV9BKf?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:52:51,604 - INFO - Successfully moved original file 1npOoPJkeJ3GjXvNmCsqPP3O1pUOV9BKf to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:52:51,609 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1UOqlIYEVbNDg_3shrQAowvm7NUEKhxRV?alt=media
+2025-02-11 16:52:57,037 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-11 16:52:57,038 - DEBUG - STREAM b'caBX' 41 13378
+2025-02-11 16:52:57,038 - DEBUG - b'caBX' 41 13378 (unknown)
+2025-02-11 16:52:57,038 - DEBUG - STREAM b'pHYs' 13431 9
+2025-02-11 16:52:57,038 - DEBUG - STREAM b'iTXt' 13452 1484
+2025-02-11 16:52:57,038 - DEBUG - STREAM b'IDAT' 14948 1048576
+2025-02-11 16:52:58,340 - DEBUG - URL being requested: POST https://www.googleapis.com/upload/drive/v3/files?fields=id&alt=json&uploadType=resumable
+2025-02-11 16:53:00,993 - DEBUG - URL being requested: GET https://www.googleapis.com/drive/v3/files/1UOqlIYEVbNDg_3shrQAowvm7NUEKhxRV?fields=parents&alt=json
+2025-02-11 16:53:01,579 - DEBUG - URL being requested: PATCH https://www.googleapis.com/drive/v3/files/1UOqlIYEVbNDg_3shrQAowvm7NUEKhxRV?addParents=10Lzq4EmcLsURU-96sppaLUS1koj9w4-A&removeParents=1qpcR7xLagORPZfMKcoSFKThIwu0T86hf&fields=id&alt=json
+2025-02-11 16:53:02,595 - INFO - Successfully moved original file 1UOqlIYEVbNDg_3shrQAowvm7NUEKhxRV to archive folder 10Lzq4EmcLsURU-96sppaLUS1koj9w4-A
+2025-02-11 16:53:02,596 - DEBUG - Images URL: ['https://drive.google.com/uc?id=17kymZPVVa3xBMMR0dCzeWODp0cDIDmpP', 'https://drive.google.com/uc?id=1pwhSJsv4F-E1F_QjnvAKOYh4VwsWMXTG', 'https://drive.google.com/uc?id=10T9lY_wW4cO64hWfLYvdbCuZPzbcuIWa', 'https://drive.google.com/uc?id=1U4d_CTBpK1gScxKYYXBsq-y3BTxXf7-y', 'https://drive.google.com/uc?id=1DrOiW3jmfAWQX1vWsiFSE3S2lcyDBBNB', 'https://drive.google.com/uc?id=1hvjTnXZ74m6qXoKHVc8lkBqArN--WIkt']
+2025-02-11 16:53:02,599 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:03,088 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json HTTP/1.1" 200 None
+2025-02-11 16:53:03,349 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:04,028 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJsYXN0X2lkIjoxNTExNjQwMzQ3NDc2NywibGFzdF92YWx1ZSI6IkJhZ3VlIERpYW1hbnQgLSBDYXJsYSIsImRpcmVjdGlvbiI6Im5leHQifQ HTTP/1.1" 200 None
+2025-02-11 16:53:04,094 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168696): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:04,094 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:04,351 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:04,744 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTUxMTU5NDg5MTcwNzEsImxhc3RfdmFsdWUiOiJCYWd1ZSBkaWFtYW50IC0gVGVzcyJ9 HTTP/1.1" 200 None
+2025-02-11 16:53:04,962 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:05,497 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6OTU2NDQwNTEwNDk3NSwibGFzdF92YWx1ZSI6IkJhZ3VlIHJ1YmlzIC0gRWxheWEifQ HTTP/1.1" 200 None
+2025-02-11 16:53:05,797 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:06,232 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTUxMjAzNDg5NzEzNDMsImxhc3RfdmFsdWUiOiJCYWd1ZSBUb3VybWFsaW5lIC0gVmlyZ2lubmllIn0 HTTP/1.1" 200 None
+2025-02-11 16:53:06,424 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:06,809 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzQ5ODUzMDQzOTksImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gIFJvbmQgQnJpbGxhbnQgNjQ1NDc0MzcyIn0 HTTP/1.1" 200 None
+2025-02-11 16:53:06,871 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:07,284 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4NTA1MDQ0NTg1NzUsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBicmlsbGFudCA1MzIyNjQ3NjYifQ HTTP/1.1" 200 None
+2025-02-11 16:53:07,349 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:07,439 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168760): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:07,439 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:07,807 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzcwODI4NDk2MTUsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBCcmlsbGFudCA2MjY0MDUyOTAifQ HTTP/1.1" 200 None
+2025-02-11 16:53:07,869 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:08,330 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6MTQ4MzcyMDcxNzE0MDcsImxhc3RfdmFsdWUiOiJEaWFtYW50IC0gUm9uZCBCcmlsbGFudCA2NTQ0NzQ0NjAifQ HTTP/1.1" 200 None
+2025-02-11 16:53:08,568 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:09,054 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6OTQ2MjM3ODg1Njc4MywibGFzdF92YWx1ZSI6IkpVTElFVFRFIC0gIE9yIGF2ZWMgRGlhbWFudHMifQ HTTP/1.1" 200 None
+2025-02-11 16:53:09,246 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:09,704 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "GET /admin/api/2024-01/products.json?page_info=eyJkaXJlY3Rpb24iOiJuZXh0IiwibGFzdF9pZCI6OTQ3NzU5NjgwNzUwMywibGFzdF92YWx1ZSI6IlBsYWdlIGRlIFNhYmxlIEJsYW5jIC0gQm91Y2xlcyBkJ29yZWlsbGVzIGVuIE9yIGF2ZWMgTmFjcmUgZXQgRGlhbWFudHMifQ HTTP/1.1" 200 None
+2025-02-11 16:53:10,011 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:11,208 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168874): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:11,208 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:13,117 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products.json HTTP/1.1" 201 None
+2025-02-11 16:53:13,235 - INFO - Product added with ID: 15147247862095
+2025-02-11 16:53:13,238 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:13,691 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/collects.json HTTP/1.1" 201 None
+2025-02-11 16:53:13,692 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:14,594 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163168934): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:14,594 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:21,474 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147247862095/images.json HTTP/1.1" 200 None
+2025-02-11 16:53:21,476 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:29,379 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147247862095/images.json HTTP/1.1" 200 None
+2025-02-11 16:53:29,382 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:39,582 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:41,316 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163169314): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:41,317 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:44,617 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=10400, id=163169469): is_file, is_inode_meta_mod
+2025-02-11 16:53:44,628 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:44,630 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163169472): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:44,630 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:47,336 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163169518): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:53:47,337 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:53:49,857 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:53:57,196 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147247862095/images.json HTTP/1.1" 200 None
+2025-02-11 16:53:57,202 - DEBUG - Starting new HTTPS connection (1): cercledesdiamantaires.myshopify.com:443
+2025-02-11 16:54:00,334 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163169827): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:54:00,334 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:54:03,732 - DEBUG - https://cercledesdiamantaires.myshopify.com:443 "POST /admin/api/2025-01/products/15147247862095/images.json HTTP/1.1" 200 None
+2025-02-11 16:54:03,735 - INFO - Produit ajouté : Bague Diamant - Lumière Éternelle
+2025-02-11 16:54:06,399 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163170029): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:54:06,400 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:54:12,614 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:54:21,798 - DEBUG - NativeEvent(path="/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py", inode=57364197, flags=11400, id=163171080): is_file, is_inode_meta_mod, is_modified
+2025-02-11 16:54:21,798 - DEBUG - queue_event FileModifiedEvent(src_path='/Users/thomassauvage/Desktop/alternance/script-product/post-product/main.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2025-02-11 16:54:24,016 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-02-11 16:54:25,498 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2025-02-11 16:54:25,563 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2025-02-11 16:54:25,566 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2025-02-11 16:54:26,036 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2025-02-11 16:54:26,041 - DEBUG - Starting new HTTPS connection (1): sheets.googleapis.com:443
+2025-02-11 16:54:26,974 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:54:27,276 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M?includeGridData=false HTTP/1.1" 200 None
+2025-02-11 16:54:28,043 - DEBUG - https://sheets.googleapis.com:443 "GET /v4/spreadsheets/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/values/%27Feuille1%27 HTTP/1.1" 200 None
