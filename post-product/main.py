@@ -17,6 +17,13 @@ from modules.metafields import get_metafield
 from modules.add_product import add_product
 from modules.post_image import post_image
 from modules.collection import collection
+import json
+import streamlit as st
+from google.oauth2.service_account import Credentials
+
+# Charger les credentials depuis Streamlit Secrets
+service_account_info = json.loads(st.secrets["credentials"])
+CREDENTIALS_FILE = Credentials.from_service_account_info(service_account_info)
 
 # Config Shopify
 API_KEY = os.getenv("API_KEY")
@@ -30,7 +37,7 @@ FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les i
 # Configuration Google Sheets
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
 SHEET_NAME = "Feuille1"  # Modifier selon ton Google Sheet
-CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
+# CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
 
 # Configuration logging
 logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
