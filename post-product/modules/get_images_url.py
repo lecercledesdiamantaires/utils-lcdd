@@ -4,6 +4,9 @@ from googleapiclient.http import MediaIoBaseUpload
 import requests
 import logging
 from io import BytesIO
+import json
+import streamlit as st
+from google.oauth2.service_account import Credentials
 from PIL import Image
 
 SERVICE_ACCOUNT_FILE = 'credentials.json'
@@ -11,8 +14,14 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 
 logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
-credentials = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+service_account_info = json.loads(st.secrets["credentials"])
+credentials = Credentials.from_service_account_info(service_account_info)
 service = build('drive', 'v3', credentials=credentials)
+
+
+
+# Charger les credentials depuis Streamlit Secrets
+
 
 ARCHIVE_FOLDER_NAME = "Archive"
 
