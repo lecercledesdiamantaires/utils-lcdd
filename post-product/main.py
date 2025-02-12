@@ -70,7 +70,7 @@ def get_google_sheet_data(sheet_url, sheet_name):
 def update_google_sheet(sheet_url, sheet_name, product_id, shopify_id):
     """Met à jour la colonne 'en_ligne' à 'TRUE' pour un produit donné"""
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name(service_account_info, scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
 
