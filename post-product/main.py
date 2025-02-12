@@ -35,7 +35,6 @@ SHEET_NAME = "Feuille1"  # Modifier selon ton Google Sheet
 # CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
 
 service_account_info = json.loads(st.secrets["credentials"])
-CREDENTIALS_FILE = Credentials.from_service_account_info(service_account_info)
 
 # Configuration logging
 logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
@@ -44,7 +43,7 @@ logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG,
 # Fonction pour récupérer les données du Google Sheet
 def get_google_sheet_data(sheet_url, sheet_name):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+    creds = Credentials.from_service_account_info(service_account_info, scopes=scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
     data = sheet.get_all_records()
