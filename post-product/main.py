@@ -17,6 +17,8 @@ from modules.metafields import get_metafield
 from modules.add_product import add_product
 from modules.post_image import post_image
 from modules.collection import collection
+from google.oauth2.service_account import Credentials
+
 
 # Config Shopify
 API_KEY = os.getenv("API_KEY")
