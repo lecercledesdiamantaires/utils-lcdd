@@ -200,7 +200,7 @@ if st.button("Publier sur Shopify"):
                 for image in images_url:
                     post_image(product_id, image, product_infos['title'])
                 logging.info(f"Produit ajouté : {product_infos['title']}")
-                st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
+                st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{product_id}")
 
                 product_infos['online'] = 'TRUE'
                 update_google_sheet(GOOGLE_SHEET_URL, SHEET_NAME, product_infos['id'], product_id)
