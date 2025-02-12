@@ -86,7 +86,14 @@ st.title("Publier les produits")
 st.write("ℹ️ Ce script permet de publier les produits sur Shopify à partir du Google Sheet 'info-produit'.")
 st.error("Pour la mise en forme du drive :")
 
-st.text_area(f"1- Respecter les listes de prédéfinies sans les modifier \n 2- Mettre le poids en gramme sans virgule \n 3- Mettre le prix en euro sans virgule \n 4- Les valeurs du caratage sont a mettre avec des points \n 5- Si il y a plusieurs pierres d'ornements il faut mettre toutes les infos dans le meme ordre c'est a dire la première couleur doit correspondre a la couleur de la première pierre qui a été mise et pareil pour le caratage \n 6 - Pour les caratages de pierre d'ornements de plusieurs pierre il faut les séparer avec un tiret comme sur la première ligne exemple è - La valeur de la colonne B doit correspondre au numéro du sous dossier du drive")
+st.text(f"""
+        1- Respecter les listes de prédéfinies sans les modifier 
+        2- Mettre le poids en gramme sans virgule 
+        3- Mettre le prix en euro sans virgule 
+        4- Les valeurs du caratage sont a mettre avec des points 
+        5- Si il y a plusieurs pierres d'ornements il faut mettre toutes les infos dans le meme ordre c'est a dire la première couleur doit correspondre a la couleur de la première pierre qui a été mise et pareil pour le caratage 
+        6 - Pour les caratages de pierre d'ornements de plusieurs pierre il faut les séparer avec un tiret comme sur la première ligne exemple è - La valeur de la colonne B doit correspondre au numéro du sous dossier du drive
+        """)
 
 if st.button("Charger les données"):
     df = get_google_sheet_data(GOOGLE_SHEET_URL, SHEET_NAME)
