@@ -192,19 +192,19 @@ if st.button("Publier sur Shopify"):
                         'metafields': metafields
                     }     
                 }
-
                 product = add_product(data)
                 logging.info(f"Product added with ID: {product['product']['id']}")
                 product_id = product["product"]["id"]
                 collection(product_infos['product_type'], product_id)
+                st.write("Récupérations des images en cours...")
                 for image in images_url:
                     post_image(product_id, image, product_infos['title'])
                 logging.info(f"Produit ajouté : {product_infos['title']}")
-                st.success(f"✅ Produit ajouté avec ID: {product_id}")
+                st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
 
                 product_infos['online'] = 'TRUE'
                 update_google_sheet(GOOGLE_SHEET_URL, SHEET_NAME, product_infos['id'], product_id)
-            
+
 
             except Exception as e:
                 erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
