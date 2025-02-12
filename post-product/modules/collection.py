@@ -1,13 +1,14 @@
 import os
+import streamlit as st
 import requests
 
-API_KEY = os.getenv("API_KEY")
-PASSWORD = os.getenv("PASSWORD")
-SHOP_NAME = os.getenv("SHOP_NAME")
-API_VERSION = os.getenv("API_VERSION")
-LIMIT = os.getenv("LIMIT")
-FALSE_URL = os.getenv("FALSE_URL")
-SHOPIFY_STORE = os.getenv("SHOP_URL")
+API_KEY = st.secrets["API_KEY"]
+PASSWORD = st.secrets["PASSWORD"]
+SHOP_NAME = st.secrets["SHOP_NAME"]
+API_VERSION = st.secrets["API_VERSION"]
+LIMIT = st.secrets["LIMIT"]
+FALSE_URL = st.secrets["FALSE_URL"]
+SHOPIFY_STORE = st.secrets["SHOP_URL"]
 BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 
 COLLECTIONS_ID = {
