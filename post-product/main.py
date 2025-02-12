@@ -92,7 +92,8 @@ st.text(f"""
         3- Mettre le prix en euro sans virgule 
         4- Les valeurs du caratage sont a mettre avec des points 
         5- Si il y a plusieurs pierres d'ornements il faut mettre toutes les infos dans le meme ordre c'est a dire la première couleur doit correspondre a la couleur de la première pierre qui a été mise et pareil pour le caratage 
-        6 - Pour les caratages de pierre d'ornements de plusieurs pierre il faut les séparer avec un tiret comme sur la première ligne exemple è - La valeur de la colonne B doit correspondre au numéro du sous dossier du drive
+        6 - Pour les caratages de pierre d'ornements de plusieurs pierre il faut les séparer avec un tiret comme sur la première ligne exemple
+        7 - La valeur de la colonne B doit correspondre au numéro du sous dossier du drive
         """)
 
 if st.button("Charger les données"):
