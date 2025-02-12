@@ -110,107 +110,107 @@ if st.button("Charger les données"):
 
 
 
-    if st.button("Publier sur Shopify"):
-        if "df" not in st.session_state:
-            st.error("❌ Les données ne sont pas chargées. Cliquez d'abord sur 'Charger les données'.")
-        else:
-            df = st.session_state["df"]
-            st.write("🛍️ Début de la publiation des produits...")
+if st.button("Publier sur Shopify"):
+    if "df" not in st.session_state:
+        st.error("❌ Les données ne sont pas chargées. Cliquez d'abord sur 'Charger les données'.")
+    else:
+        df = st.session_state["df"]
+        st.write("🛍️ Début de la publiation des produits...")
 
-            erreurs = []
+        erreurs = []
 
-            for index, row in df.iterrows():
-                if row.get("en_ligne") == "TRUE":
-                    continue
-                try:
-                    product_infos = {
-                        'id': row.get('id'),
-                        'title': row.get('titre'), 
-                        'product_type': row.get('type_de_produit'),
-                        'total_weight_of_jewelry': row.get('poid_total_du_bijoux'),
-                        'main_stone': row.get('pierre_principale'),
-                        'main_stone_shape': row.get('forme_pierre_principale'),
-                        'main_stone_color': row.get('couleur_pierre_principale'),
-                        'main_stone_carat': row.get('carat_pierre_principale'),
-                        'number_of_stones': row.get('nombre_de_pierres'),
-                        'ornamental_stone': row.get('nom_pierre_d_ornements'),
-                        'ornamental_stone_color': row.get("couleur_pierre_d_ornements"),
-                        'ornamental_stone_carat': row.get("caratage_pierre_d_ornement"),
-                        'price': row.get('prix'),
-                        'description': row.get('description'),
-                        'online': row.get('en_ligne'),
-                    }
-                    st.write(f"Produit : {product_infos['title']}, ID : {product_infos['id']}")
-                    check_product_type(product_infos['id'], product_infos['product_type'])
+        for index, row in df.iterrows():
+            if row.get("en_ligne") == "TRUE":
+                continue
+            try:
+                product_infos = {
+                    'id': row.get('id'),
+                    'title': row.get('titre'), 
+                    'product_type': row.get('type_de_produit'),
+                    'total_weight_of_jewelry': row.get('poid_total_du_bijoux'),
+                    'main_stone': row.get('pierre_principale'),
+                    'main_stone_shape': row.get('forme_pierre_principale'),
+                    'main_stone_color': row.get('couleur_pierre_principale'),
+                    'main_stone_carat': row.get('carat_pierre_principale'),
+                    'number_of_stones': row.get('nombre_de_pierres'),
+                    'ornamental_stone': row.get('nom_pierre_d_ornements'),
+                    'ornamental_stone_color': row.get("couleur_pierre_d_ornements"),
+                    'ornamental_stone_carat': row.get("caratage_pierre_d_ornement"),
+                    'price': row.get('prix'),
+                    'description': row.get('description'),
+                    'online': row.get('en_ligne'),
+                }
+                st.write(f"Produit : {product_infos['title']}, ID : {product_infos['id']}")
+                check_product_type(product_infos['id'], product_infos['product_type'])
 
-                    description = generate_product_info(
-                        product_infos['total_weight_of_jewelry'],
-                        product_infos['main_stone'],
-                        product_infos['main_stone_carat'],
-                        product_infos['ornamental_stone'],
-                        product_infos['ornamental_stone_carat'],
-                        product_infos['number_of_stones'],
-                        product_infos['main_stone_shape'],
-                        product_infos['product_type'],
-                        product_infos['main_stone_color'],
-                        product_infos['ornamental_stone_color'],
-                        product_infos['description']
-                    )
+                description = generate_product_info(
+                    product_infos['total_weight_of_jewelry'],
+                    product_infos['main_stone'],
+                    product_infos['main_stone_carat'],
+                    product_infos['ornamental_stone'],
+                    product_infos['ornamental_stone_carat'],
+                    product_infos['number_of_stones'],
+                    product_infos['main_stone_shape'],
+                    product_infos['product_type'],
+                    product_infos['main_stone_color'],
+                    product_infos['ornamental_stone_color'],
+                    product_infos['description']
+                )
 
-                    tags = create_tags(
-                        product_infos['product_type'], 
-                        product_infos['main_stone'], 
-                        product_infos['ornamental_stone']
-                    )
-                    images_url = get_images_url(FOLDER_ID, product_infos['id'])
-                    logging.debug(f"Images URL: {images_url}")
-                    metafields = get_metafield(
-                        product_infos['product_type'],
-                        product_infos['main_stone'],
-                        product_infos['ornamental_stone'],
-                        product_infos['main_stone_color'],
-                        product_infos['ornamental_stone_color']
-                    )
-                    variants = create_variants(
-                        product_infos['price'],
-                        product_infos['product_type'],
-                        product_infos['total_weight_of_jewelry']
-                    )
-                    options = create_options(
-                        product_infos['product_type']
-                    )
-                    
-                    data = { 
-                        "product" : {
-                            'title': title_main(product_infos['title']),
-                            'body_html': description,
-                            'vendor': 'Le Cercle des Diamantaires',
-                            'product_type': product_infos['product_type'],
-                            'tags': tags,
-                            'variants': variants,
-                            'options': options,
-                            'metafields': metafields
-                        }     
-                    }
-
-                    product = add_product(data)
-                    logging.info(f"Product added with ID: {product['product']['id']}")
-                    product_id = product["product"]["id"]
-                    collection(product_infos['product_type'], product_id)
-                    for image in images_url:
-                        post_image(product_id, image, product_infos['title'])
-                    logging.info(f"Produit ajouté : {product_infos['title']}")
-                    st.success(f"✅ Produit ajouté avec ID: {product_id}")
-
-                    product_infos['online'] = 'TRUE'
-                    update_google_sheet(GOOGLE_SHEET_URL, SHEET_NAME, product_infos['id'], product_id)
+                tags = create_tags(
+                    product_infos['product_type'], 
+                    product_infos['main_stone'], 
+                    product_infos['ornamental_stone']
+                )
+                images_url = get_images_url(FOLDER_ID, product_infos['id'])
+                logging.debug(f"Images URL: {images_url}")
+                metafields = get_metafield(
+                    product_infos['product_type'],
+                    product_infos['main_stone'],
+                    product_infos['ornamental_stone'],
+                    product_infos['main_stone_color'],
+                    product_infos['ornamental_stone_color']
+                )
+                variants = create_variants(
+                    product_infos['price'],
+                    product_infos['product_type'],
+                    product_infos['total_weight_of_jewelry']
+                )
+                options = create_options(
+                    product_infos['product_type']
+                )
                 
+                data = { 
+                    "product" : {
+                        'title': title_main(product_infos['title']),
+                        'body_html': description,
+                        'vendor': 'Le Cercle des Diamantaires',
+                        'product_type': product_infos['product_type'],
+                        'tags': tags,
+                        'variants': variants,
+                        'options': options,
+                        'metafields': metafields
+                    }     
+                }
 
-                except Exception as e:
-                    erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
-                    logging.error(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
-                    st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
-            if not erreurs:
-                st.success("✅ Tous les produits ont été publiés avec succès !")
-            else:
-                st.error("\n".join(erreurs))
+                product = add_product(data)
+                logging.info(f"Product added with ID: {product['product']['id']}")
+                product_id = product["product"]["id"]
+                collection(product_infos['product_type'], product_id)
+                for image in images_url:
+                    post_image(product_id, image, product_infos['title'])
+                logging.info(f"Produit ajouté : {product_infos['title']}")
+                st.success(f"✅ Produit ajouté avec ID: {product_id}")
+
+                product_infos['online'] = 'TRUE'
+                update_google_sheet(GOOGLE_SHEET_URL, SHEET_NAME, product_infos['id'], product_id)
+            
+
+            except Exception as e:
+                erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
+                logging.error(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
+                st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
+        if not erreurs:
+            st.success("✅ Tous les produits ont été publiés avec succès !")
+        else:
+            st.error("\n".join(erreurs))
