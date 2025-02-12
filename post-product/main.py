@@ -35,6 +35,9 @@ SHEET_NAME = "Feuille1"  # Modifier selon ton Google Sheet
 # CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
 
 service_account_info = json.loads(st.secrets["credentials"])
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_info(service_account_info, scopes=scope)
+client = gspread.authorize(creds)
 
 # Configuration logging
 logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG, 
@@ -42,9 +45,6 @@ logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG,
 
 # Fonction pour récupérer les données du Google Sheet
 def get_google_sheet_data(sheet_url, sheet_name):
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = Credentials.from_service_account_info(service_account_info, scopes=scope)
-    client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
     data = sheet.get_all_records()
 
@@ -69,20 +69,11 @@ def get_google_sheet_data(sheet_url, sheet_name):
 
 def update_google_sheet(sheet_url, sheet_name, product_id, shopify_id):
     """Met à jour la colonne 'en_ligne' à 'TRUE' pour un produit donné"""
-    logging.info(f"Updating Google Sheet for product ID: {product_id} with Shopify ID: {shopify_id}")
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(service_account_info, scope)
-    client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
     cell = sheet.find(str(product_id), in_column=2) 
-
     if cell:
-        logging.info(f"Found product ID {product_id} in Google Sheet at row {cell.row}")
         sheet.update_cell(cell.row, sheet.find("en_ligne").col, "TRUE")
         sheet.update_cell(cell.row, sheet.find("url").col, f"https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
-        logging.info(f"Updated 'en_ligne' and 'url' for product ID {product_id}")
-    else:
-        logging.warning(f"Product ID {product_id} not found in Google Sheet")
 
 
 # Interface Streamlit
