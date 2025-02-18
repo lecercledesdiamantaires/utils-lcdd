@@ -15,7 +15,6 @@ SHOPIFY_STORE = st.secrets["SHOP_URL"]
 all_products = []
 
 stone_metafields = [
-    { "id": "\"gid://shopify/Metaobject/287805669711\"", "stone": "Aquamarine" },
     { "id": "\"gid://shopify/Metaobject/85147255119\"", "stone": "Chrysoprase" },
     { "id": "\"gid://shopify/Metaobject/85096694095\"", "stone": "Corail" },
     { "id": "\"gid://shopify/Metaobject/83815203151\"", "stone": "Agate" },
