@@ -17,30 +17,30 @@ all_products = []
 stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/85147255119\"", "stone": "Chrysoprase" },
     { "id": "\"gid://shopify/Metaobject/85096694095\"", "stone": "Corail" },
-    { "id": "\"gid://shopify/Metaobject/83815203151\"", "stone": "Agate" },
-    { "id": "\"gid://shopify/Metaobject/83815170383\"", "stone": "Opaline" },
+    { "id": "\"gid://shopify/Metaobject/83813859663\"", "stone": "Agate" },
+    { "id": "\"gid://shopify/Metaobject/83815203151\"", "stone": "Opaline" },
     { "id": "\"gid://shopify/Metaobject/83815170383\"", "stone": "Turquoise" },
-    { "id": "\"gid://shopify/Metaobject/83814941007\"", "stone": "Spinelle" },
-    { "id": "\"gid://shopify/Metaobject/83814908239\"", "stone": "Rubellite" },
-    { "id": "\"gid://shopify/Metaobject/83814875471\"", "stone": "Rhodonite" },
-    { "id": "\"gid://shopify/Metaobject/83814842703\"", "stone": "Pyrite" },
-    { "id": "\"gid://shopify/Metaobject/83814777167\"", "stone": "Pierre de lune" },
-    { "id": "\"gid://shopify/Metaobject/83814744399\"", "stone": "Péridot" },
-    { "id": "\"gid://shopify/Metaobject/83814711631\"", "stone": "Opale" },
-    { "id": "\"gid://shopify/Metaobject/83814678863\"", "stone": "Onyx" },
-    { "id": "\"gid://shopify/Metaobject/83814646095\"", "stone": "Oeil de tigre" },
-    { "id": "\"gid://shopify/Metaobject/83814580559\"", "stone": "Nacre" },
-    { "id": "\"gid://shopify/Metaobject/83814547791\"", "stone": "Lapis Lazuli" },
-    { "id": "\"gid://shopify/Metaobject/83814515023\"", "stone": "Labradorite" },
-    { "id": "\"gid://shopify/Metaobject/83814449487\"", "stone": "Kyanite" },
-    { "id": "\"gid://shopify/Metaobject/83814383951\"", "stone": "Jade" },
-    { "id": "\"gid://shopify/Metaobject/83814318415\"", "stone": "Iolite" },
-    { "id": "\"gid://shopify/Metaobject/83814285647\"", "stone": "Grenat" },
-    { "id": "\"gid://shopify/Metaobject/83814220111\"", "stone": "Cornaline" },
-    { "id": "\"gid://shopify/Metaobject/83814154575\"", "stone": "Calcédoine" },
-    { "id": "\"gid://shopify/Metaobject/83814023503\"", "stone": "Aventurine" },
-    { "id": "\"gid://shopify/Metaobject/83813957967\"", "stone": "Ambre" },
-    { "id": "\"gid://shopify/Metaobject/83813859663\"", "stone": "Amazonite" },
+    { "id": "\"gid://shopify/Metaobject/83815039311\"", "stone": "Spinelle" },
+    { "id": "\"gid://shopify/Metaobject/83814941007\"", "stone": "Rubellite" },
+    { "id": "\"gid://shopify/Metaobject/83814908239\"", "stone": "Rhodonite" },
+    { "id": "\"gid://shopify/Metaobject/83814875471\"", "stone": "Pyrite" },
+    { "id": "\"gid://shopify/Metaobject/83814842703\"", "stone": "Pierre de lune" },
+    { "id": "\"gid://shopify/Metaobject/83814777167\"", "stone": "Péridot" },
+    { "id": "\"gid://shopify/Metaobject/83814744399\"", "stone": "Opale" },
+    { "id": "\"gid://shopify/Metaobject/83814711631\"", "stone": "Onyx" },
+    { "id": "\"gid://shopify/Metaobject/83814678863\"", "stone": "Oeil de tigre"},
+    { "id": "\"gid://shopify/Metaobject/83814646095\"", "stone": "Nacre" },
+    { "id": "\"gid://shopify/Metaobject/83814580559\"", "stone": "Lapis Lazuli" },
+    { "id": "\"gid://shopify/Metaobject/83814547791\"", "stone": "Labradorite" },
+    { "id": "\"gid://shopify/Metaobject/83814515023\"", "stone": "Kyanite" },
+    { "id": "\"gid://shopify/Metaobject/83814449487\"", "stone": "Jade" },
+    { "id": "\"gid://shopify/Metaobject/83814383951\"", "stone": "Iolite" },
+    { "id": "\"gid://shopify/Metaobject/83814318415\"", "stone": "Grenat" },
+    { "id": "\"gid://shopify/Metaobject/83814285647\"", "stone": "Cornaline" },
+    { "id": "\"gid://shopify/Metaobject/83814220111\"", "stone": "Calcédoine" },
+    { "id": "\"gid://shopify/Metaobject/83814154575\"", "stone": "Aventurine" },
+    { "id": "\"gid://shopify/Metaobject/83813990735\"", "stone": "Ambre" },
+    { "id": "\"gid://shopify/Metaobject/83813957967\"", "stone": "Amazonite" },
     { "id": "\"gid://shopify/Metaobject/83801538895\"", "stone": "Topaze" },
     { "id": "\"gid://shopify/Metaobject/83801440591\"", "stone": "Tanzanite" },
     { "id": "\"gid://shopify/Metaobject/83800850767\"", "stone": "Saphir" },
@@ -144,7 +144,8 @@ def get_stone( primal_stone, secondary_stone_list):
 
     # Vérifier la pierre principale
     for stone in stone_metafields:
-        if stone["stone"].lower() == primal_stone.lower():
+        stone_lower = stone["stone"].lower()
+        if stone_lower in primal_stone.lower() and stone_lower not in secondary_stones_found:
             stone_ids.append(stone["id"])
 
     # Vérifier les pierres secondaires
@@ -153,7 +154,6 @@ def get_stone( primal_stone, secondary_stone_list):
         if stone_lower in secondary_stone_list and stone_lower not in secondary_stones_found:
             secondary_stones_found.add(stone_lower)  # Marquer la pierre comme trouvée
             stone_ids.append(stone["id"])
-
     return stone_ids
 
 def get_color(primal_color, secondary_color):
