@@ -138,8 +138,17 @@ def get_gold_color():
     """
     return "[\"gid://shopify/Metaobject/83803111759\",\"gid://shopify/Metaobject/84184858959\",\"gid://shopify/Metaobject/83803308367\"]"
 
-def get_stone( primal_stone, secondary_stone_list):
+def get_stone(primal_stone, secondary_stone):
+    """
+    Retourne les IDs des pierres principales et secondaires dans Shopify.
+    Gestion de la casse pour éviter les problèmes avec majuscules/minuscules.
+    """
+    # Transformer la chaîne secondary_stone en liste avec séparation par tirets et tout en minuscule
+    secondary_stone_list = [stone.lower() for stone in secondary_stone.split(', ')]
+
+    # Liste pour stocker les IDs
     stone_ids = []
+
     for stone in stone_metafields:
         if stone["stone"].lower() == primal_stone.lower():
             stone_ids.append(stone["id"])
@@ -147,8 +156,9 @@ def get_stone( primal_stone, secondary_stone_list):
             if stone["stone"].lower() in secondary_stone_list:
                 secondary_stone_list.remove(stone["stone"].lower())
                 stone_ids.append(stone["id"])
-    return stone_ids
 
+    return stone_ids
+    
 def get_color(primal_color, secondary_color):
     """
     Retourne les IDs des couleurs principales et secondaires dans Shopify.
