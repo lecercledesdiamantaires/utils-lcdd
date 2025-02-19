@@ -140,20 +140,13 @@ def get_gold_color():
 
 def get_stone( primal_stone, secondary_stone_list):
     stone_ids = []
-    secondary_stones_found = set()  # Utiliser un set pour éviter les suppressions en cours de boucle
-
-    # Vérifier la pierre principale
     for stone in stone_metafields:
-        stone_lower = stone["stone"].lower()
-        if stone_lower in primal_stone.lower() and stone_lower not in secondary_stones_found:
+        if stone["stone"].lower() == primal_stone.lower():
             stone_ids.append(stone["id"])
-
-    # Vérifier les pierres secondaires
-    for stone in stone_metafields:
-        stone_lower = stone["stone"].lower()
-        if stone_lower in secondary_stone_list and stone_lower not in secondary_stones_found:
-            secondary_stones_found.add(stone_lower)  # Marquer la pierre comme trouvée
-            stone_ids.append(stone["id"])
+        for i in range (len(secondary_stone_list)):
+            if stone["stone"].lower() in secondary_stone_list:
+                secondary_stone_list.remove(stone["stone"].lower())
+                stone_ids.append(stone["id"])
     return stone_ids
 
 def get_color(primal_color, secondary_color):
