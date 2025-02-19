@@ -124,7 +124,7 @@ def select_two_random_ids(related_products):
 
 def get_related_products(product_type):
     """
-    Sélectionne deux produits de type "Bague" et retourne leurs IDs.
+    Sélectionne deux produits de type 'product_type' et retourne leurs IDs.
     """
     related_products = find_products_by_type(product_type)
     id1, id2 = select_two_random_ids(related_products)
@@ -138,24 +138,21 @@ def get_gold_color():
     """
     return "[\"gid://shopify/Metaobject/83803111759\",\"gid://shopify/Metaobject/84184858959\",\"gid://shopify/Metaobject/83803308367\"]"
 
-def get_stone(primal_stone, secondary_stone):
-    """
-    Retourne les IDs des pierres principales et secondaires dans Shopify.
-    Gestion de la casse pour éviter les problèmes avec majuscules/minuscules.
-    """
-    # Transformer la chaîne secondary_stone en liste avec séparation par tirets et tout en minuscule
-    secondary_stone_list = [stone.lower() for stone in secondary_stone.split(', ')]
-    
-    # Liste pour stocker les IDs
+def get_stone( primal_stone, secondary_stone_list):
     stone_ids = []
-    
+    secondary_stones_found = set()  # Utiliser un set pour éviter les suppressions en cours de boucle
+
+    # Vérifier la pierre principale
     for stone in stone_metafields:
         if stone["stone"].lower() == primal_stone.lower():
             stone_ids.append(stone["id"])
-        for i in range (len(secondary_stone_list)):
-            if stone["stone"].lower() in secondary_stone_list:
-                secondary_stone_list.remove(stone["stone"].lower())
-                stone_ids.append(stone["id"])
+
+    # Vérifier les pierres secondaires
+    for stone in stone_metafields:
+        stone_lower = stone["stone"].lower()
+        if stone_lower in secondary_stone_list and stone_lower not in secondary_stones_found:
+            secondary_stones_found.add(stone_lower)  # Marquer la pierre comme trouvée
+            stone_ids.append(stone["id"])
 
     return stone_ids
 
