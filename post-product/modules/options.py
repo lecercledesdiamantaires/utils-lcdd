@@ -9,18 +9,21 @@ def create_options(type):
             "name": "Pierre précieuse",
             "values": ["Diamant", "Saphir", "Emeraude", "Rubis"]
         }
-        if type == 'Bague Catalogue':
+        if type == 'Baguecatalogue':
             size = {
                 "name" : "Taille",
                 "values" : ["48", "50", "52", "54", "56", "58", "60", "62"]
             }
-        elif type == 'Collier Catalogue' or type == 'Bracelet Catalogue':
+            options.append(size)
+
+        elif type == 'Colliercatalogue' or type == 'Braceletcatalogue':
             size = {
                 "name" : "Taille",
                 "values" : ["XXS","XS","S","M","L","XL","XXL"]
             }
+            options.append(size)
+
         
-        options.append(size)
         options.append(pierres)
     else :
         carats ={
