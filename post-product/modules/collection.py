@@ -22,7 +22,7 @@ def collection(product_category, product_id):
     if product_category in ["Puce", "Pendantes"]:
         product_category = "Boucles d'oreilles"
 
-    if product_category in ["Bague Catalogue", "Collier Catalogue", "Bracelet Catalogue", "Boucles doreilles Catalogue"]:
+    if product_category in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
         product_category = "Catalogue"
 
     url = f"{BASE_URL}/collects.json"
