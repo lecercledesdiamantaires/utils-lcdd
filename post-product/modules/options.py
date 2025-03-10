@@ -4,9 +4,9 @@ def create_options(type):
         "values" : ["Rose gold","Gold","White gold"]
     }
     options = []
-    if type == "Bague Catalogue" or type == 'Collier Catalogue' or type == 'Bracelet Catalogue' or type == 'Boucles doreilles Catalogue':
+    if type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
         pierres = {
-            "name": "Pierre",
+            "name": "Pierre précieuse",
             "values": ["Diamant", "Saphir", "Emeraude", "Rubis"]
         }
         if type == 'Bague Catalogue':
