@@ -78,25 +78,46 @@ def generate_product_info(weight, primal_stone_name, carat_primal_stone, seconda
         "main_color": main_color,
         "secondary_color": secondary_color
     }
-    return write_description(product_info, first_paragraph)
+    return write_description(product_info, first_paragraph, product_type)
 
-def write_description(product_info, first_paragraph):
-    description = f"""
-    {first_paragraph}
-    <div class="infos-product">
-        <h4>Caractéristiques du produit</h4>
-        <ul>
-            <li><strong>Poids</strong>: {product_info['weight']} {"gramme" if product_info['weight'] < 2 else "grammes"}</li>
-            <li><strong>Matériau</strong>: Or</li>
-            <li><strong>Pierre principale</strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
-            <li><strong>Couleur principale</strong>: {product_info['main_color']}</li>
-            {write_secondary_stones(product_info['secondary_stones'])}
-            {f"<li><strong>Nombre de pierres</strong>: {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
-            {f"<li><strong>Couleur secondaire</strong>: {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
-            {f"<li><strong>Forme de la pierre</strong>: {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
-        </ul>
-    </div>
-    <br>
-    <p>Photos retouchées</p>
-    """
+def write_description(product_info, first_paragraph, product_type):
+    if product_type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
+        description = f"""
+        {first_paragraph}
+        <div class="infos-product">
+            <h4>Caractéristiques du produit</h4>
+            <ul>
+                <li><strong>Poids</strong>: {product_info['weight']} {"gramme" if product_info['weight'] < 2 else "grammes"}</li>
+                <li><strong>Matériau</strong>: Or</li>
+                <li><strong>Pierre principale</strong>: Pierre principale au choix ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
+                <li><strong>Couleur principale</strong>: {product_info['main_color']}</li>
+                {write_secondary_stones(product_info['secondary_stones'])}
+                {f"<li><strong>Nombre de pierres</strong>: {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
+                {f"<li><strong>Couleur secondaire</strong>: {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
+                {f"<li><strong>Forme de la pierre</strong>: {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
+            </ul>
+        </div>
+        <br>
+        <p>Photos retouchées</p>
+        """
+
+    else :
+        description = f"""
+        {first_paragraph}
+        <div class="infos-product">
+            <h4>Caractéristiques du produit</h4>
+            <ul>
+                <li><strong>Poids</strong>: {product_info['weight']} {"gramme" if product_info['weight'] < 2 else "grammes"}</li>
+                <li><strong>Matériau</strong>: Or</li>
+                <li><strong>Pierre principale</strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
+                <li><strong>Couleur principale</strong>: {product_info['main_color']}</li>
+                {write_secondary_stones(product_info['secondary_stones'])}
+                {f"<li><strong>Nombre de pierres</strong>: {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
+                {f"<li><strong>Couleur secondaire</strong>: {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
+                {f"<li><strong>Forme de la pierre</strong>: {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
+            </ul>
+        </div>
+        <br>
+        <p>Photos retouchées</p>
+        """
     return description

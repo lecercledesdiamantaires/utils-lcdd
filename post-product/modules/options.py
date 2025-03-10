@@ -7,7 +7,7 @@ def create_options(type):
     if type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
 
         pierres = {
-            "name": "Pierre précieuse",
+            "name": "Pierre principale",
             "values": ["Diamant", "Saphir", "Emeraude", "Rubis"]
         }
         if type == 'Baguecatalogue':
