@@ -1,15 +1,11 @@
-import os
-import streamlit as st
 import requests
+import streamlit as st
 
-API_KEY = st.secrets["API_KEY"]
-PASSWORD = st.secrets["PASSWORD"]
-SHOP_NAME = st.secrets["SHOP_NAME"]
 API_VERSION = st.secrets["API_VERSION"]
-LIMIT = st.secrets["LIMIT"]
-FALSE_URL = st.secrets["FALSE_URL"]
 SHOPIFY_STORE = st.secrets["SHOP_URL"]
-BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
+PASSWORD = st.secrets["PASSWORD"]
+
+BASE_URL = f"https://{SHOPIFY_STORE}/admin/api/{API_VERSION}"
 
 COLLECTIONS_ID = {
     "Bague": 628351533391,
@@ -23,13 +19,18 @@ COLLECTIONS_ID = {
 }
 
 def collection(product_category, product_id):
-    if product_category == "Puce" or product_category == "Pendantes":
+    if product_category in ["Puce", "Pendantes"]:
         product_category = "Boucles d'oreilles"
 
-    if product_category == "Bague Catalogue" or product_category == 'Collier Catalogue' or product_category == 'Bracelet Catalogue' or product_category == 'Boucles doreilles Catalogue':
+    if product_category in ["Bague Catalogue", "Collier Catalogue", "Bracelet Catalogue", "Boucles doreilles Catalogue"]:
         product_category = "Catalogue"
 
-    url = f"{BASE_URL}/admin/api/{API_VERSION}/collects.json"
+    url = f"{BASE_URL}/collects.json"
+
+    headers = {
+        "Content-Type": "application/json",
+        "X-Shopify-Access-Token": PASSWORD
+    }
 
     if product_category == "Alliance":
         for cat in ["Bague", "Fiancailles"]:
@@ -39,11 +40,10 @@ def collection(product_category, product_id):
                     "product_id": product_id
                 }
             }
-            response = requests.post(url, json=data, timeout=10)
+            response = requests.post(url, json=data, headers=headers, timeout=10)
             if response.status_code != 201:
                 print(f"Erreur {response.status_code} pour {cat}: {response.text}")
 
-    # Ajout principal du produit à la collection correspondante
     if product_category in COLLECTIONS_ID:
         data = {
             "collect": {
@@ -51,6 +51,6 @@ def collection(product_category, product_id):
                 "product_id": product_id
             }
         }
-        response = requests.post(url, json=data, timeout=10)
+        response = requests.post(url, json=data, headers=headers, timeout=10)
         if response.status_code != 201:
             print(f"Erreur {response.status_code} pour {product_category}: {response.text}")

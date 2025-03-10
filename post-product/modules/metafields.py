@@ -11,6 +11,8 @@ API_VERSION = st.secrets["API_VERSION"]
 LIMIT = st.secrets["LIMIT"]
 FALSE_URL = st.secrets["FALSE_URL"]
 SHOPIFY_STORE = st.secrets["SHOP_URL"]
+BASE_URL = f"https://{SHOPIFY_STORE}/admin/api/{API_VERSION}"
+
 
 all_products = []
 
@@ -73,13 +75,19 @@ color_metafields = [
     { "id": "\"gid://shopify/Metaobject/299832639823\"", "color": "marron" },
 ]
 
+
 def load_products():
     """
     Charge tous les produits de tous les types depuis Shopify une seule fois.
     Les produits sont stockés dans la variable globale `all_products`.
     """
     global all_products
-    url = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}/admin/api/2024-01/products.json"
+    url = f"{BASE_URL}/products.json"
+    headers = {
+        "Content-Type": "application/json",
+        "X-Shopify-Access-Token": PASSWORD
+    }
+
     page_info = None
 
     while True:
@@ -87,7 +95,7 @@ def load_products():
         if page_info:
             paginated_url += f"?page_info={page_info}"
 
-        response = requests.get(paginated_url)
+        response = requests.get(paginated_url, headers=headers)
         response.raise_for_status()
         data = response.json()
 

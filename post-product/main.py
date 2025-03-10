@@ -1,5 +1,4 @@
 import streamlit as st
-import requests
 import json
 import pandas as pd
 import logging
@@ -19,14 +18,6 @@ from modules.post_image import post_image
 from modules.collection import collection
 from google.oauth2.service_account import Credentials
 
-
-# Config Shopify
-API_KEY = st.secrets["API_KEY"]
-PASSWORD = st.secrets["PASSWORD"]
-SHOP_NAME = st.secrets["SHOP_NAME"]
-API_VERSION = st.secrets["API_VERSION"]
-SHOPIFY_STORE = st.secrets["SHOP_URL"]
-BASE_URL = f"https://{API_KEY}:{PASSWORD}@{SHOPIFY_STORE}"
 FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les images
 
 # Configuration Google Sheets
