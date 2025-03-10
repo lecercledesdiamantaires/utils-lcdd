@@ -15,4 +15,4 @@ def check_product_type(product_id, product_type):
     formatted_type = product_type.strip().capitalize() 
     
     if formatted_type not in AVAILABLE_RODUCT_TYPES:
-        raise ValueError(f"Le type de produit '{formatted_type}' n'est pas valide. ID du produit : {product_id}. , \n {AVAILABLE_RODUCT_TYPES} {product_type} {formatted_type}")
+        raise ValueError(f"Le type de produit '{formatted_type}' n'est pas valide. ID du produit : {product_id}.")

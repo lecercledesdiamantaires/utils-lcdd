@@ -1,7 +1,7 @@
 def create_options(type):
     colors= {
         "name" : "Couleur de l'or",
-        "values" : ["Rose gold","Gold","White gold"]
+        "values" : ["Rose gold", "Gold", "White gold"]
     }
     options = []
     if type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:

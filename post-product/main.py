@@ -172,7 +172,7 @@ if st.button("Publier sur Shopify"):
                         'title': title_main(product_infos['title']),
                         'body_html': description,
                         'vendor': 'Le Cercle des Diamantaires',
-                        'product_type': product_infos['product_type'],
+                        'product_type': product_infos['product_type'] if product_type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"] else "Catalogue",
                         'tags': tags,
                         'variants': variants,
                         'options': options,
@@ -191,7 +191,6 @@ if st.button("Publier sur Shopify"):
 
                 product_infos['online'] = 'TRUE'
                 update_google_sheet(GOOGLE_SHEET_URL, SHEET_NAME, product_infos['id'], product_id)
-
 
             except Exception as e:
                 erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")

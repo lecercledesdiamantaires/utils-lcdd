@@ -5,6 +5,15 @@ logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG,
 
 
 def check_first_paragraph(first_paragraph, product_type, primal_stone_name):
+    if product_type == 'Baguecatalogue':
+        product_type = "bague"
+    elif product_type == 'Colliercatalogue':
+        product_type = "collier"
+    elif product_type == 'Braceletcatalogue':
+        product_type = "bracelet"
+    elif product_type == 'Boucledoreillescatalogue':
+        product_type = "boucle d'oreille"
+
     if not first_paragraph:
         return f"<p>Découvrez notre {product_type} en Or avec {primal_stone_name}</p>"
     else:
