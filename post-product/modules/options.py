@@ -40,13 +40,13 @@ def create_options(type):
                 "values" : ["XXS","XS","S","M","L","XL","XXL"]
             }
             options.append(size)
+        options.append(colors)
 
         carats ={
             "name": "Caratage de l'or",
             "values": ["14", "18"]
         }
         options.append(carats)
-        options.append(colors)
 
 
     return options
