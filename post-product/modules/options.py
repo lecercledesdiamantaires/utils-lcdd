@@ -5,6 +5,8 @@ def create_options(type):
     }
     options = []
     if type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
+        options.append(colors)
+
         pierres = {
             "name": "Pierre précieuse",
             "values": ["Diamant", "Saphir", "Emeraude", "Rubis"]
@@ -26,6 +28,8 @@ def create_options(type):
         
         options.append(pierres)
     else :
+        options.append(colors)
+
         carats ={
             "name": "Caratage de l'or",
             "values": ["14", "18"]
@@ -46,6 +50,11 @@ def create_options(type):
             }
             options.append(size)
 
-    options.append(colors)
+        carats ={
+            "name": "Caratage de l'or",
+            "values": ["14", "18"]
+        }
+        options.append(carats)
+
 
     return options
