@@ -19,11 +19,15 @@ COLLECTIONS_ID = {
     "Collier": 628351697231,
     "Boucles d'oreilles": 628351598927,
     "Broche": 628352057679,
+    "Catalogue": 658578145615,
 }
 
 def collection(product_category, product_id):
     if product_category == "Puce" or product_category == "Pendantes":
         product_category = "Boucles d'oreilles"
+
+    if product_category == "Bague Catalogue" or product_category == 'Collier Catalogue' or product_category == 'Bracelet Catalogue' or product_category == 'Boucles doreilles Catalogue':
+        product_category = "Catalogue"
 
     url = f"{BASE_URL}/admin/api/{API_VERSION}/collects.json"
 

@@ -69,9 +69,9 @@ color_metafields = [
     { "id": "\"gid://shopify/Metaobject/299818778959\"", "color": "noir" },
     { "id": "\"gid://shopify/Metaobject/85294874959\"", "color": "multicolore" },
     { "id": "\"gid://shopify/Metaobject/85298184527\"", "color": "orange" },
-    { "id": "\"gid://shopify/Metaobject/301276856655\"", "color": "argent" }
+    { "id": "\"gid://shopify/Metaobject/301276856655\"", "color": "argent" },
+    { "id": "\"gid://shopify/Metaobject/299832639823\"", "color": "marron" },
 ]
-
 
 def load_products():
     """
