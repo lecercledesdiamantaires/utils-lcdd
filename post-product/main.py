@@ -172,7 +172,7 @@ if st.button("Publier sur Shopify"):
                         'title': title_main(product_infos['title']),
                         'body_html': description,
                         'vendor': 'Le Cercle des Diamantaires',
-                        'product_type': product_infos['product_type'] if product_infos['product_type'] not in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"] else "Catalogue",
+                        'product_type': product_infos['product_type'],
                         'tags': tags,
                         'variants': variants,
                         'options': options,
