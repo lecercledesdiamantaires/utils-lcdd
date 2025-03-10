@@ -1,5 +1,5 @@
 AVAILABLE_RODUCT_TYPES = [
-    'Bague', 'Collier', 'Bracelet', 'Broche', 'Puce', 'Pendantes', 'Diamant', 'Alliance', 'Bague Catalogue', 'Collier Catalogue', 'Bracelet Catalogue', 'Boucles doreilles Catalogue',
+    'Bague', 'Collier', 'Bracelet', 'Broche', 'Puce', 'Pendantes', 'Diamant', 'Alliance', 'Bague catalogue', 'Collier Catalogue', 'Bracelet Catalogue', 'Boucles doreilles Catalogue',
 ]
 
 def check_product_type(product_id, product_type):
@@ -15,4 +15,4 @@ def check_product_type(product_id, product_type):
     formatted_type = product_type.strip().capitalize() 
     
     if formatted_type not in AVAILABLE_RODUCT_TYPES:
-        raise ValueError(f"Le type de produit '{formatted_type}' n'est pas valide. ID du produit : {product_id}.")
+        raise ValueError(f"Le type de produit '{formatted_type}' n'est pas valide. ID du produit : {product_id}. , \n {AVAILABLE_RODUCT_TYPES} {product_type}")
