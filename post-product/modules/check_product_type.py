@@ -1,5 +1,5 @@
 AVAILABLE_RODUCT_TYPES = [
-    'Bague', 'Collier', 'Bracelet', 'Broche', 'Puce', 'Pendantes', 'Diamant', 'Alliance', 'Baguecatalogue', 'Colliercatalogue', 'Braceletcatalogue', 'Bouclesdoreillescatalogue',
+    'Bague', 'Collier', 'Bracelet', 'Broche', 'Puce', 'Pendantes', 'Diamant', 'Alliances', 'Baguecatalogue', 'Colliercatalogue', 'Braceletcatalogue', 'Bouclesdoreillescatalogue',
 ]
 
 def check_product_type(product_id, product_type):
