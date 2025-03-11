@@ -194,7 +194,7 @@ if st.button("Publier sur Shopify"):
             except Exception as e:
                 erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
                 logging.error(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
-                st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
+                st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)} {str(product_infos['product_type'])}")
         if not erreurs:
             st.success("✅ Tous les produits ont été publiés avec succès !")
         else:
