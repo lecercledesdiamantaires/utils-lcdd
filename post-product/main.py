@@ -52,12 +52,32 @@ sheet_names = [sheet.title for sheet in sheets]
 selected_sheet = st.selectbox("Sélectionnez une feuille :", sheet_names, index=0)
 
 def update_google_sheet(sheet_url, sheet_name, product_id, shopify_id):
-    """Met à jour la colonne 'en_ligne' à 'TRUE' pour un produit donné"""
+    """Met à jour la colonne 'en_ligne' à 'TRUE' et ajoute l'URL Shopify"""
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
-    cell = sheet.find(str(product_id), in_column=2) 
-    if cell:
-        sheet.update_cell(cell.row, sheet.find("en_ligne").col, "TRUE")
-        sheet.update_cell(cell.row, sheet.find("url").col, f"https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
+    
+    try:
+        cell = sheet.find(str(product_id), in_column=2)  # Assurez-vous que la colonne 2 contient bien les IDs produits
+        if not cell:
+            st.error(f"❌ Impossible de trouver le produit {product_id} dans la feuille.")
+            return
+
+        headers = sheet.row_values(1)  # Récupère la première ligne contenant les noms des colonnes
+        col_en_ligne = headers.index("en_ligne") + 1 if "en_ligne" in headers else None
+        col_url = headers.index("url") + 1 if "url" in headers else None
+
+        if col_en_ligne:
+            sheet.update_cell(cell.row, col_en_ligne, "TRUE")
+        else:
+            st.warning("⚠️ Colonne 'en_ligne' non trouvée dans la feuille Google Sheets.")
+
+        if col_url:
+            sheet.update_cell(cell.row, col_url, f"https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
+        else:
+            st.warning("⚠️ Colonne 'url' non trouvée dans la feuille Google Sheets.")
+
+    except Exception as e:
+        st.error(f"❌ Erreur lors de la mise à jour du Google Sheet : {str(e)}")
+
 
 # Fonction pour récupérer les données du Google Sheet
 def get_google_sheet_data(sheet_url, sheet_name):
