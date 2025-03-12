@@ -51,6 +51,14 @@ sheets = get_sheet_names(GOOGLE_SHEET_URL)
 sheet_names = [sheet.title for sheet in sheets]
 selected_sheet = st.selectbox("Sélectionnez une feuille :", sheet_names, index=0)
 
+def update_google_sheet(sheet_url, sheet_name, product_id, shopify_id):
+    """Met à jour la colonne 'en_ligne' à 'TRUE' pour un produit donné"""
+    sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
+    cell = sheet.find(str(product_id), in_column=2) 
+    if cell:
+        sheet.update_cell(cell.row, sheet.find("en_ligne").col, "TRUE")
+        sheet.update_cell(cell.row, sheet.find("url").col, f"https://admin.shopify.com/store/cercledesdiamantaires/products/{shopify_id}")
+
 # Fonction pour récupérer les données du Google Sheet
 def get_google_sheet_data(sheet_url, sheet_name):
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
@@ -81,40 +89,87 @@ if st.button("Publier sur Shopify"):
             if row.get("en_ligne") == "TRUE":
                 continue
             try:
-                product_infos = {key: row.get(key) for key in row.keys()}
-                st.write(f"🚀 Publication du produit ID: {product_infos['id']}, Nom: {product_infos['titre']}")
+                product_infos = {
+                    'id': row.get('id'),
+                    'title': row.get('titre'), 
+                    'product_type': row.get('type_de_produit'),
+                    'total_weight_of_jewelry': row.get('poid_total_du_bijoux'),
+                    'main_stone': row.get('pierre_principale'),
+                    'main_stone_shape': row.get('forme_pierre_principale'),
+                    'main_stone_color': row.get('couleur_pierre_principale'),
+                    'main_stone_carat': row.get('carat_pierre_principale'),
+                    'number_of_stones': row.get('nombre_de_pierres'),
+                    'ornamental_stone': row.get('nom_pierre_d_ornements'),
+                    'ornamental_stone_color': row.get("couleur_pierre_d_ornements"),
+                    'ornamental_stone_carat': row.get("caratage_pierre_d_ornement"),
+                    'price': row.get('prix'),
+                    'description': row.get('description'),
+                    'online': row.get('en_ligne'),
+                }
+                st.write(f"Produit : {product_infos['title']}, ID : {product_infos['id']}")
+                check_product_type(product_infos['id'], product_infos['product_type'])
+
                 description = generate_product_info(
-                    product_infos['poid_total_du_bijoux'],
-                    product_infos['pierre_principale'],
-                    product_infos['carat_pierre_principale'],
-                    product_infos['nom_pierre_d_ornements'],
-                    product_infos['caratage_pierre_d_ornement'],
-                    product_infos['nombre_de_pierres'],
-                    product_infos['forme_pierre_principale'],
-                    product_infos['type_de_produit'],
-                    product_infos['couleur_pierre_principale'],
-                    product_infos['couleur_pierre_d_ornements'],
+                    product_infos['total_weight_of_jewelry'],
+                    product_infos['main_stone'],
+                    product_infos['main_stone_carat'],
+                    product_infos['ornamental_stone'],
+                    product_infos['ornamental_stone_carat'],
+                    product_infos['number_of_stones'],
+                    product_infos['main_stone_shape'],
+                    product_infos['product_type'],
+                    product_infos['main_stone_color'],
+                    product_infos['ornamental_stone_color'],
                     product_infos['description']
                 )
+
+                tags = create_tags(
+                    product_infos['product_type'], 
+                    product_infos['main_stone'], 
+                    product_infos['ornamental_stone']
+                )
                 images_url = get_images_url(FOLDER_ID, product_infos['id'])
-                data = {
-                    "product": {
-                        'title': title_main(product_infos['titre']),
+                logging.debug(f"Images URL: {images_url}")
+                metafields = get_metafield(
+                    product_infos['product_type'],
+                    product_infos['main_stone'],
+                    product_infos['ornamental_stone'],
+                    product_infos['main_stone_color'],
+                    product_infos['ornamental_stone_color']
+                )
+                variants = create_variants(
+                    product_infos['price'],
+                    product_infos['product_type'],
+                    product_infos['total_weight_of_jewelry']
+                )
+                options = create_options(
+                    product_infos['product_type']
+                )
+                
+                data = { 
+                    "product" : {
+                        'title': title_main(product_infos['title']),
                         'body_html': description,
                         'vendor': 'Le Cercle des Diamantaires',
-                        'product_type': product_infos['type_de_produit'],
-                        'tags': create_tags(product_infos['type_de_produit'], product_infos['pierre_principale'], product_infos['nom_pierre_d_ornements']),
-                        'variants': create_variants(product_infos['prix'], product_infos['type_de_produit'], product_infos['poid_total_du_bijoux']),
-                        'options': create_options(product_infos['type_de_produit']),
-                        'metafields': get_metafield(product_infos['type_de_produit'], product_infos['pierre_principale'], product_infos['nom_pierre_d_ornements'], product_infos['couleur_pierre_principale'], product_infos['couleur_pierre_d_ornements'])
-                    }
+                        'product_type': product_infos['product_type'] if product_infos['product_type'] not in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"] else "Catalogue",
+                        'tags': tags,
+                        'variants': variants,
+                        'options': options,
+                        'metafields': metafields
+                    }     
                 }
                 product = add_product(data)
+                logging.info(f"Product added with ID: {product['product']['id']}")
                 product_id = product["product"]["id"]
-                collection(product_infos['type_de_produit'], product_id)
+                collection(product_infos['product_type'], product_id)
+                st.write("Récupérations des images en cours...")
                 for image in images_url:
-                    post_image(product_id, image, product_infos['titre'])
-                st.success(f"✅ Produit ajouté : https://admin.shopify.com/store/cercledesdiamantaires/products/{product_id}")
+                    post_image(product_id, image, product_infos['title'])
+                logging.info(f"Produit ajouté : {product_infos['title']}")
+                st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{product_id}")
+
+                product_infos['online'] = 'TRUE'
+                update_google_sheet(GOOGLE_SHEET_URL, selected_sheet, product_infos['id'], product_id)
             except Exception as e:
                 erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
                 st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
