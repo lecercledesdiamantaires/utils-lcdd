@@ -189,7 +189,7 @@ if st.button("Publier sur Shopify"):
                 st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{product_id}")
 
                 product_infos['online'] = 'TRUE'
-                update_google_sheet(GOOGLE_SHEET_URL, sheet_names, product_infos['id'], product_id)
+                update_google_sheet(GOOGLE_SHEET_URL, selected_sheet, product_infos['id'], product_id)
             except Exception as e:
                 erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
                 st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
