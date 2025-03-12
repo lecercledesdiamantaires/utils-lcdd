@@ -57,7 +57,8 @@ stone_metafields = [
     { "id": "\"gid://shopify/Metaobject/83795214671\"", "stone": "Morganite" },
     { "id": "\"gid://shopify/Metaobject/83532054863\"", "stone": "Rubis" },
     { "id": "\"gid://shopify/Metaobject/292354818383\"", "stone": "Spessarite"},
-    { "id": "\"gid://shopify/Metaobject/292394041679\"", "stone": "Tsavorite"}
+    { "id": "\"gid://shopify/Metaobject/292394041679\"", "stone": "Tsavorite"},
+    { "id": "\"gid://shopify/Metaobject/315325251919\"", "stone": "Au choix"},
 ]
 
 color_metafields = [
@@ -73,6 +74,7 @@ color_metafields = [
     { "id": "\"gid://shopify/Metaobject/85298184527\"", "color": "orange" },
     { "id": "\"gid://shopify/Metaobject/301276856655\"", "color": "argent" },
     { "id": "\"gid://shopify/Metaobject/299832639823\"", "color": "marron" },
+    { "id": "\"gid://shopify/Metaobject/315325940047\"", "color": "au choix" },
 ]
 
 
