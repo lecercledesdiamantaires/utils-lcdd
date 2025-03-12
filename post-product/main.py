@@ -35,8 +35,6 @@ FOLDER_URL = st.text_input("URL du dossier Google Drive contenant les images :",
 FOLDER_ID = extract_folder_id(FOLDER_URL) if FOLDER_URL else ""
 GOOGLE_SHEET_URL = st.text_input("URL du Google Sheet contenant les produits :", DEFAULT_GOOGLE_SHEET_URL)
 
-st.write(f"📌 Travail sur le dossier ID : {FOLDER_ID}")
-
 # Connexion Google Sheets
 service_account_info = json.loads(st.secrets["credentials"])
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -52,8 +50,6 @@ def get_sheet_names(sheet_url):
 sheets = get_sheet_names(GOOGLE_SHEET_URL)
 sheet_names = [sheet.title for sheet in sheets]
 selected_sheet = st.selectbox("Sélectionnez une feuille :", sheet_names, index=0)
-
-st.write(f"📌 Travail sur la feuille : {selected_sheet}")
 
 # Fonction pour récupérer les données du Google Sheet
 def get_google_sheet_data(sheet_url, sheet_name):
@@ -86,6 +82,7 @@ if st.button("Publier sur Shopify"):
                 continue
             try:
                 product_infos = {key: row.get(key) for key in row.keys()}
+                st.write(f"🚀 Publication du produit ID: {product_infos['id']}, Nom: {product_infos['titre']}")
                 description = generate_product_info(
                     product_infos['poid_total_du_bijoux'],
                     product_infos['pierre_principale'],
