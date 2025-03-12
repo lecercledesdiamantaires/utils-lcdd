@@ -6,7 +6,7 @@ logging.basicConfig(filename='post-product/logs/post.log', level=logging.DEBUG,
 
 def check_first_paragraph(first_paragraph, product_type, primal_stone_name):
     if product_type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Boucledoreillescatalogue"]:
-        primal_stone_name = "la pierre principale de votre choix, sertie sur une monture en Or de la couleur de votre choix. Si les options proposées ne vous conviennent pas, remplissez le formulaire de personnalisation pour découvrir des possibilités infinit."
+        primal_stone_name = "la pierre principale de votre choix, sertie sur une monture en Or de la couleur de votre choix. Si les options proposées ne vous conviennent pas, remplissez le formulaire de personnalisation pour découvrir des possibilités infinies."
 
     if product_type == 'Baguecatalogue':
         product_type = "bague"
@@ -91,14 +91,14 @@ def write_description(product_info, first_paragraph, product_type):
         <div class="infos-product">
             <h4>Caractéristiques du produit</h4>
             <ul>
-                <li><strong>Poids</strong>: Le poids dépends des options que vous choisirez. </li>
-                <li><strong>Matériau</strong>: Or de votre choix</li>
-                <li><strong>Pierre principale</strong>: Pierre principale au choix ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
+                <li><strong>Poids</strong> : Le poids dépends des options que vous choisirez. </li>
+                <li><strong>Matériau</strong> : Or de votre choix</li>
+                <li><strong>Pierre principale</strong> : Pierre principale au choix ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
                 <li><strong>Couleur principale</strong>: Au choix</li>
                 {write_secondary_stones(product_info['secondary_stones'])}
-                {f"<li><strong>Nombre de pierres</strong>: {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
-                {f"<li><strong>Couleur secondaire</strong>: {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
-                {f"<li><strong>Forme de la pierre</strong>: {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
+                {f"<li><strong>Nombre de pierres</strong> : {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
+                {f"<li><strong>Couleur secondaire</strong> : {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
+                {f"<li><strong>Forme de la pierre</strong> : {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
             </ul>
         </div>
         <br>
@@ -111,14 +111,14 @@ def write_description(product_info, first_paragraph, product_type):
         <div class="infos-product">
             <h4>Caractéristiques du produit</h4>
             <ul>
-                <li><strong>Poids</strong>: {product_info['weight']} {"gramme" if product_info['weight'] < 2 else "grammes"}</li>
-                <li><strong>Matériau</strong>: Or</li>
-                <li><strong>Pierre principale</strong>: {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
-                <li><strong>Couleur principale</strong>: {product_info['main_color']}</li>
+                <li><strong>Poids</strong> : {product_info['weight']} {"gramme" if product_info['weight'] < 2 else "grammes"}</li>
+                <li><strong>Matériau</strong> : Or</li>
+                <li><strong>Pierre principale</strong> : {product_info['primal_stone']['name']} ({product_info['primal_stone']['carat']} {"carat" if product_info['primal_stone']['carat'] < 2 else "carats"})</li>
+                <li><strong>Couleur principale</strong> : {product_info['main_color']}</li>
                 {write_secondary_stones(product_info['secondary_stones'])}
-                {f"<li><strong>Nombre de pierres</strong>: {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
-                {f"<li><strong>Couleur secondaire</strong>: {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
-                {f"<li><strong>Forme de la pierre</strong>: {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
+                {f"<li><strong>Nombre de pierres</strong> : {product_info['stone_number']}</li>" if product_info.get('stone_number') else ""}
+                {f"<li><strong>Couleur secondaire</strong> : {product_info['secondary_color']}</li>" if product_info.get('secondary_color') else ""}
+                {f"<li><strong>Forme de la pierre</strong> : {product_info['stone_shape']}</li>" if product_info.get('stone_shape') else ""}
             </ul>
         </div>
         <br>
