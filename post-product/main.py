@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import logging
 import gspread
+import re
 from google.oauth2.service_account import Credentials
 from modules.options import create_options
 from modules.check_product_type import check_product_type
@@ -17,15 +18,21 @@ from modules.post_image import post_image
 from modules.collection import collection
 
 # Valeurs par défaut
-DEFAULT_FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'
+DEFAULT_FOLDER_URL = "https://drive.google.com/drive/folders/1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs"
 DEFAULT_GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
 
 # Interface Streamlit
 st.title("Publier les produits sur Shopify")
 st.write("ℹ️ Ce script permet de publier les produits sur Shopify à partir d'un Google Sheet.")
 
+# Fonction pour extraire l'ID d'un dossier Google Drive
+def extract_folder_id(folder_url):
+    match = re.search(r"folders/([a-zA-Z0-9_-]+)", folder_url)
+    return match.group(1) if match else None
+
 # Entrées utilisateur pour le dossier Drive et la feuille Google Sheets
-FOLDER_ID = st.text_input("ID du dossier Google Drive contenant les images :", DEFAULT_FOLDER_ID)
+FOLDER_URL = st.text_input("URL du dossier Google Drive contenant les images :", DEFAULT_FOLDER_URL)
+FOLDER_ID = extract_folder_id(FOLDER_URL) if FOLDER_URL else ""
 GOOGLE_SHEET_URL = st.text_input("URL du Google Sheet contenant les produits :", DEFAULT_GOOGLE_SHEET_URL)
 
 # Connexion Google Sheets
