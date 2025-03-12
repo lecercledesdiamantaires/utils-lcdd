@@ -18,12 +18,18 @@ from modules.post_image import post_image
 from modules.collection import collection
 from google.oauth2.service_account import Credentials
 
-FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les images
-
-# Configuration Google Sheets
-GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
-SHEET_NAME = "Feuille1"
+# FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'  # ID du dossier contenant les images
+# GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
+# SHEET_NAME = "Feuille1"
 #CREDENTIALS_FILE = "./credentials.json"  # Fichier JSON des credentials
+
+DEFAULT_FOLDER_ID = '1KThYIEU4ieN9jZI8N4-tmAUNN8jmDjZs'
+DEFAULT_GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1EhcVeT6Uh7U_Yv9eoERMJqG-SH2YePKJa8EqWPMde0M/edit?gid=0#gid=0"
+SHEET_NAME = "Feuille1"
+
+FOLDER_ID = st.text_input("ID du dossier Google Drive contenant les images :", DEFAULT_FOLDER_ID)
+GOOGLE_SHEET_URL = st.text_input("URL du Google Sheet contenant les produits :", DEFAULT_GOOGLE_SHEET_URL)
+
 
 service_account_info = json.loads(st.secrets["credentials"])
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
