@@ -201,8 +201,6 @@ def get_metafield(product_type, primal_stone, secondary_stone, color, secondary_
     """
     load_products()
 
-    if product_type in ["Baguecatalogue", "Colliercatalogue", "Braceletcatalogue", "Bouclesdoreillescatalogue"]:
-            product_type = "Catalogue"
     stone_ids = enlever_doublons(get_stone(primal_stone, secondary_stone))
     color_ids = enlever_doublons(get_color(color, secondary_color))
     gold_color = get_gold_color()
