@@ -124,27 +124,39 @@ if st.button("Publier sur Shopify"):
                     'id': row.get('id'),
                     'title': row.get('titre'), 
                     'product_type': row.get('type_de_produit'),
-                    'total_weight_of_jewelry': row.get('poid_total_du_bijoux'),
+                    'total_weight_of_jewelry': row.get('poid_total_du_bijoux', 0),  # Accepte une valeur par défaut de 0
                     'main_stone': row.get('pierre_principale'),
                     'main_stone_shape': row.get('forme_pierre_principale'),
                     'main_stone_color': row.get('couleur_pierre_principale'),
-                    'main_stone_carat': row.get('carat_pierre_principale'),
+                    'main_stone_carat': row.get('carat_pierre_principale', 0),  # Accepte une valeur par défaut de 0
                     'number_of_stones': row.get('nombre_de_pierres'),
                     'ornamental_stone': row.get('nom_pierre_d_ornements'),
                     'ornamental_stone_color': row.get("couleur_pierre_d_ornements"),
-                    'ornamental_stone_carat': row.get("caratage_pierre_d_ornement"),
+                    'ornamental_stone_carat': row.get("caratage_pierre_d_ornement", 0),  # Accepte une valeur par défaut de 0
                     'price': row.get('prix'),
                     'description': row.get('description'),
                     'online': row.get('en_ligne'),
                 }
                 
-                # Vérification des champs obligatoires
-                champs_obligatoires = ['id', 'title', 'product_type', 'price', 'total_weight_of_jewelry', 'main_stone' , 'main_stone_carat', 'main_stone_shape']
+                # Vérification des champs obligatoires - poids et caratage exclus des champs obligatoires
+                champs_obligatoires = ['id', 'title', 'product_type', 'price', 'main_stone', 'main_stone_shape']
                 champs_manquants = [champ for champ in champs_obligatoires if not product_infos.get(champ)]
                 
                 if champs_manquants:
                     raise ValueError(f"Champs obligatoires manquants: {', '.join(champs_manquants)}")
                 
+                # Vérification et correction des valeurs numériques nulles ou vides
+                if product_infos['total_weight_of_jewelry'] is None or product_infos['total_weight_of_jewelry'] == '':
+                    product_infos['total_weight_of_jewelry'] = 0
+                    st.info(f"ℹ️ Produit {product_infos['id']}: Poids total définit à 0 par défaut")
+                    
+                if product_infos['main_stone_carat'] is None or product_infos['main_stone_carat'] == '':
+                    product_infos['main_stone_carat'] = 0
+                    st.info(f"ℹ️ Produit {product_infos['id']}: Caratage pierre principale définit à 0 par défaut")
+                
+                if product_infos['ornamental_stone_carat'] is None or product_infos['ornamental_stone_carat'] == '':
+                    product_infos['ornamental_stone_carat'] = 0
+                    
                 st.write(f"Produit : {product_infos['title']}, ID : {product_infos['id']}")
                 
                 try:
@@ -242,13 +254,19 @@ if st.button("Publier sur Shopify"):
                 images_ajoutees = 0
                 for image in images_url:
                     try:
+                        # Vérifie que l'URL de l'image n'est pas vide
+                        if not image:
+                            raise ValueError("L'URL de l'image est vide ou nulle")
+                            
                         post_image(product_id, image, product_infos['title'])
                         images_ajoutees += 1
+                    except ValueError as e:
+                        st.warning(f"⚠️ {str(e)} pour le produit {product_infos['id']}")
                     except Exception as e:
                         st.warning(f"⚠️ Erreur lors de l'ajout de l'image {image}: {str(e)}")
                 
-                if images_ajoutees == 0 and images_url:
-                    st.warning(f"⚠️ Aucune image n'a pu être ajoutée pour le produit {product_infos['id']}.")
+                if len(images_url) > 0 and images_ajoutees == 0:
+                    st.error(f"❌ Aucune image n'a pu être ajoutée pour le produit {product_infos['id']}")
                 elif images_ajoutees < len(images_url):
                     st.warning(f"⚠️ Seulement {images_ajoutees}/{len(images_url)} images ont été ajoutées.")
                 
