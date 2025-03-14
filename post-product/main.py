@@ -104,10 +104,21 @@ if st.button("Publier sur Shopify"):
     else:
         df = st.session_state["df"]
         erreurs = []
+        produits_traites = 0
+        produits_publies = 0
         st.write("🛍️ Début de la publication des produits...")
-        for _, row in df.iterrows():
+        progress_bar = st.progress(0)
+        
+        total_produits = len(df)
+        
+        for index, row in df.iterrows():
+            produits_traites += 1
+            progress_bar.progress(produits_traites / total_produits)
+            
             if row.get("en_ligne") == "TRUE":
+                st.info(f"⏭️ Produit {row.get('id')} déjà en ligne, passage au suivant.")
                 continue
+                
             try:
                 product_infos = {
                     'id': row.get('id'),
@@ -126,45 +137,81 @@ if st.button("Publier sur Shopify"):
                     'description': row.get('description'),
                     'online': row.get('en_ligne'),
                 }
+                
+                # Vérification des champs obligatoires
+                champs_obligatoires = ['id', 'title', 'product_type', 'price']
+                champs_manquants = [champ for champ in champs_obligatoires if not product_infos.get(champ)]
+                
+                if champs_manquants:
+                    raise ValueError(f"Champs obligatoires manquants: {', '.join(champs_manquants)}")
+                
                 st.write(f"Produit : {product_infos['title']}, ID : {product_infos['id']}")
-                check_product_type(product_infos['id'], product_infos['product_type'])
+                
+                try:
+                    check_product_type(product_infos['id'], product_infos['product_type'])
+                except Exception as e:
+                    raise ValueError(f"Type de produit invalide: {str(e)}")
 
-                description = generate_product_info(
-                    product_infos['total_weight_of_jewelry'],
-                    product_infos['main_stone'],
-                    product_infos['main_stone_carat'],
-                    product_infos['ornamental_stone'],
-                    product_infos['ornamental_stone_carat'],
-                    product_infos['number_of_stones'],
-                    product_infos['main_stone_shape'],
-                    product_infos['product_type'],
-                    product_infos['main_stone_color'],
-                    product_infos['ornamental_stone_color'],
-                    product_infos['description']
-                )
+                try:
+                    description = generate_product_info(
+                        product_infos['total_weight_of_jewelry'],
+                        product_infos['main_stone'],
+                        product_infos['main_stone_carat'],
+                        product_infos['ornamental_stone'],
+                        product_infos['ornamental_stone_carat'],
+                        product_infos['number_of_stones'],
+                        product_infos['main_stone_shape'],
+                        product_infos['product_type'],
+                        product_infos['main_stone_color'],
+                        product_infos['ornamental_stone_color'],
+                        product_infos['description']
+                    )
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la génération de la description: {str(e)}")
 
-                tags = create_tags(
-                    product_infos['product_type'], 
-                    product_infos['main_stone'], 
-                    product_infos['ornamental_stone']
-                )
-                images_url = get_images_url(FOLDER_ID, product_infos['id'])
-                logging.debug(f"Images URL: {images_url}")
-                metafields = get_metafield(
-                    product_infos['product_type'],
-                    product_infos['main_stone'],
-                    product_infos['ornamental_stone'],
-                    product_infos['main_stone_color'],
-                    product_infos['ornamental_stone_color']
-                )
-                variants = create_variants(
-                    product_infos['price'],
-                    product_infos['product_type'],
-                    product_infos['total_weight_of_jewelry']
-                )
-                options = create_options(
-                    product_infos['product_type']
-                )
+                try:
+                    tags = create_tags(
+                        product_infos['product_type'], 
+                        product_infos['main_stone'], 
+                        product_infos['ornamental_stone']
+                    )
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la création des tags: {str(e)}")
+                
+                try:
+                    images_url = get_images_url(FOLDER_ID, product_infos['id'])
+                    if not images_url:
+                        st.warning(f"⚠️ Aucune image trouvée pour le produit {product_infos['id']}.")
+                    logging.debug(f"Images URL: {images_url}")
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la récupération des images: {str(e)}")
+                
+                try:
+                    metafields = get_metafield(
+                        product_infos['product_type'],
+                        product_infos['main_stone'],
+                        product_infos['ornamental_stone'],
+                        product_infos['main_stone_color'],
+                        product_infos['ornamental_stone_color']
+                    )
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la création des métadonnées: {str(e)}")
+                
+                try:
+                    variants = create_variants(
+                        product_infos['price'],
+                        product_infos['product_type'],
+                        product_infos['total_weight_of_jewelry']
+                    )
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la création des variantes: {str(e)}")
+                
+                try:
+                    options = create_options(
+                        product_infos['product_type']
+                    )
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de la création des options: {str(e)}")
                 
                 data = { 
                     "product" : {
@@ -178,22 +225,55 @@ if st.button("Publier sur Shopify"):
                         'metafields': metafields
                     }     
                 }
-                product = add_product(data)
-                logging.info(f"Product added with ID: {product['product']['id']}")
-                product_id = product["product"]["id"]
-                collection(product_infos['product_type'], product_id)
-                st.write("Récupérations des images en cours...")
+                
+                try:
+                    product = add_product(data)
+                    logging.info(f"Product added with ID: {product['product']['id']}")
+                    product_id = product["product"]["id"]
+                except Exception as e:
+                    raise ValueError(f"Erreur lors de l'ajout du produit sur Shopify: {str(e)}")
+                
+                try:
+                    collection(product_infos['product_type'], product_id)
+                except Exception as e:
+                    st.warning(f"⚠️ Produit créé mais erreur lors de l'ajout à la collection: {str(e)}")
+                
+                st.write("Récupération des images en cours...")
+                images_ajoutees = 0
                 for image in images_url:
-                    post_image(product_id, image, product_infos['title'])
+                    try:
+                        post_image(product_id, image, product_infos['title'])
+                        images_ajoutees += 1
+                    except Exception as e:
+                        st.warning(f"⚠️ Erreur lors de l'ajout de l'image {image}: {str(e)}")
+                
+                if images_ajoutees == 0 and images_url:
+                    st.warning(f"⚠️ Aucune image n'a pu être ajoutée pour le produit {product_infos['id']}.")
+                elif images_ajoutees < len(images_url):
+                    st.warning(f"⚠️ Seulement {images_ajoutees}/{len(images_url)} images ont été ajoutées.")
+                
                 logging.info(f"Produit ajouté : {product_infos['title']}")
                 st.success(f"✅ Produit ajouté avec succès : https://admin.shopify.com/store/cercledesdiamantaires/products/{product_id}")
 
-                product_infos['online'] = 'TRUE'
-                update_google_sheet(GOOGLE_SHEET_URL, selected_sheet, product_infos['id'], product_id)
+                try:
+                    product_infos['online'] = 'TRUE'
+                    update_google_sheet(GOOGLE_SHEET_URL, selected_sheet, product_infos['id'], product_id)
+                except Exception as e:
+                    st.warning(f"⚠️ Produit créé mais erreur lors de la mise à jour de la feuille Google: {str(e)}")
+                
+                produits_publies += 1
+                
+            except ValueError as e:
+                erreurs.append(f"Erreur sur {row.get('id', 'inconnu')} : {str(e)}")
+                st.error(f"❌ Erreur sur {row.get('id', 'inconnu')} : {str(e)}")
             except Exception as e:
-                erreurs.append(f"Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
-                st.error(f"❌ Erreur sur {product_infos.get('id', 'inconnu')} : {str(e)}")
+                erreurs.append(f"Erreur inattendue sur {row.get('id', 'inconnu')} : {str(e)}")
+                st.error(f"❌ Erreur inattendue sur {row.get('id', 'inconnu')} : {str(e)}")
+        
         if not erreurs:
-            st.success("✅ Tous les produits ont été publiés avec succès !")
+            st.success(f"✅ Tous les produits ({produits_publies}/{total_produits}) ont été publiés avec succès !")
         else:
-            st.error("\n".join(erreurs))
+            st.warning(f"⚠️ {produits_publies}/{total_produits} produits publiés. {len(erreurs)} erreurs rencontrées.")
+            with st.expander("Détails des erreurs"):
+                for erreur in erreurs:
+                    st.error(erreur)
