@@ -139,7 +139,7 @@ if st.button("Publier sur Shopify"):
                 }
                 
                 # Vérification des champs obligatoires
-                champs_obligatoires = ['id', 'title', 'product_type', 'price']
+                champs_obligatoires = ['id', 'title', 'product_type', 'price', 'total_weight_of_jewelry', 'main_stone' , 'main_stone_carat', 'main_stone_shape']
                 champs_manquants = [champ for champ in champs_obligatoires if not product_infos.get(champ)]
                 
                 if champs_manquants:
