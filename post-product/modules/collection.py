@@ -32,17 +32,17 @@ def collection(product_category, product_id):
         "X-Shopify-Access-Token": PASSWORD
     }
 
-    if product_category == "Alliance":
-        for cat in ["Bague", "Fiancailles"]:
-            data = {
-                "collect": {
-                    "collection_id": COLLECTIONS_ID[cat],
-                    "product_id": product_id
-                }
-            }
-            response = requests.post(url, json=data, headers=headers, timeout=10)
-            if response.status_code != 201:
-                print(f"Erreur {response.status_code} pour {cat}: {response.text}")
+    # if product_category == "Alliance":
+    #     for cat in ["Bague", "Fiancailles"]:
+    #         data = {
+    #             "collect": {
+    #                 "collection_id": COLLECTIONS_ID[cat],
+    #                 "product_id": product_id
+    #             }
+    #         }
+    #         response = requests.post(url, json=data, headers=headers, timeout=10)
+    #         if response.status_code != 201:
+    #             print(f"Erreur {response.status_code} pour {cat}: {response.text}")
 
     if product_category in COLLECTIONS_ID:
         data = {
