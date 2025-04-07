@@ -16,6 +16,7 @@ COLLECTIONS_ID = {
     "Boucles d'oreilles": 628351598927,
     "Broche": 628352057679,
     "Catalogue": 658578145615,
+    "Vintage": 661217640783,
 }
 
 def collection(product_category, product_id):

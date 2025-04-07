@@ -16,6 +16,8 @@ def check_first_paragraph(first_paragraph, product_type, primal_stone_name):
         product_type = "bracelet"
     elif product_type == 'Boucledoreillescatalogue':
         product_type = "boucle d'oreille"
+    elif product_type == 'Vintage':
+        product_type = "Bague vintage"
     
 
     if not first_paragraph:
